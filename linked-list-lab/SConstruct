@@ -1,0 +1,27 @@
+# put these lines in front of all scripts
+
+import os, sys
+env = Environment(ENV=os.environ)
+
+# Compile the java files
+
+compile = env.Java('classes','.',JAVACLASSPATH='/usr/share/junit/lib/junit.jar')
+
+env.Alias('compile',compile)
+
+# Run the tests
+
+tests = env.Command('tests',compile,
+   ['java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestList'])
+
+# Utility to commit and push
+
+add = env.Command('add',['List.java','TestList.java'],'git add *.java')
+
+commit = env.Command('commit',add,'git commit')
+
+env.Command('submit',[add,commit],
+   ['git pull',
+    'git push'])
+
+Default(compile)
