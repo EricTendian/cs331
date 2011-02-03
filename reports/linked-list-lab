@@ -1,0 +1,220 @@
+Testing lab Linked List Lab for etendian.
+Thu Feb  3 15:43:48 CST 2011
+
+Running 'Canonical Test Cases': Did not compile
+    (solutions tests vs. student code.)
+Running 'Working version of program': Pass
+    (student tests vs. solution code.)
+Running 'Size Returns 0': Fail
+    (student tests vs. broken code.)
+Running 'Insert fails to increment size': Fail
+    (student tests vs. broken code.)
+Running 'Insert erases first element': Fail
+    (student tests vs. broken code.)
+Running 'InsertEnd fails to increment size': Fail
+    (student tests vs. broken code.)
+Running 'InsertEnd inserts at beginning': Fail
+    (student tests vs. broken code.)
+Running 'Find only returns -1': Fail
+    (student tests vs. broken code.)
+Running 'Find only works the first time': Fail
+    (student tests vs. broken code.)
+Running 'Delete does nothing': Fail
+    (student tests vs. broken code.)
+Running 'Delete truncates list': Fail
+    (student tests vs. broken code.)
+Running 'Reverse deletes list': Fail
+    (student tests vs. broken code.)
+Running 'Reverse does nothing': Fail
+    (student tests vs. broken code.)
+Running 'Memory equality instead of mathematical equality': Fail
+    (student tests vs. broken code.)
+Total: 5/85
+
+
+Details:
+----------------------------------------
+'Canonical Test Cases'
+    (solutions tests vs. student code.)
+----------------------------------------
+TestList.java:22: cannot find symbol
+symbol  : method find(java.lang.Integer)
+location: class List
+assertEquals("Find zero 1.",0,foo.find(i1));
+^
+TestList.java:23: cannot find symbol
+symbol  : method find(java.lang.Integer)
+location: class List
+assertEquals("Find zero 2.",0,foo.find(i5));
+^
+TestList.java:24: cannot find symbol
+symbol  : method find(java.lang.Integer)
+location: class List
+assertEquals("Find zero 3.",0,foo.find(i10));
+^
+TestList.java:25: cannot find symbol
+symbol  : method find(java.lang.Integer)
+location: class List
+assertEquals("Find zero 4.",0,foo.find(i20));
+^
+TestList.java:26: cannot find symbol
+symbol  : method find(java.lang.Integer)
+location: class List
+assertEquals("Find zero 5.",0,foo.find(i25));
+^
+
+----------------------------------------
+'Working version of program'
+    (student tests vs. solution code.)
+----------------------------------------
+Pass
+.
+Time: 0.002
+
+OK (1 test)
+
+
+----------------------------------------
+'Size Returns 0'
+    (student tests vs. broken code.)
+----------------------------------------
+broke1
+Student test case did not detect error.
+.
+Time: 0.003
+
+OK (1 test)
+
+
+----------------------------------------
+'Insert fails to increment size'
+    (student tests vs. broken code.)
+----------------------------------------
+broke2
+Student test case did not detect error.
+.
+Time: 0.002
+
+OK (1 test)
+
+
+----------------------------------------
+'Insert erases first element'
+    (student tests vs. broken code.)
+----------------------------------------
+broke3
+Student test case did not detect error.
+.
+Time: 0.003
+
+OK (1 test)
+
+
+----------------------------------------
+'InsertEnd fails to increment size'
+    (student tests vs. broken code.)
+----------------------------------------
+broke4
+Student test case did not detect error.
+.
+Time: 0.003
+
+OK (1 test)
+
+
+----------------------------------------
+'InsertEnd inserts at beginning'
+    (student tests vs. broken code.)
+----------------------------------------
+broke5
+Student test case did not detect error.
+.
+Time: 0.003
+
+OK (1 test)
+
+
+----------------------------------------
+'Find only returns -1'
+    (student tests vs. broken code.)
+----------------------------------------
+broke6
+Student test case did not detect error.
+.
+Time: 0.003
+
+OK (1 test)
+
+
+----------------------------------------
+'Find only works the first time'
+    (student tests vs. broken code.)
+----------------------------------------
+broke7
+Student test case did not detect error.
+.
+Time: 0.003
+
+OK (1 test)
+
+
+----------------------------------------
+'Delete does nothing'
+    (student tests vs. broken code.)
+----------------------------------------
+broke8
+Student test case did not detect error.
+.
+Time: 0.003
+
+OK (1 test)
+
+
+----------------------------------------
+'Delete truncates list'
+    (student tests vs. broken code.)
+----------------------------------------
+broke9
+Student test case did not detect error.
+.
+Time: 0.003
+
+OK (1 test)
+
+
+----------------------------------------
+'Reverse deletes list'
+    (student tests vs. broken code.)
+----------------------------------------
+broke10
+Student test case did not detect error.
+.
+Time: 0.003
+
+OK (1 test)
+
+
+----------------------------------------
+'Reverse does nothing'
+    (student tests vs. broken code.)
+----------------------------------------
+broke11
+Student test case did not detect error.
+.
+Time: 0.003
+
+OK (1 test)
+
+
+----------------------------------------
+'Memory equality instead of mathematical equality'
+    (student tests vs. broken code.)
+----------------------------------------
+broke12
+Student test case did not detect error.
+.
+Time: 0.003
+
+OK (1 test)
+
+
