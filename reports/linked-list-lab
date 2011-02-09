@@ -6,13 +6,7 @@ Running 'Canonical Test Cases': Fail
 Running 'Working version of program': Fail
     (student tests vs. solution code.)
 
- No further tests will be run.Total: 0/85
-
-
-Details:
-----------------------------------------
-'Canonical Test Cases'
-    (solutions tests vs. student code.)
+ No further tests will be run.Total: 85858585858585858585858585858585858585858585858585858585858585858585858585858585858585858585858585858585858585858585858585858585858585858585858585858585858585858585858585solutions tests vs. student code.)
 ----------------------------------------
 canon
 Solution test case detected error.

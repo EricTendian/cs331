@@ -33,7 +33,7 @@ public class TestList extends TestCase {
        foo.insert(i15);
        foo.insert(i20);
        //foo.insert(i25);
-       assertEquals("Find Test",10,foo.find(i10));
+       assertEquals("Find Test",1,foo.find(i10));
        foo.insert(i25);
        //assertEquals("insertAtEnd Test",,);
        foo.delete(4);
