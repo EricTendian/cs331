@@ -100,13 +100,13 @@ public class List<E> {
             //if you are not at the end of the list, make curr curr.next and take previous curr out of the list
             else curr.next=null; //if you are at the end of the list, cut off curr.next
         } size--; //decrement size
-        Node curr = first;
-        String out = curr.data.toString();
-        while (curr.next!=null) {
+        /*Node curr = first;
+        String out = "";
+        while (curr!=null) {
+            out=out+","+curr.data.toString();
             curr=curr.next;
-            out=curr.data.toString();
         }
-        System.out.println(out);
+        System.out.println(out.substring(1));*/
         }
     }
 

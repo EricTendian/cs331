@@ -24,26 +24,21 @@ public class TestList extends TestCase {
    }
    
    // test list with values added.
-   /*public void testFull() {
+   public void testOne() {
        List foo = new List<Integer>();
        foo.insert(i1);
        assertEquals("Insert Test",1,foo.size());
-       foo.insert(i2);
-       assertEquals("Size Test",2,foo.size());
-       foo.insert(i5);
-       foo.insert(i10);
-       foo.insert(i15);
-       foo.insert(i20);
-       assertEquals("Find Test",3,foo.find(i10));
+       assertEquals("Size Test",1,foo.size());
+       assertEquals("Find Test",1,foo.find(i1));
+       foo.delete(1);
+       assertEquals("Delete Test",0,foo.find(i1));
        foo.insertAtEnd(i25);
-       //list is: 20,15,10,5,2,1,25
-       //assertEquals("insertAtEnd Test",7,foo.find(i25));
-       foo.delete(4);
-       assertEquals("Delete Test",0,foo.find(i5));
+       assertEquals("insertAtEnd Test",2,foo.find(i25));
+       foo.reverse();
        //assertEquals("Reverse Test",,);
-   }*/
+   }
    
-   public void testSize() {
+   /*public void testSize() {
        List foo = new List<Integer>();
        assertEquals("Size Test - empty",0,foo.size());
        foo.insert(i1);
@@ -106,5 +101,5 @@ public class TestList extends TestCase {
        rev.insert(i5);
        assertEquals("Reverse Test",rev.find(i15),foo.find(i15));
    }
-
+*/
 }
