@@ -17,7 +17,7 @@ public class TestList extends TestCase {
    public void testZero() {
       List foo = new List<Integer>();
       assertEquals("Size Test",0,foo.size());
-
+      assertEquals("Find Test",0,foo.find(i10));
       // add more tests here to see if an empty list behaves properly
    }
    
@@ -25,7 +25,7 @@ public class TestList extends TestCase {
    public void testFull() {
        List foo = new List<Integer>();
        foo.insert(i1);
-       //assertEquals("Insert Test",,);
+       assertEquals("Insert Test",1,foo.size());
        foo.insert(i2);
        assertEquals("Size Test",2,foo.size());
        foo.insert(i5);
@@ -33,7 +33,7 @@ public class TestList extends TestCase {
        foo.insert(i15);
        foo.insert(i20);
        //foo.insert(i25);
-       assertEquals("Find Test",1,foo.find(i10));
+       assertEquals("Find Test",4,foo.find(i10));
        foo.insert(i25);
        //assertEquals("insertAtEnd Test",,);
        foo.delete(4);

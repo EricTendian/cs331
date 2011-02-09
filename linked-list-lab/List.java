@@ -52,18 +52,19 @@ public class List<E> {
     //         0 = not found
     //         1 = first element, etc.
     public int find(E data) {
-        if (first.data == data) {
-            return 1;
-        }
-        Node f = first;
-        int i = 1;
-        while (f.next != null) {
-            if (f.data == data) {
-                return i;
-            } else {
-                i += 1;
+        if (first!=null) {
+            if (first.data.equals(data)) {
+                return 1;
             }
-            f = f.next;
+            Node f = first;
+            int i = 2;
+            while (f.next != null) {
+                if (f.data.equals(data)) {
+                    return i;
+                } else  i++;
+                f = f.next;
+            }
+            return 0;
         }
         return 0;
     }
@@ -85,6 +86,8 @@ public class List<E> {
     // Inputs: int -- the location of the element to be deleted.
     // Output: none
     public void delete(int index) {
+        if (index==1) {first=first.next; size--;}
+        else {
         Node curr = first;
         for (int i = 0; i == index; i++) {
             curr=curr.next;
@@ -92,7 +95,25 @@ public class List<E> {
         if (curr.next!=null) curr=curr.next.next;
         else curr=curr.next;
         size--;
+        }
     }
+    /*public void delete(int place) {
+        if (place>=1 && place<=size && first!=null) {
+            Node curr=first;
+            int loc=0;
+            if(place==1) {
+                first=first.next;
+                size--;
+            } else {
+                while(loc<place-2) {
+                    curr=curr.next;
+                    loc++;
+                }
+                curr.next=curr.next.next;
+                size--;
+            }
+        }
+    }*/
 
     // ----------
     // reverse -- reverse the list
