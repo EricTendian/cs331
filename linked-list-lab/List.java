@@ -31,8 +31,8 @@ public class List<E> {
     // Inputs: none
     // Output: int
     public int size() {
-        return -1; // an easy bug
-        //return size;
+        //return -1; // an easy bug
+        return size;
     }
 
     // ----------
