@@ -18,7 +18,7 @@ public class TestList extends TestCase {
       List foo = new List<Integer>();
       assertEquals("Size Test",0,foo.size());
       assertEquals("Find Test",0,foo.find(i10));
-      foo.delete(i2);
+      foo.delete(1);
       assertEquals("Delete Test",0,foo.size());
       // add more tests here to see if an empty list behaves properly
    }
@@ -34,7 +34,7 @@ public class TestList extends TestCase {
        assertEquals("Delete Test",0,foo.find(i1));
        foo.insertAtEnd(i25);
        assertEquals("insertAtEnd Test",2,foo.find(i25));
-       foo.reverse();
+       //foo.reverse();
        //assertEquals("Reverse Test",,);
    }
    
