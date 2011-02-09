@@ -96,9 +96,9 @@ public class List<E> {
             for (int i = 1; i < index; i++) {
                 curr=curr.next; //traverse the list until you get to the item to be deleted
             }
-            if (curr.next.next!=null) curr.next=curr.next.next;
+            curr.next=curr.next.next;
             //if you are not at the end of the list, make curr curr.next and take previous curr out of the list
-            else curr.next=null; //if you are at the end of the list, cut off curr.next
+            //if you are at the end of the list, cut off curr.next
         } size--; //decrement size
         /*Node curr = first;
         String out = "";
