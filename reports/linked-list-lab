@@ -1,5 +1,5 @@
 Testing lab Linked List Lab for etendian.
-Wed Feb  9 15:33:20 CST 2011
+Wed Feb  9 15:38:26 CST 2011
 
 Running 'Canonical Test Cases': Fail
     (solutions tests vs. student code.)
@@ -47,7 +47,7 @@ at List.find(List.java:55)
 working
 Solution test case detected error.
 ..F
-Time: 0.006
+Time: 0.005
 There was 1 failure:
 1) testOne(TestList)junit.framework.AssertionFailedError: insertAtEnd Test expected:<2> but was:<1>
 at TestList.testOne(TestList.java:36)
