@@ -1,5 +1,5 @@
 Testing lab Linked List Lab for etendian.
-Wed Feb  9 14:52:23 CST 2011
+Wed Feb  9 15:33:20 CST 2011
 
 Running 'Canonical Test Cases': Fail
     (solutions tests vs. student code.)
@@ -16,28 +16,28 @@ Details:
 ----------------------------------------
 canon
 Solution test case detected error.
-......E.E.F.F.E.E.E
-Time: 0.006
-There were 5 errors:
-1) testDelOneElt(TestList)java.lang.NullPointerException
-at List.delete(List.java:104)
-at TestList.testDelOneElt(TestList.java:99)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-2) testDelFourElt(TestList)java.lang.NullPointerException
+.......E.F.F.E.E.E
+Time: 0.007
+There were 4 errors:
+1) testDelFourElt(TestList)java.lang.NullPointerException
 at List.delete(List.java:99)
 at TestList.testDelFourElt(TestList.java:120)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-3) testReverseZero(TestList)java.lang.NullPointerException
+2) testReverseZero(TestList)java.lang.NullPointerException
 at List.reverse(List.java:121)
 at TestList.testReverseZero(TestList.java:210)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-4) testReverseOne(TestList)java.lang.NullPointerException
+3) testReverseOne(TestList)java.lang.NullPointerException
+at List.find(List.java:55)
+at TestList.testReverseOne(TestList.java:236)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+4) testReverseFour(TestList)java.lang.NullPointerException
 at List.find(List.java:55)
 
 ----------------------------------------
@@ -46,17 +46,17 @@ at List.find(List.java:55)
 ----------------------------------------
 working
 Solution test case detected error.
-......F.
+..F
 Time: 0.006
 There was 1 failure:
-1) testDelete(TestList)junit.framework.AssertionFailedError: Delete Test - full expected:<3> but was:<4>
-at TestList.testDelete(TestList.java:90)
+1) testOne(TestList)junit.framework.AssertionFailedError: insertAtEnd Test expected:<2> but was:<1>
+at TestList.testOne(TestList.java:36)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 
 FAILURES!!!
-Tests run: 7,  Failures: 1,  Errors: 0
+Tests run: 2,  Failures: 1,  Errors: 0
 
 
 ----------------------------------------
