@@ -1,8 +1,7 @@
 public class List<E> {
+    
     // Node is accessible inside the class, but not outside.
-
     private class Node {
-
         public E data;
         public Node next;
 
@@ -31,7 +30,6 @@ public class List<E> {
     // Inputs: none
     // Output: int
     public int size() {
-        //return -1; // an easy bug
         return size;
     }
 
@@ -40,9 +38,9 @@ public class List<E> {
     // Inputs: E data
     // Output: none
     public void insert(E data) {
+        //make new Node who's next is first, then make that Node first
         first = new Node(data, first);
-        size++;
-        // This code is also incorrect. inc size
+        size++; //inc size
     }
 
     // ----------
@@ -52,21 +50,22 @@ public class List<E> {
     //         0 = not found
     //         1 = first element, etc.
     public int find(E data) {
+        //if first is not null, then look for data
         if (first!=null) {
             if (first.data.equals(data)) {
                 return 1;
             }
-            Node f = first;
+            Node f = first.next;
             int i = 2;
-            while (f.next != null) {
+            while (f != null) {
                 if (f.data.equals(data)) {
-                    return i;
-                } else  i++;
-                f = f.next;
+                    return i; //if it finds data, return the index
+                } else  i++; //inc index
+                f = f.next; //continue traversing list
             }
-            return 0;
+            return 0; //can't find data after fully traversing list
         }
-        return 0;
+        return 0; //else return not found
     }
 
     // ----------
@@ -74,11 +73,14 @@ public class List<E> {
     // Inputs: E data
     // Output: none
     public void insertAtEnd(E data) {
-        Node l = first;
+        if (first!=null) {
+        Node l = first; //use l as cursor
         while (l.next != null) {
-            l = l.next;
+            l = l.next; //traverse list until end is reached
         }
         l.next = new Node(data, null);
+        //make l's next (previously null) a new node with data as l.next.data
+        } else first = new Node(data,null);
     }
 
     // ----------
@@ -86,34 +88,27 @@ public class List<E> {
     // Inputs: int -- the location of the element to be deleted.
     // Output: none
     public void delete(int index) {
-        if (index==1) {first=first.next; size--;}
+        if (first!=null && size>=index) {
+        //if you are deleting the first item, make first point to first.next
+        if (index==1) first=first.next;
         else {
+            Node curr = first; //use curr as cursor
+            for (int i = 1; i < index; i++) {
+                curr=curr.next; //traverse the list until you get to the item to be deleted
+            }
+            if (curr.next.next!=null) curr.next=curr.next.next;
+            //if you are not at the end of the list, make curr curr.next and take previous curr out of the list
+            else curr.next=null; //if you are at the end of the list, cut off curr.next
+        } size--; //decrement size
         Node curr = first;
-        for (int i = 0; i == index; i++) {
+        String out = curr.data.toString();
+        while (curr.next!=null) {
             curr=curr.next;
+            out=curr.data.toString();
         }
-        if (curr.next!=null) curr=curr.next.next;
-        else curr=curr.next;
-        size--;
+        System.out.println(out);
         }
     }
-    /*public void delete(int place) {
-        if (place>=1 && place<=size && first!=null) {
-            Node curr=first;
-            int loc=0;
-            if(place==1) {
-                first=first.next;
-                size--;
-            } else {
-                while(loc<place-2) {
-                    curr=curr.next;
-                    loc++;
-                }
-                curr.next=curr.next.next;
-                size--;
-            }
-        }
-    }*/
 
     // ----------
     // reverse -- reverse the list
@@ -121,11 +116,11 @@ public class List<E> {
     // Output: none
     public void reverse() {
         //Node temp = new Node(null,null);
-        Node curr=first;
-        first=new Node(null,null);
+        Node curr=first; //copy first to curr
+        first=new Node(null); //reset first
         while (curr.next!=null) {
-            insertAtEnd(curr.data);
-            curr=curr.next;
+            insertAtEnd(curr.data); //add elements to end of list
+            curr=curr.next; //move cursor
         }
     }
 }

@@ -18,11 +18,13 @@ public class TestList extends TestCase {
       List foo = new List<Integer>();
       assertEquals("Size Test",0,foo.size());
       assertEquals("Find Test",0,foo.find(i10));
+      foo.delete(i2);
+      assertEquals("Delete Test",0,foo.size());
       // add more tests here to see if an empty list behaves properly
    }
    
    // test list with values added.
-   public void testFull() {
+   /*public void testFull() {
        List foo = new List<Integer>();
        foo.insert(i1);
        assertEquals("Insert Test",1,foo.size());
@@ -32,13 +34,77 @@ public class TestList extends TestCase {
        foo.insert(i10);
        foo.insert(i15);
        foo.insert(i20);
-       //foo.insert(i25);
-       assertEquals("Find Test",4,foo.find(i10));
-       foo.insert(i25);
-       //assertEquals("insertAtEnd Test",,);
+       assertEquals("Find Test",3,foo.find(i10));
+       foo.insertAtEnd(i25);
+       //list is: 20,15,10,5,2,1,25
+       //assertEquals("insertAtEnd Test",7,foo.find(i25));
        foo.delete(4);
-       assertEquals("Delete Test",0,foo.find(i15));
+       assertEquals("Delete Test",0,foo.find(i5));
        //assertEquals("Reverse Test",,);
+   }*/
+   
+   public void testSize() {
+       List foo = new List<Integer>();
+       assertEquals("Size Test - empty",0,foo.size());
+       foo.insert(i1);
+       assertEquals("Size Test - full",1,foo.size());
+   }
+   
+   public void testInsert() {
+       List foo = new List<Integer>();
+       foo.insert(i1);
+       assertEquals("Insert Test - find",1,foo.find(i1));
+       assertEquals("Insert Test - size",1,foo.size());
+   }
+   
+   public void testFind() {
+       List foo = new List<Integer>();
+       foo.insert(i5);
+       foo.insert(i10);
+       foo.insert(i15);
+       foo.insert(i20);
+       //list is 20,15,10,5
+       assertEquals("Find Test",2,foo.find(i15));
+   }
+   
+   public void testInsertAtEnd() {
+       List foo = new List<Integer>();
+       foo.insertAtEnd(i5);
+       foo.insertAtEnd(i10);
+       foo.insertAtEnd(i15);
+       foo.insertAtEnd(i20);
+       //list is 5,10,15,20
+       assertEquals("InsertAtEnd Test",3,foo.find(i15));
+   }
+   
+   public void testDelete() {
+       List foo = new List<Integer>();
+       foo.delete(i2);
+       assertEquals("Delete Test - empty",0,foo.size());
+       foo.insert(i5);
+       foo.insert(i10);
+       foo.insert(i15);
+       foo.insert(i20);
+       foo.delete(i10);
+       //list is 20,15,5
+       assertEquals("Delete Test - full",3,foo.size());
+       assertEquals("Delete Test - full",0,foo.find(i10));
+       foo.delete(i25);
+   }
+   
+   public void testReverse() {
+       List foo = new List<Integer>();
+       foo.insert(i5);
+       foo.insert(i10);
+       foo.insert(i15);
+       foo.insert(i20);
+       foo.reverse();
+       List rev = new List<Integer>();
+       rev.insert(i20);
+       rev.insert(i15);
+       rev.insert(i10);
+       rev.insert(i5);
+       assertEquals("Reverse Test",rev.find(i15),foo.find(i15));
    }
 
 }
