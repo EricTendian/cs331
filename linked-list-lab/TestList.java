@@ -60,6 +60,20 @@ public class TestList extends TestCase {
        assertEquals("Reverse Test",rev.find(i25),foo.find(i25));
    }
    
+   public void testThree() {
+       List foo = new List<Integer>();
+       foo.insert(i1);
+       foo.insert(i2);
+       foo.insert(i5);
+       List rev = new List<Integer>();
+       rev.insert(i5);
+       rev.insert(i2);
+       rev.insert(i1);
+       assertEquals("Reverse Test",rev.find(i1),foo.find(i1));
+       assertEquals("Reverse Test",rev.find(i2),foo.find(i2));
+       assertEquals("Reverse Test",rev.find(i5),foo.find(i5));
+   }
+   
    /*public void testSize() {
        List foo = new List<Integer>();
        assertEquals("Size Test - empty",0,foo.size());

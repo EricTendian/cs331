@@ -101,13 +101,6 @@ public class List<E> {
             //if you are not at the end of the list, make curr curr.next and take previous curr out of the list
             else curr.next=null; //if you are at the end of the list, cut off curr.next
         } size--; //decrement size
-        /*Node curr = first;
-        String out = "";
-        while (curr!=null) {
-            out=out+","+curr.data.toString();
-            curr=curr.next;
-        }
-        System.out.println(out.substring(1));*/
         }
     }
 
@@ -116,13 +109,17 @@ public class List<E> {
     // Inputs: none
     // Output: none
     public void reverse() {
-        Node curr = first;
-        first = null; //reset first
-        while (curr != null) {
-            Node save = curr;
-            curr = curr.next;
-            save.next = first;
-            first = save; //save new linked list
+        if (size>2) {
+            Node curr = first; //5,2,1, reversed is 1,2,5
+            first=null;
+            while (curr != null) {
+                insertAtEnd(curr.data);
+                curr = curr.next; //move to next item in list
+            }
+        } else if (size==2) {
+            Node save = first;
+            first=first.next;
+            insertAtEnd(save.data);
         }
     }
 }
