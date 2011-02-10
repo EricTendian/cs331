@@ -73,14 +73,15 @@ public class List<E> {
     // Inputs: E data
     // Output: none
     public void insertAtEnd(E data) {
-        if (first!=null) {
-        Node l = first; //use l as cursor
-        while (l.next != null) {
-            l = l.next; //traverse list until end is reached
+        if (size>0) {
+        Node curr = first; //use l as cursor
+        while (curr.next != null) {
+            curr = curr.next; //traverse list until end is reached
         }
-        l.next = new Node(data, null);
+        curr.next = new Node(data);
         //make l's next (previously null) a new node with data as l.next.data
-        } else first = new Node(data,null);
+        } else first = new Node(data);
+        size++;
     }
 
     // ----------
@@ -96,9 +97,9 @@ public class List<E> {
             for (int i = 1; i < index; i++) {
                 curr=curr.next; //traverse the list until you get to the item to be deleted
             }
-            curr.next=curr.next.next;
+            if (curr.next.next!=null) curr.next=curr.next.next;
             //if you are not at the end of the list, make curr curr.next and take previous curr out of the list
-            //if you are at the end of the list, cut off curr.next
+            else curr.next=null; //if you are at the end of the list, cut off curr.next
         } size--; //decrement size
         /*Node curr = first;
         String out = "";
@@ -115,12 +116,13 @@ public class List<E> {
     // Inputs: none
     // Output: none
     public void reverse() {
-        //Node temp = new Node(null,null);
-        Node curr=first; //copy first to curr
-        first=new Node(null); //reset first
-        while (curr.next!=null) {
-            insertAtEnd(curr.data); //add elements to end of list
-            curr=curr.next; //move cursor
+        Node curr = first;
+        first = null; //reset first
+        while (curr != null) {
+            Node save = curr;
+            curr = curr.next;
+            save.next = first;
+            first = save; //save new linked list
         }
     }
 }
