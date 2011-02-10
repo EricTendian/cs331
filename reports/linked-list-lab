@@ -1,5 +1,5 @@
 Testing lab Linked List Lab for etendian.
-Wed Feb  9 16:04:05 CST 2011
+Thu Feb 10 09:03:57 CST 2011
 
 Running 'Canonical Test Cases': Fail
     (solutions tests vs. student code.)
@@ -9,11 +9,11 @@ Running 'Size Returns 0': Pass
     (student tests vs. broken code.)
 Running 'Insert fails to increment size': Pass
     (student tests vs. broken code.)
-Running 'Insert erases first element': Fail
+Running 'Insert erases first element': Pass
     (student tests vs. broken code.)
 Running 'InsertEnd fails to increment size': Fail
     (student tests vs. broken code.)
-Running 'InsertEnd inserts at beginning': Fail
+Running 'InsertEnd inserts at beginning': Pass
     (student tests vs. broken code.)
 Running 'Find only returns -1': Pass
     (student tests vs. broken code.)
@@ -25,11 +25,11 @@ Running 'Delete truncates list': Fail
     (student tests vs. broken code.)
 Running 'Reverse deletes list': Pass
     (student tests vs. broken code.)
-Running 'Reverse does nothing': Fail
+Running 'Reverse does nothing': Pass
     (student tests vs. broken code.)
 Running 'Memory equality instead of mathematical equality': Fail
     (student tests vs. broken code.)
-Total: 35/85
+Total: 50/85
 
 
 Details:
@@ -39,39 +39,29 @@ Details:
 ----------------------------------------
 canon
 Solution test case detected error.
-.......E.F.F.E.E.E
+.......E.....
 Time: 0.006
-There were 4 errors:
+There was 1 error:
 1) testDelFourElt(TestList)java.lang.NullPointerException
-at List.delete(List.java:99)
+at List.delete(List.java:100)
 at TestList.testDelFourElt(TestList.java:120)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-2) testReverseZero(TestList)java.lang.NullPointerException
-at List.reverse(List.java:121)
-at TestList.testReverseZero(TestList.java:210)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-3) testReverseOne(TestList)java.lang.NullPointerException
-at List.find(List.java:55)
-at TestList.testReverseOne(TestList.java:236)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-4) testReverseFour(TestList)java.lang.NullPointerException
-at List.find(List.java:55)
+
+FAILURES!!!
+Tests run: 12,  Failures: 0,  Errors: 1
+
 
 ----------------------------------------
 'Working version of program'
     (student tests vs. solution code.)
 ----------------------------------------
 Pass
-..
-Time: 0.003
+...
+Time: 0.004
 
-OK (2 tests)
+OK (3 tests)
 
 
 ----------------------------------------
@@ -90,13 +80,7 @@ Pass
 'Insert erases first element'
     (student tests vs. broken code.)
 ----------------------------------------
-broke3
-Student test case did not detect error.
-..
-Time: 0.003
-
-OK (2 tests)
-
+Pass
 
 ----------------------------------------
 'InsertEnd fails to increment size'
@@ -104,23 +88,17 @@ OK (2 tests)
 ----------------------------------------
 broke4
 Student test case did not detect error.
-..
+...
 Time: 0.004
 
-OK (2 tests)
+OK (3 tests)
 
 
 ----------------------------------------
 'InsertEnd inserts at beginning'
     (student tests vs. broken code.)
 ----------------------------------------
-broke5
-Student test case did not detect error.
-..
-Time: 0.004
-
-OK (2 tests)
-
+Pass
 
 ----------------------------------------
 'Find only returns -1'
@@ -146,10 +124,10 @@ Pass
 ----------------------------------------
 broke9
 Student test case did not detect error.
-..
+...
 Time: 0.004
 
-OK (2 tests)
+OK (3 tests)
 
 
 ----------------------------------------
@@ -162,13 +140,7 @@ Pass
 'Reverse does nothing'
     (student tests vs. broken code.)
 ----------------------------------------
-broke11
-Student test case did not detect error.
-..
-Time: 0.004
-
-OK (2 tests)
-
+Pass
 
 ----------------------------------------
 'Memory equality instead of mathematical equality'
@@ -176,9 +148,9 @@ OK (2 tests)
 ----------------------------------------
 broke12
 Student test case did not detect error.
-..
-Time: 0.004
+...
+Time: 0.003
 
-OK (2 tests)
+OK (3 tests)
 
 
