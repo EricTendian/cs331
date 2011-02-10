@@ -25,7 +25,7 @@ public class TestList extends TestCase {
    }
    
    // test list with one value added
-   public void testOne() {
+   /*public void testOne() {
        List foo = new List<Integer>();
        foo.insert(i1);
        assertEquals("Insert Test",1,foo.size());
@@ -73,7 +73,7 @@ public class TestList extends TestCase {
        assertEquals("Reverse Test",rev.find(i2),foo.find(i2));
        assertEquals("Reverse Test",rev.find(i5),foo.find(i5));
    }
-   
+   */
    /*public void testSize() {
        List foo = new List<Integer>();
        assertEquals("Size Test - empty",0,foo.size());
