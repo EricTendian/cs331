@@ -50,8 +50,10 @@ public class TestList extends TestCase {
        assertEquals("Find Test",2,foo.find(i1));
        foo.delete(1);
        assertEquals("Delete Test",0,foo.find(i2));
+       assertEquals("Delete Test",1,foo.size());
        foo.insertAtEnd(i25);
        assertEquals("insertAtEnd Test",2,foo.find(i25));
+       assertEquals("insertAtEnd Test",2,foo.size());
        foo.reverse();
        List rev = new List<Integer>();
        rev.insert(i1);
