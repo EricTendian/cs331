@@ -1,5 +1,5 @@
 Testing lab Linked List Lab for etendian.
-Thu Feb 10 18:33:04 CST 2011
+Thu Feb 10 18:38:04 CST 2011
 
 Running 'Canonical Test Cases': Fail
     (solutions tests vs. student code.)
@@ -11,7 +11,7 @@ Running 'Insert fails to increment size': Pass
     (student tests vs. broken code.)
 Running 'Insert erases first element': Pass
     (student tests vs. broken code.)
-Running 'InsertEnd fails to increment size': Fail
+Running 'InsertEnd fails to increment size': Pass
     (student tests vs. broken code.)
 Running 'InsertEnd inserts at beginning': Pass
     (student tests vs. broken code.)
@@ -21,15 +21,15 @@ Running 'Find only works the first time': Pass
     (student tests vs. broken code.)
 Running 'Delete does nothing': Pass
     (student tests vs. broken code.)
-Running 'Delete truncates list': Fail
+Running 'Delete truncates list': Pass
     (student tests vs. broken code.)
 Running 'Reverse deletes list': Pass
     (student tests vs. broken code.)
 Running 'Reverse does nothing': Pass
     (student tests vs. broken code.)
-Running 'Memory equality instead of mathematical equality': Fail
+Running 'Memory equality instead of mathematical equality': Pass
     (student tests vs. broken code.)
-Total: 50/85
+Total: 65/85
 
 
 Details:
@@ -40,7 +40,7 @@ Details:
 canon
 Solution test case detected error.
 .......E.....
-Time: 0.005
+Time: 0.006
 There was 1 error:
 1) testDelFourElt(TestList)java.lang.NullPointerException
 at List.delete(List.java:95)
@@ -86,13 +86,7 @@ Pass
 'InsertEnd fails to increment size'
     (student tests vs. broken code.)
 ----------------------------------------
-broke4
-Student test case did not detect error.
-...
-Time: 0.004
-
-OK (3 tests)
-
+Pass
 
 ----------------------------------------
 'InsertEnd inserts at beginning'
@@ -122,13 +116,7 @@ Pass
 'Delete truncates list'
     (student tests vs. broken code.)
 ----------------------------------------
-broke9
-Student test case did not detect error.
-...
-Time: 0.003
-
-OK (3 tests)
-
+Pass
 
 ----------------------------------------
 'Reverse deletes list'
@@ -146,11 +134,5 @@ Pass
 'Memory equality instead of mathematical equality'
     (student tests vs. broken code.)
 ----------------------------------------
-broke12
-Student test case did not detect error.
-...
-Time: 0.003
-
-OK (3 tests)
-
+Pass
 
