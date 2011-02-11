@@ -39,6 +39,7 @@ public class TestList extends TestCase {
        assertEquals("insertAtEnd Test",1,foo.find(i25));
        foo.reverse();
        assertEquals("Reverse Test",1,foo.find(i25));
+       assertEquals("Memory Test",1,foo.find(new Integer(25)));
    }
    
    public void testTwo() {
@@ -60,6 +61,7 @@ public class TestList extends TestCase {
        rev.insert(i25);
        assertEquals("Reverse Test",rev.find(i1),foo.find(i1));
        assertEquals("Reverse Test",rev.find(i25),foo.find(i25));
+       assertEquals("Memory Test",2,foo.find(new Integer(1)));
    }
    
    /*public void testThree() {
