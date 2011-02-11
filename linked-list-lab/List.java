@@ -50,20 +50,15 @@ public class List<E> {
     //         0 = not found
     //         1 = first element, etc.
     public int find(E data) {
-        //if first is not null, then look for data
-        if (first!=null) {
-            if (first.data.equals(data)) {
-                return 1;
+        Node curr = first;
+        int i = 1;
+        while (curr != null) {
+            if (curr.data.equals(data)) { //check if they are equal
+                return i; //return index
+            } else {
+                i++; //inc index
+                curr = curr.next; //continue traversing list
             }
-            Node f = first.next;
-            int i = 2;
-            while (f != null) {
-                if (f.data.equals(data)) {
-                    return i; //if it finds data, return the index
-                } else  i++; //inc index
-                f = f.next; //continue traversing list
-            }
-            return 0; //can't find data after fully traversing list
         }
         return 0; //else return not found
     }
@@ -89,7 +84,7 @@ public class List<E> {
     // Inputs: int -- the location of the element to be deleted.
     // Output: none
     public void delete(int index) {
-        if (first!=null && size>=index) {
+        if (first!=null && size>=index && index>=1) {
         //if you are deleting the first item, make first point to first.next
         if (index==1) first=first.next;
         else {
@@ -109,17 +104,18 @@ public class List<E> {
     // Inputs: none
     // Output: none
     public void reverse() {
-        if (size>2) {
-            Node curr = first; //5,2,1, reversed is 1,2,5
-            first=null;
+        if (size > 1) {
+            Node curr = first;
+            List rev = new List();
             while (curr != null) {
-                insertAtEnd(curr.data);
-                curr = curr.next; //move to next item in list
+                rev.insert(curr.data);
+                curr = curr.next;
             }
-        } else if (size==2) {
-            Node save = first;
-            first=first.next;
-            insertAtEnd(save.data);
+            first = rev.getFirst();
         }
+    }
+    
+    public Node getFirst() {
+        return first;
     }
 }
