@@ -1,5 +1,5 @@
 public class List<E> {
-    
+
     // Node is accessible inside the class, but not outside.
     private class Node {
         public E data;
@@ -89,12 +89,11 @@ public class List<E> {
         if (index==1) first=first.next;
         else {
             Node curr = first; //use curr as cursor
-            for (int i = 1; i < index; i++) {
+            for (int i = 2; i < index; i++) {
                 curr=curr.next; //traverse the list until you get to the item to be deleted
             }
-            if (curr.next.next!=null) curr.next=curr.next.next;
-            //if you are not at the end of the list, make curr curr.next and take previous curr out of the list
-            else curr.next=null; //if you are at the end of the list, cut off curr.next
+            curr.next=curr.next.next;
+            //skip the iem to be deleted and make curr.next the item to be deleted's next
         } size--; //decrement size
         }
     }
