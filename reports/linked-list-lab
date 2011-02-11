@@ -1,5 +1,5 @@
 Testing lab Linked List Lab for etendian.
-Thu Feb 10 18:27:39 CST 2011
+Thu Feb 10 18:33:04 CST 2011
 
 Running 'Canonical Test Cases': Fail
     (solutions tests vs. student code.)
@@ -40,7 +40,7 @@ Details:
 canon
 Solution test case detected error.
 .......E.....
-Time: 0.006
+Time: 0.005
 There was 1 error:
 1) testDelFourElt(TestList)java.lang.NullPointerException
 at List.delete(List.java:95)
@@ -149,7 +149,7 @@ Pass
 broke12
 Student test case did not detect error.
 ...
-Time: 0.004
+Time: 0.003
 
 OK (3 tests)
 
