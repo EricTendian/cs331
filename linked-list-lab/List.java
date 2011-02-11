@@ -1,5 +1,5 @@
 public class List<E> {
-
+    
     // Node is accessible inside the class, but not outside.
     private class Node {
         public E data;
