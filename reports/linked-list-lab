@@ -1,0 +1,156 @@
+Testing lab Linked List Lab for etendian.
+Thu Feb 10 18:27:39 CST 2011
+
+Running 'Canonical Test Cases': Fail
+    (solutions tests vs. student code.)
+Running 'Working version of program': Pass
+    (student tests vs. solution code.)
+Running 'Size Returns 0': Pass
+    (student tests vs. broken code.)
+Running 'Insert fails to increment size': Pass
+    (student tests vs. broken code.)
+Running 'Insert erases first element': Pass
+    (student tests vs. broken code.)
+Running 'InsertEnd fails to increment size': Fail
+    (student tests vs. broken code.)
+Running 'InsertEnd inserts at beginning': Pass
+    (student tests vs. broken code.)
+Running 'Find only returns -1': Pass
+    (student tests vs. broken code.)
+Running 'Find only works the first time': Pass
+    (student tests vs. broken code.)
+Running 'Delete does nothing': Pass
+    (student tests vs. broken code.)
+Running 'Delete truncates list': Fail
+    (student tests vs. broken code.)
+Running 'Reverse deletes list': Pass
+    (student tests vs. broken code.)
+Running 'Reverse does nothing': Pass
+    (student tests vs. broken code.)
+Running 'Memory equality instead of mathematical equality': Fail
+    (student tests vs. broken code.)
+Total: 50/85
+
+
+Details:
+----------------------------------------
+'Canonical Test Cases'
+    (solutions tests vs. student code.)
+----------------------------------------
+canon
+Solution test case detected error.
+.......E.....
+Time: 0.006
+There was 1 error:
+1) testDelFourElt(TestList)java.lang.NullPointerException
+at List.delete(List.java:95)
+at TestList.testDelFourElt(TestList.java:120)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+FAILURES!!!
+Tests run: 12,  Failures: 0,  Errors: 1
+
+
+----------------------------------------
+'Working version of program'
+    (student tests vs. solution code.)
+----------------------------------------
+Pass
+...
+Time: 0.004
+
+OK (3 tests)
+
+
+----------------------------------------
+'Size Returns 0'
+    (student tests vs. broken code.)
+----------------------------------------
+Pass
+
+----------------------------------------
+'Insert fails to increment size'
+    (student tests vs. broken code.)
+----------------------------------------
+Pass
+
+----------------------------------------
+'Insert erases first element'
+    (student tests vs. broken code.)
+----------------------------------------
+Pass
+
+----------------------------------------
+'InsertEnd fails to increment size'
+    (student tests vs. broken code.)
+----------------------------------------
+broke4
+Student test case did not detect error.
+...
+Time: 0.004
+
+OK (3 tests)
+
+
+----------------------------------------
+'InsertEnd inserts at beginning'
+    (student tests vs. broken code.)
+----------------------------------------
+Pass
+
+----------------------------------------
+'Find only returns -1'
+    (student tests vs. broken code.)
+----------------------------------------
+Pass
+
+----------------------------------------
+'Find only works the first time'
+    (student tests vs. broken code.)
+----------------------------------------
+Pass
+
+----------------------------------------
+'Delete does nothing'
+    (student tests vs. broken code.)
+----------------------------------------
+Pass
+
+----------------------------------------
+'Delete truncates list'
+    (student tests vs. broken code.)
+----------------------------------------
+broke9
+Student test case did not detect error.
+...
+Time: 0.003
+
+OK (3 tests)
+
+
+----------------------------------------
+'Reverse deletes list'
+    (student tests vs. broken code.)
+----------------------------------------
+Pass
+
+----------------------------------------
+'Reverse does nothing'
+    (student tests vs. broken code.)
+----------------------------------------
+Pass
+
+----------------------------------------
+'Memory equality instead of mathematical equality'
+    (student tests vs. broken code.)
+----------------------------------------
+broke12
+Student test case did not detect error.
+...
+Time: 0.004
+
+OK (3 tests)
+
+
