@@ -1,0 +1,47 @@
+# put these lines in front of all scripts
+
+import os, sys
+env = Environment(ENV=os.environ)
+
+# Compile the java files
+
+compileList = env.Java('classes','list',JAVACLASSPATH='/usr/share/junit/lib/junit.jar')
+compileStack = env.Java('classes','stack',JAVACLASSPATH='/usr/share/junit/lib/junit.jar:classes')
+compileQueue = env.Java('classes','queue',JAVACLASSPATH='/usr/share/junit/lib/junit.jar:classes')
+
+env.Depends(compileStack,compileList)
+env.Depends(compileQueue,compileList)
+env.Alias('compile-list',compileList)
+env.Alias('compile-stack',compileStack)
+env.Alias('compile-queue',compileQueue)
+
+env.Alias('compile',[compileList, compileStack, compileQueue])
+
+# Run the tests
+
+testList = env.Command('test-list',compileList,
+   ['java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestList'])
+testStack = env.Command('test-stack',compileStack,
+   ['java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestStack'])
+testQueue = env.Command('test-queue',compileQueue,
+   ['java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestQueue'])
+
+env.Depends(testList,compileList)
+env.Depends(testStack,compileStack)
+env.Depends(testQueue,compileQueue)
+
+env.Alias('tests',[testList, testStack, testQueue])
+
+# Utility to commit and push
+
+add = env.Command('add',['list/List.java','list/TestList.java',
+      'stack/Stack.java','stack/TestStack.java',
+      'queue/Queue.java', 'queue/TestQueue.java'],'git add {list,stack.queue}/*.java')
+
+commit = env.Command('commit',add,'git commit')
+
+env.Command('submit',[add,commit],
+   ['git pull',
+    'git push'])
+
+Default(compile)
