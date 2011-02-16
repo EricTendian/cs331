@@ -36,7 +36,8 @@ env.Alias('tests',[testList, testStack, testQueue])
 
 add = env.Command('add',['list/List.java','list/TestList.java',
       'stack/Stack.java','stack/TestStack.java',
-      'queue/Queue.java', 'queue/TestQueue.java'],'git add {list,stack.queue}/*.java')
+      'queue/Queue.java', 'queue/TestQueue.java'],'git add 
+{list,stack,queue}/*.java')
 
 commit = env.Command('commit',add,'git commit')
 
