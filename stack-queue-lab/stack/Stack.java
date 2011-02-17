@@ -15,7 +15,7 @@ public class Stack<E> {
     
     public E top () {
         E first = l.removeFromFront();
-        l.insertAtFront(first);
+        if (first!=null) l.insertAtFront(first);
         return first;
     }
     

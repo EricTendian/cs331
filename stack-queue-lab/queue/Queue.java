@@ -15,7 +15,7 @@ public class Queue<E> {
     
     public E front() {
         E first = l.removeFromFront();
-        l.insertAtFront(first);
+        if (first!=null) l.insertAtFront(first);
         return first;
     }
     
