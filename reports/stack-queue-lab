@@ -5,11 +5,31 @@ Running Testing student's program (Stacks): Pass
     (solutions tests vs. student code.)
 Running Testing student's program (Queue): Did not compile
     (solutions tests vs. student code.)
-Running Test student's TestStack against working version of program: Did not compile
+Running Test student's TestStack against working version of program: Pass
     (student tests vs. solution code.)
-
- No further tests will be run.
- No further tests will be run.Total: 30/120
+Running Test student's TestQueue against working version of program: Pass
+    (student tests vs. solution code.)
+Running Push doesn't change size: Pass
+    (student tests vs. broken code.)
+Running Pop doesn't change size: Pass
+    (student tests vs. broken code.)
+Running Pop doesn't remove element: Pass
+    (student tests vs. broken code.)
+Running Pop empty stack makes negative size: Pass
+    (student tests vs. broken code.)
+Running Push replaces all elements: Pass
+    (student tests vs. broken code.)
+Running Enqueue enters wrong end: Pass
+    (student tests vs. broken code.)
+Running Dequeue doesn't update size: Pass
+    (student tests vs. broken code.)
+Running Dequeue doesn't remove element: Pass
+    (student tests vs. broken code.)
+Running Front removes element: Pass
+    (student tests vs. broken code.)
+Running Enqueue doesn't update size: Pass
+    (student tests vs. broken code.)
+Total: 90/120
 
 
 Details:
@@ -20,7 +40,7 @@ Testing student's program (Stacks)
 Pass
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestStack
 ....
-Time: 0.005
+Time: 0.012
 
 OK (4 tests)
 
@@ -44,80 +64,83 @@ OSError: [Errno 2] No such file or directory
 Test student's TestStack against working version of program
     (student tests vs. solution code.)
 ----------------------------------------
-Traceback (most recent call last):
-File "/usr/bin/scons", line 187, in <module>
-import SCons.Script
-File "/usr/lib/scons-2.0.1/SCons/Script/__init__.py", line 131, in <module>
-import SConscript
-File "/usr/lib/scons-2.0.1/SCons/Script/SConscript.py", line 68, in <module>
-launch_dir = os.path.abspath(os.curdir)
-File "/usr/lib64/python2.6/posixpath.py", line 343, in abspath
-cwd = os.getcwd()
-OSError: [Errno 2] No such file or directory
+Pass
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestStack
+...
+Time: 0.005
+
+OK (3 tests)
+
 
 ----------------------------------------
 Test student's TestQueue against working version of program
     (student tests vs. solution code.)
 ----------------------------------------
-Not run.  Qualifying tests failed.
+Pass
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestQueue
+...
+Time: 0.01
+
+OK (3 tests)
+
 
 ----------------------------------------
 Push doesn't change size
     (student tests vs. broken code.)
 ----------------------------------------
-Not run.  Qualifying tests failed.
+Pass
 
 ----------------------------------------
 Pop doesn't change size
     (student tests vs. broken code.)
 ----------------------------------------
-Not run.  Qualifying tests failed.
+Pass
 
 ----------------------------------------
 Pop doesn't remove element
     (student tests vs. broken code.)
 ----------------------------------------
-Not run.  Qualifying tests failed.
+Pass
 
 ----------------------------------------
 Pop empty stack makes negative size
     (student tests vs. broken code.)
 ----------------------------------------
-Not run.  Qualifying tests failed.
+Pass
 
 ----------------------------------------
 Push replaces all elements
     (student tests vs. broken code.)
 ----------------------------------------
-Not run.  Qualifying tests failed.
+Pass
 
 ----------------------------------------
 Enqueue enters wrong end
     (student tests vs. broken code.)
 ----------------------------------------
-Not run.  Qualifying tests failed.
+Pass
 
 ----------------------------------------
 Dequeue doesn't update size
     (student tests vs. broken code.)
 ----------------------------------------
-Not run.  Qualifying tests failed.
+Pass
 
 ----------------------------------------
 Dequeue doesn't remove element
     (student tests vs. broken code.)
 ----------------------------------------
-Not run.  Qualifying tests failed.
+Pass
 
 ----------------------------------------
 Front removes element
     (student tests vs. broken code.)
 ----------------------------------------
-Not run.  Qualifying tests failed.
+Pass
 
 ----------------------------------------
 Enqueue doesn't update size
     (student tests vs. broken code.)
 ----------------------------------------
-Not run.  Qualifying tests failed.
+Pass
 
