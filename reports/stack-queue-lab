@@ -1,9 +1,9 @@
 Testing lab Stacks and Queues Lab for etendian.
-Mon Feb 21 09:03:38 CST 2011
+Mon Feb 21 22:38:11 CST 2011
 
 Running Testing student's program (Stacks): Pass
     (solutions tests vs. student code.)
-Running Testing student's program (Queue): Did not compile
+Running Testing student's program (Queue): Pass
     (solutions tests vs. student code.)
 Running Test student's TestStack against working version of program: Pass
     (student tests vs. solution code.)
@@ -29,7 +29,7 @@ Running Front removes element: Pass
     (student tests vs. broken code.)
 Running Enqueue doesn't update size: Pass
     (student tests vs. broken code.)
-Total: 90/120
+Total: 120/120
 
 
 Details:
@@ -40,7 +40,7 @@ Testing student's program (Stacks)
 Pass
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestStack
 ....
-Time: 0.012
+Time: 0.005
 
 OK (4 tests)
 
@@ -49,16 +49,13 @@ OK (4 tests)
 Testing student's program (Queue)
     (solutions tests vs. student code.)
 ----------------------------------------
-Traceback (most recent call last):
-File "/usr/bin/scons", line 187, in <module>
-import SCons.Script
-File "/usr/lib/scons-2.0.1/SCons/Script/__init__.py", line 131, in <module>
-import SConscript
-File "/usr/lib/scons-2.0.1/SCons/Script/SConscript.py", line 68, in <module>
-launch_dir = os.path.abspath(os.curdir)
-File "/usr/lib64/python2.6/posixpath.py", line 343, in abspath
-cwd = os.getcwd()
-OSError: [Errno 2] No such file or directory
+Pass
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestQueue
+....
+Time: 0.004
+
+OK (4 tests)
+
 
 ----------------------------------------
 Test student's TestStack against working version of program
@@ -67,7 +64,7 @@ Test student's TestStack against working version of program
 Pass
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestStack
 ...
-Time: 0.005
+Time: 0.004
 
 OK (3 tests)
 
@@ -79,7 +76,7 @@ Test student's TestQueue against working version of program
 Pass
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestQueue
 ...
-Time: 0.01
+Time: 0.005
 
 OK (3 tests)
 
