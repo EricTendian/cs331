@@ -1,5 +1,5 @@
 public class Queue<E> {
-    private List<E> l;
+    private List<E> l;//
     
     public Queue() {
         l = new List<E>();
