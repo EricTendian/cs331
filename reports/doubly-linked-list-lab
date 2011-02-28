@@ -1,0 +1,233 @@
+Testing lab doubly linked list lab for etendian.
+Sun Feb 27 21:45:58 CST 2011
+
+Running 'Testing student's code': Did not compile
+    (solutions tests vs. student code.)
+Running 'Testing student's test cases with working version of program': Pass
+    (student tests vs. solution code.)
+Running 'size doesn't increment on insertion.': Fail
+    (student tests vs. broken code.)
+Running 'size doesn't decrement on deletion.': Fail
+    (student tests vs. broken code.)
+Running 'last pointer not set on initial insertion.': Fail
+    (student tests vs. broken code.)
+Running 'delete last element doesn't set first=null.': Fail
+    (student tests vs. broken code.)
+Running 'reverse iterator is really a forward iterator.': Fail
+    (student tests vs. broken code.)
+Running 'reverse iterator only returns last element.': Fail
+    (student tests vs. broken code.)
+Running 'insert last clobbers last element.': Fail
+    (student tests vs. broken code.)
+Running 'previous pointers never set.': Fail
+    (student tests vs. broken code.)
+Running 'forward find iterator skips first match.': Fail
+    (student tests vs. broken code.)
+Running 'forward find iterator returns everything.': Fail
+    (student tests vs. broken code.)
+Running 'reverse find iterator skips first match.': Fail
+    (student tests vs. broken code.)
+Running 'reverse find iterator returns everything.': Fail
+    (student tests vs. broken code.)
+Total: 5/85
+
+
+Details:
+----------------------------------------
+'Testing student's code'
+    (solutions tests vs. student code.)
+----------------------------------------
+javac -classpath /usr/share/junit/lib/junit.jar -d classes -sourcepath . DList.java Iterator.java TestDList.java
+TestDList.java:30: cannot find symbol
+symbol  : method insertFront(java.lang.Integer)
+location: class DList<java.lang.Integer>
+d.insertFront(i1);
+^
+TestDList.java:32: cannot find symbol
+symbol  : method insertFront(java.lang.Integer)
+location: class DList<java.lang.Integer>
+d.insertFront(i2);
+^
+TestDList.java:35: cannot find symbol
+symbol  : method insertEnd(java.lang.Integer)
+location: class DList<java.lang.Integer>
+d.insertEnd(i1);
+^
+TestDList.java:37: cannot find symbol
+symbol  : method insertEnd(java.lang.Integer)
+location: class DList<java.lang.Integer>
+d.insertEnd(i2);
+^
+TestDList.java:40: cannot find symbol
+symbol  : method deleteFront()
+location: class DList<java.lang.Integer>
+d.deleteFront();
+
+----------------------------------------
+'Testing student's test cases with working version of program'
+    (student tests vs. solution code.)
+----------------------------------------
+Pass
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
+.
+Time: 0.003
+
+OK (1 test)
+
+
+----------------------------------------
+'size doesn't increment on insertion.'
+    (student tests vs. broken code.)
+----------------------------------------
+broke1
+Student test case did not detect error.
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
+.
+Time: 0.003
+
+OK (1 test)
+
+
+----------------------------------------
+'size doesn't decrement on deletion.'
+    (student tests vs. broken code.)
+----------------------------------------
+broke2
+Student test case did not detect error.
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
+.
+Time: 0.003
+
+OK (1 test)
+
+
+----------------------------------------
+'last pointer not set on initial insertion.'
+    (student tests vs. broken code.)
+----------------------------------------
+broke3
+Student test case did not detect error.
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
+.
+Time: 0.004
+
+OK (1 test)
+
+
+----------------------------------------
+'delete last element doesn't set first=null.'
+    (student tests vs. broken code.)
+----------------------------------------
+broke4
+Student test case did not detect error.
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
+.
+Time: 0.004
+
+OK (1 test)
+
+
+----------------------------------------
+'reverse iterator is really a forward iterator.'
+    (student tests vs. broken code.)
+----------------------------------------
+broke5
+Student test case did not detect error.
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
+.
+Time: 0.003
+
+OK (1 test)
+
+
+----------------------------------------
+'reverse iterator only returns last element.'
+    (student tests vs. broken code.)
+----------------------------------------
+broke6
+Student test case did not detect error.
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
+.
+Time: 0.004
+
+OK (1 test)
+
+
+----------------------------------------
+'insert last clobbers last element.'
+    (student tests vs. broken code.)
+----------------------------------------
+broke7
+Student test case did not detect error.
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
+.
+Time: 0.003
+
+OK (1 test)
+
+
+----------------------------------------
+'previous pointers never set.'
+    (student tests vs. broken code.)
+----------------------------------------
+broke8
+Student test case did not detect error.
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
+.
+Time: 0.003
+
+OK (1 test)
+
+
+----------------------------------------
+'forward find iterator skips first match.'
+    (student tests vs. broken code.)
+----------------------------------------
+broke9
+Student test case did not detect error.
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
+.
+Time: 0.003
+
+OK (1 test)
+
+
+----------------------------------------
+'forward find iterator returns everything.'
+    (student tests vs. broken code.)
+----------------------------------------
+broke10
+Student test case did not detect error.
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
+.
+Time: 0.004
+
+OK (1 test)
+
+
+----------------------------------------
+'reverse find iterator skips first match.'
+    (student tests vs. broken code.)
+----------------------------------------
+broke11
+Student test case did not detect error.
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
+.
+Time: 0.003
+
+OK (1 test)
+
+
+----------------------------------------
+'reverse find iterator returns everything.'
+    (student tests vs. broken code.)
+----------------------------------------
+broke12
+Student test case did not detect error.
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
+.
+Time: 0.004
+
+OK (1 test)
+
+
