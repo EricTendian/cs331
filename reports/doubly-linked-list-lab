@@ -1,11 +1,11 @@
 Testing lab doubly linked list lab for etendian.
-Sun Feb 27 21:45:58 CST 2011
+Tue Mar  1 23:57:56 CST 2011
 
-Running 'Testing student's code': Did not compile
+Running 'Testing student's code': Fail
     (solutions tests vs. student code.)
 Running 'Testing student's test cases with working version of program': Pass
     (student tests vs. solution code.)
-Running 'size doesn't increment on insertion.': Fail
+Running 'size doesn't increment on insertion.': Pass
     (student tests vs. broken code.)
 Running 'size doesn't decrement on deletion.': Fail
     (student tests vs. broken code.)
@@ -29,7 +29,7 @@ Running 'reverse find iterator skips first match.': Fail
     (student tests vs. broken code.)
 Running 'reverse find iterator returns everything.': Fail
     (student tests vs. broken code.)
-Total: 5/85
+Total: 10/85
 
 
 Details:
@@ -37,31 +37,31 @@ Details:
 'Testing student's code'
     (solutions tests vs. student code.)
 ----------------------------------------
-javac -classpath /usr/share/junit/lib/junit.jar -d classes -sourcepath . DList.java Iterator.java TestDList.java
-TestDList.java:30: cannot find symbol
-symbol  : method insertFront(java.lang.Integer)
-location: class DList<java.lang.Integer>
-d.insertFront(i1);
-^
-TestDList.java:32: cannot find symbol
-symbol  : method insertFront(java.lang.Integer)
-location: class DList<java.lang.Integer>
-d.insertFront(i2);
-^
-TestDList.java:35: cannot find symbol
-symbol  : method insertEnd(java.lang.Integer)
-location: class DList<java.lang.Integer>
-d.insertEnd(i1);
-^
-TestDList.java:37: cannot find symbol
-symbol  : method insertEnd(java.lang.Integer)
-location: class DList<java.lang.Integer>
-d.insertEnd(i2);
-^
-TestDList.java:40: cannot find symbol
-symbol  : method deleteFront()
-location: class DList<java.lang.Integer>
-d.deleteFront();
+canon
+Solution test case detected error.
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
+..F.F.F.F.F.E.E
+Time: 0.06
+There were 2 errors:
+1) testFindFwd(TestDList)java.lang.NullPointerException
+at TestDList.testFindFwd(TestDList.java:198)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+2) testFindRev(TestDList)java.lang.NullPointerException
+at TestDList.testFindRev(TestDList.java:221)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+There were 5 failures:
+1) testSansIterators(TestDList)junit.framework.AssertionFailedError: 10. tsi expected:<0> but was:<-2>
+at TestDList.testSansIterators(TestDList.java:53)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+2) testInsertFrontFwd(TestDList)junit.framework.AssertionFailedError: if fwd 1 expected:<1> but was:<null>
+at TestDList.testInsertFrontFwd(TestDList.java:68)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 
 ----------------------------------------
 'Testing student's test cases with working version of program'
@@ -69,24 +69,17 @@ d.deleteFront();
 ----------------------------------------
 Pass
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
-.
-Time: 0.003
+..
+Time: 0.042
 
-OK (1 test)
+OK (2 tests)
 
 
 ----------------------------------------
 'size doesn't increment on insertion.'
     (student tests vs. broken code.)
 ----------------------------------------
-broke1
-Student test case did not detect error.
-java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
-.
-Time: 0.003
-
-OK (1 test)
-
+Pass
 
 ----------------------------------------
 'size doesn't decrement on deletion.'
@@ -95,10 +88,10 @@ OK (1 test)
 broke2
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
-.
-Time: 0.003
+..
+Time: 0.04
 
-OK (1 test)
+OK (2 tests)
 
 
 ----------------------------------------
@@ -108,10 +101,10 @@ OK (1 test)
 broke3
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
-.
-Time: 0.004
+..
+Time: 0.047
 
-OK (1 test)
+OK (2 tests)
 
 
 ----------------------------------------
@@ -121,10 +114,10 @@ OK (1 test)
 broke4
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
-.
-Time: 0.004
+..
+Time: 0.047
 
-OK (1 test)
+OK (2 tests)
 
 
 ----------------------------------------
@@ -134,10 +127,10 @@ OK (1 test)
 broke5
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
-.
-Time: 0.003
+..
+Time: 0.027
 
-OK (1 test)
+OK (2 tests)
 
 
 ----------------------------------------
@@ -147,10 +140,10 @@ OK (1 test)
 broke6
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
-.
-Time: 0.004
+..
+Time: 0.027
 
-OK (1 test)
+OK (2 tests)
 
 
 ----------------------------------------
@@ -160,10 +153,10 @@ OK (1 test)
 broke7
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
-.
-Time: 0.003
+..
+Time: 0.062
 
-OK (1 test)
+OK (2 tests)
 
 
 ----------------------------------------
@@ -173,10 +166,10 @@ OK (1 test)
 broke8
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
-.
-Time: 0.003
+..
+Time: 0.047
 
-OK (1 test)
+OK (2 tests)
 
 
 ----------------------------------------
@@ -186,10 +179,10 @@ OK (1 test)
 broke9
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
-.
-Time: 0.003
+..
+Time: 0.042
 
-OK (1 test)
+OK (2 tests)
 
 
 ----------------------------------------
@@ -199,10 +192,10 @@ OK (1 test)
 broke10
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
-.
-Time: 0.004
+..
+Time: 0.043
 
-OK (1 test)
+OK (2 tests)
 
 
 ----------------------------------------
@@ -212,10 +205,10 @@ OK (1 test)
 broke11
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
-.
-Time: 0.003
+..
+Time: 0.041
 
-OK (1 test)
+OK (2 tests)
 
 
 ----------------------------------------
@@ -225,9 +218,9 @@ OK (1 test)
 broke12
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
-.
-Time: 0.004
+..
+Time: 0.034
 
-OK (1 test)
+OK (2 tests)
 
 
