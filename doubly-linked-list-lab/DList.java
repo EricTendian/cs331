@@ -81,6 +81,12 @@ public class DList<E extends Comparable<E>> {
       }
    }
 
+   public class FwdFindIterator extends FwdIterator {
+      public FwdFindIterator(E data) {
+      
+      }
+   }
+
    public class RevIterator extends AllIterator {
       public RevIterator() {
          cursor = sentinel;
