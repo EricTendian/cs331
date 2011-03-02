@@ -18,11 +18,32 @@ public class DList<E extends Comparable<E>> {
    private Node sentinel;
 
    public DList() {
-      // You will need to initialize everything here.
+      size = 0;
+      sentinel = null;
    }
 
    public int size() {
       return size;
+   }
+
+   public void insertFront(E data) {
+      sentinel = new Node(null,data,sentinel);
+      size++;
+   }
+
+   public void insertEnd(E data) {
+      sentinel = new Node(sentinel,data,null);
+      size++;
+   }
+
+   public void deleteFront() {
+      sentinel = new Node(sentinel.data);
+      size--;
+   }
+
+   public void deleteEnd() {
+      sentinel = new Node(sentinel,sentinel.data,sentinel.prev);
+      size--;
    }
 
    private abstract class AllIterator implements Iterator<E> {
@@ -43,8 +64,8 @@ public class DList<E extends Comparable<E>> {
       public abstract void next();  // set valid to null if next moves to the sentinel
 
       public void delete() {
-         // your code here!
-         // What are your boundary conditions?
+         if (cursor != sentinel)
+	    sentinel.next = cursor.next;
       }
    }
 
@@ -60,4 +81,31 @@ public class DList<E extends Comparable<E>> {
       }
    }
 
+   public class RevIterator extends AllIterator {
+      public RevIterator() {
+         cursor = sentinel;
+	 this.next();
+      }
+
+      public void next() {
+         if (cursor != sentinel)
+	    cursor = cursor.prev;
+      }
+   }
+
+   public Iterator makeFwdIterator() {
+      return new FwdIterator();
+   }
+
+   public Iterator makeRevIterator() {
+      return new RevIterator();
+   }
+
+   public Iterator makeFwdFindIterator(E data) {
+      return null;
+   }
+
+   public Iterator makeRevFindIterator(E data) {
+      return null;
+   }
 }

@@ -19,4 +19,15 @@ public class TestDList extends TestCase {
       assertEquals("1. create",0,d.size());
    }
 
+   public void testInsertion() {
+      DList<Integer> d = new DList<Integer>();
+      d.insertFront(i1);
+      d.insertFront(i2);
+      d.insertFront(i5);
+      assertEquals("2. insert",3,d.size());
+      Iterator fwd = d.makeFwdIterator();
+      Iterator rev = d.makeRevIterator();
+      //assertEquals();
+   }
+
 }
