@@ -17,17 +17,48 @@ public class TestDList extends TestCase {
       DList<Integer> d = new DList<Integer>();
 
       assertEquals("1. create",0,d.size());
+      d.insertFront(i1);
+      d.deleteEnd();
+      assertEquals("size doesn't decrement on deletion",0,d.size());
    }
 
-   public void testInsertion() {
+   public void testFrontInsertion() {
       DList<Integer> d = new DList<Integer>();
       d.insertFront(i1);
       d.insertFront(i2);
       d.insertFront(i5);
-      assertEquals("2. insert",3,d.size());
       Iterator fwd = d.makeFwdIterator();
       Iterator rev = d.makeRevIterator();
-      //assertEquals();
+      assertEquals("insertFront 3 items",3,d.size());
+      assertEquals("front item correct",i5,fwd.get());
+      assertEquals("last item correct",i1,rev.get());
+      d.deleteFront();
+      assertEquals("deleteFront decrements size",2,d.size());
+      d.insertFront(i5);
+      assertEquals("forward iterator starts at first element",i5,fwd.get());
+      fwd.next();
+      assertEquals("forward iterator only returns first element",i2,fwd.get());
+      
+      assertEquals("reverse iterator is really a forward iterator",false,fwd.equals(rev));      
+      assertEquals("reverse iterator only returns last element",i1,rev.get());
+      rev.next();
+      assertEquals("reverse iterator only returns last element",i2,rev.get());
+   }
+
+   public void testEndInsertion() {
+      DList<Integer> d = new DList<Integer>();
+      d.insertEnd(i1);
+      d.insertEnd(i2);
+      d.insertEnd(i5);
+      Iterator fwd = d.makeFwdIterator();
+      Iterator rev = d.makeRevIterator();
+      assertEquals("insertEnd 3 items",3,d.size());
+      assertEquals("front item correct",i1,fwd.get());
+      assertEquals("last item correct",i5,rev.get());
+      d.deleteEnd();
+      assertEquals("deleteEnd decrements size",2,d.size());
+      d.insertEnd(i5);
+      
    }
 
 }
