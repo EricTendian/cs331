@@ -58,6 +58,7 @@ public class TestDList extends TestCase {
         assertEquals("last item correct", i5, rev.get());
         d.deleteEnd();
         assertEquals("deleteEnd decrements size", 2, d.size());
+	assertEquals("deleteEnd doesn't set first=null", i1, fwd.get());
         d.insertEnd(i5);
 
     }
@@ -69,11 +70,8 @@ public class TestDList extends TestCase {
         d.insertFront(i5);
         Iterator fwdfind = d.makeFwdFindIterator(i1);
         Iterator revfind = d.makeRevFindIterator(i5);
-        fwdfind.next();
-        revfind.next();
         assertEquals("element found fwd", null, fwdfind.get());
         assertEquals("element found rev", null, revfind.get());
-        
         fwdfind.next();
         revfind.next();
         assertEquals("fwdfind returns everything", null, fwdfind.get());
