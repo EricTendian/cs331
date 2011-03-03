@@ -1,6 +1,6 @@
 interface Iterator<E> {
-   E get();
-   void next();
-   boolean isValid();
-   void delete();
+    E get();
+    void next();
+    boolean isValid();
+    void delete();
 }
