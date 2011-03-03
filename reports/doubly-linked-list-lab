@@ -1,12 +1,35 @@
 Testing lab doubly linked list lab for etendian.
-Wed Mar  2 23:21:47 CST 2011
+Wed Mar  2 23:26:46 CST 2011
 
 Running 'Testing student's code': Fail
     (solutions tests vs. student code.)
-Running 'Testing student's test cases with working version of program': Fail
+Running 'Testing student's test cases with working version of program': Pass
     (student tests vs. solution code.)
-
- No further tests will be run.Total: 0/85
+Running 'size doesn't increment on insertion.': Pass
+    (student tests vs. broken code.)
+Running 'size doesn't decrement on deletion.': Pass
+    (student tests vs. broken code.)
+Running 'last pointer not set on initial insertion.': Pass
+    (student tests vs. broken code.)
+Running 'delete last element doesn't set first=null.': Fail
+    (student tests vs. broken code.)
+Running 'reverse iterator is really a forward iterator.': Pass
+    (student tests vs. broken code.)
+Running 'reverse iterator only returns last element.': Pass
+    (student tests vs. broken code.)
+Running 'insert last clobbers last element.': Fail
+    (student tests vs. broken code.)
+Running 'previous pointers never set.': Pass
+    (student tests vs. broken code.)
+Running 'forward find iterator skips first match.': Fail
+    (student tests vs. broken code.)
+Running 'forward find iterator returns everything.': Pass
+    (student tests vs. broken code.)
+Running 'reverse find iterator skips first match.': Fail
+    (student tests vs. broken code.)
+Running 'reverse find iterator returns everything.': Pass
+    (student tests vs. broken code.)
+Total: 45/85
 
 
 Details:
@@ -44,91 +67,111 @@ at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 'Testing student's test cases with working version of program'
     (student tests vs. solution code.)
 ----------------------------------------
-working
-Solution test case detected error.
+Pass
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
-....F
-Time: 0.01
-There was 1 failure:
-1) testFind(TestDList)junit.framework.AssertionFailedError: fwdfind returns everything expected:<1> but was:<null>
-at TestDList.testFind(TestDList.java:79)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+....
+Time: 0.008
 
-FAILURES!!!
-Tests run: 4,  Failures: 1,  Errors: 0
+OK (4 tests)
 
 
 ----------------------------------------
 'size doesn't increment on insertion.'
     (student tests vs. broken code.)
 ----------------------------------------
-Not run.  Qualifying tests failed.
+Pass
 
 ----------------------------------------
 'size doesn't decrement on deletion.'
     (student tests vs. broken code.)
 ----------------------------------------
-Not run.  Qualifying tests failed.
+Pass
 
 ----------------------------------------
 'last pointer not set on initial insertion.'
     (student tests vs. broken code.)
 ----------------------------------------
-Not run.  Qualifying tests failed.
+Pass
 
 ----------------------------------------
 'delete last element doesn't set first=null.'
     (student tests vs. broken code.)
 ----------------------------------------
-Not run.  Qualifying tests failed.
+broke4
+Student test case did not detect error.
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
+....
+Time: 0.008
+
+OK (4 tests)
+
 
 ----------------------------------------
 'reverse iterator is really a forward iterator.'
     (student tests vs. broken code.)
 ----------------------------------------
-Not run.  Qualifying tests failed.
+Pass
 
 ----------------------------------------
 'reverse iterator only returns last element.'
     (student tests vs. broken code.)
 ----------------------------------------
-Not run.  Qualifying tests failed.
+Pass
 
 ----------------------------------------
 'insert last clobbers last element.'
     (student tests vs. broken code.)
 ----------------------------------------
-Not run.  Qualifying tests failed.
+broke7
+Student test case did not detect error.
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
+....
+Time: 0.008
+
+OK (4 tests)
+
 
 ----------------------------------------
 'previous pointers never set.'
     (student tests vs. broken code.)
 ----------------------------------------
-Not run.  Qualifying tests failed.
+Pass
 
 ----------------------------------------
 'forward find iterator skips first match.'
     (student tests vs. broken code.)
 ----------------------------------------
-Not run.  Qualifying tests failed.
+broke9
+Student test case did not detect error.
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
+....
+Time: 0.008
+
+OK (4 tests)
+
 
 ----------------------------------------
 'forward find iterator returns everything.'
     (student tests vs. broken code.)
 ----------------------------------------
-Not run.  Qualifying tests failed.
+Pass
 
 ----------------------------------------
 'reverse find iterator skips first match.'
     (student tests vs. broken code.)
 ----------------------------------------
-Not run.  Qualifying tests failed.
+broke11
+Student test case did not detect error.
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
+....
+Time: 0.008
+
+OK (4 tests)
+
 
 ----------------------------------------
 'reverse find iterator returns everything.'
     (student tests vs. broken code.)
 ----------------------------------------
-Not run.  Qualifying tests failed.
+Pass
 
