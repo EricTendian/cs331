@@ -64,15 +64,16 @@ public class TestDList extends TestCase {
 
     public void testFind() {
         DList<Integer> d = new DList<Integer>();
-        d.insertEnd(i1);
+        d.insertFront(i1);
         d.insertEnd(i2);
-        d.insertEnd(i5);
+        d.insertFront(i5);
         Iterator fwdfind = d.makeFwdFindIterator(i1);
         Iterator revfind = d.makeRevFindIterator(i5);
-        assertEquals("element found fwd", i1, fwdfind.get());
-        assertEquals("element found rev", i5, revfind.get());
         fwdfind.next();
         revfind.next();
+        assertEquals("element found fwd", i1, fwdfind.get());
+        assertEquals("element found rev", i5, revfind.get());
+        
         fwdfind.next();
         revfind.next();
         assertEquals("fwdfind returns everything", i1, fwdfind.get());
