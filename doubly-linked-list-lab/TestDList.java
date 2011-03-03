@@ -70,8 +70,10 @@ public class TestDList extends TestCase {
         d.insertFront(i5);
         Iterator fwdfind = d.makeFwdFindIterator(i1);
         Iterator revfind = d.makeRevFindIterator(i5);
-        assertEquals("element found fwd", i5, fwdfind.get());
-        assertEquals("element found rev", i2, revfind.get());
+	fwdfind.next();
+	revfind.next();
+        assertEquals("element found fwd", i1, fwdfind.get());
+        assertEquals("element found rev", i5, revfind.get());
         fwdfind.next();
         revfind.next();
         assertEquals("fwdfind returns everything", null, fwdfind.get());
