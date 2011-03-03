@@ -1,5 +1,5 @@
 Testing lab doubly linked list lab for etendian.
-Wed Mar  2 23:31:47 CST 2011
+Wed Mar  2 23:41:47 CST 2011
 
 Running 'Testing student's code': Fail
     (solutions tests vs. student code.)
@@ -48,9 +48,9 @@ working
 Solution test case detected error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
 ....F
-Time: 0.009
+Time: 0.01
 There was 1 failure:
-1) testFind(TestDList)junit.framework.AssertionFailedError: element found fwd expected:<null> but was:<1>
+1) testFind(TestDList)junit.framework.AssertionFailedError: element found fwd expected:<5> but was:<1>
 at TestDList.testFind(TestDList.java:73)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
