@@ -76,33 +76,31 @@ public class DList<E extends Comparable<E>> {
 
         public FwdIterator() {
             cursor = sentinel;
+	    valid = true;
             this.next();
         }
 
         public void next() {
-            if (cursor != sentinel) {
-                cursor = cursor.next;
-            }
+            if (cursor != sentinel) cursor = cursor.next;
+            else valid = false;
         }
     }
 
     public class FwdFindIterator extends AllIterator {
-
         E data;
-        boolean found;
 
         public FwdFindIterator(E data) {
             cursor = sentinel;
             this.data = data;
-            found = false;
+            valid = true;
             this.next();
         }
 
         public void next() {
-	    if (found) {cursor=null;return;}
-            while (!found && cursor!=sentinel) {
+	    if (!isValid) {cursor=null;return;}
+            while (isValid() && cursor!=sentinel) {
                 if (data.compareTo(cursor.data) == 0) {
-                    found = true;
+                    valid = false;
                 } else cursor = cursor.next;
             }
         }
@@ -116,29 +114,26 @@ public class DList<E extends Comparable<E>> {
         }
 
         public void next() {
-            if (cursor != sentinel) {
-                cursor = cursor.prev;
-            }
+            if (cursor != sentinel) cursor = cursor.prev;
+            else valid = false; 
         }
     }
 
     public class RevFindIterator extends AllIterator {
-
         E data;
-        boolean found;
 
         public RevFindIterator(E data) {
             cursor = sentinel;
             this.data = data;
-            found = false;
+            valid = true;
             this.next();
         }
 
         public void next() {
-	    if (found) {cursor=null;return;}
+	    if (!isValid()) {cursor=null;return;}
             while (!found && cursor != sentinel) {
                 if (data.compareTo(cursor.data) == 0) {
-                    found = true;
+                    valid = false;
                 } else cursor = cursor.prev;
             }
         }
