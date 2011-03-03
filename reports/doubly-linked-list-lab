@@ -1,5 +1,5 @@
 Testing lab doubly linked list lab for etendian.
-Thu Mar  3 09:16:48 CST 2011
+Thu Mar  3 09:41:47 CST 2011
 
 Running 'Testing student's code': Did not compile
     (solutions tests vs. student code.)
@@ -15,12 +15,12 @@ Details:
     (solutions tests vs. student code.)
 ----------------------------------------
 javac -classpath /usr/share/junit/lib/junit.jar -d classes -sourcepath . DList.java Iterator.java TestDList.java
-DList.java:100: cannot find symbol
+DList.java:102: cannot find symbol
 symbol  : variable isValid
 location: class DList<E>.FwdFindIterator
 if (!isValid) {cursor=null;return;}
 ^
-DList.java:134: cannot find symbol
+DList.java:136: cannot find symbol
 symbol  : variable found
 location: class DList<E>.RevFindIterator
 while (!found && cursor != sentinel) {
@@ -36,7 +36,7 @@ working
 Solution test case detected error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
 ...F.
-Time: 0.01
+Time: 0.009
 There was 1 failure:
 1) testEndInsertion(TestDList)junit.framework.AssertionFailedError: last item overwritten expected:<2> but was:<1>
 at TestDList.testEndInsertion(TestDList.java:55)
