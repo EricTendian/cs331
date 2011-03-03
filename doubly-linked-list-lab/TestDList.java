@@ -48,16 +48,21 @@ public class TestDList extends TestCase {
 
     public void testEndInsertion() {
         DList<Integer> d = new DList<Integer>();
-        d.insertEnd(i1);
+        Iterator rev = d.makeRevIterator();
+	d.insertEnd(i1);
         d.insertEnd(i2);
+        assertEquals("last item overwritten", i2, rev.get());
+	rev.next();
+	assertEquals("last item overwritten", i1, rev.get());
         d.insertEnd(i5);
         Iterator fwd = d.makeFwdIterator();
-        Iterator rev = d.makeRevIterator();
+        rev = d.makeRevIterator();
         assertEquals("insertEnd 3 items", 3, d.size());
         assertEquals("front item correct", i1, fwd.get());
         assertEquals("last item correct", i5, rev.get());
         d.deleteEnd();
         assertEquals("deleteEnd decrements size", 2, d.size());
+        fwd = d.makeFwdIterator();
 	assertEquals("deleteEnd doesn't set first=null", i1, fwd.get());
         d.insertEnd(i5);
 
