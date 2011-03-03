@@ -48,9 +48,9 @@ public class TestDList extends TestCase {
 
     public void testEndInsertion() {
         DList<Integer> d = new DList<Integer>();
-        Iterator rev = d.makeRevIterator();
 	d.insertEnd(i1);
         d.insertEnd(i2);
+	Iterator rev = d.makeRevIterator();
         assertEquals("last item overwritten", i2, rev.get());
 	rev.next();
 	assertEquals("last item overwritten", i1, rev.get());
