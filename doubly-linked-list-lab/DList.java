@@ -67,7 +67,9 @@ public class DList<E extends Comparable<E>> {
 
         public void delete() {
             if (cursor != sentinel) {
-                sentinel.next = cursor.next;
+                cursor.prev.next = cursor.next;
+		cursor.next.prev = cursor.prev;
+		this.next();
             }
         }
     }
