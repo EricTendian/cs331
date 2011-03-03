@@ -71,8 +71,8 @@ public class TestDList extends TestCase {
         Iterator revfind = d.makeRevFindIterator(i5);
         fwdfind.next();
         revfind.next();
-        assertEquals("element found fwd", i1, fwdfind.get());
-        assertEquals("element found rev", i5, revfind.get());
+        assertEquals("element found fwd", null, fwdfind.get());
+        assertEquals("element found rev", null, revfind.get());
         
         fwdfind.next();
         revfind.next();
