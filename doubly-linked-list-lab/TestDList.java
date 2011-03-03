@@ -76,7 +76,7 @@ public class TestDList extends TestCase {
         
         fwdfind.next();
         revfind.next();
-        assertEquals("fwdfind returns everything", i1, fwdfind.get());
-        assertEquals("revfind returns everything", i5, revfind.get());
+        assertEquals("fwdfind returns everything", null, fwdfind.get());
+        assertEquals("revfind returns everything", null, revfind.get());
     }
 }
