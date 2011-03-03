@@ -1,5 +1,5 @@
 Testing lab doubly linked list lab for etendian.
-Wed Mar  2 22:31:48 CST 2011
+Wed Mar  2 22:36:46 CST 2011
 
 Running 'Testing student's code': Fail
     (solutions tests vs. student code.)
@@ -18,14 +18,14 @@ canon
 Solution test case detected error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
 ..F.F.F.F.F.F.E
-Time: 0.011
+Time: 0.01
 There was 1 error:
 1) testFindRev(TestDList)java.lang.NullPointerException
 at java.lang.Integer.compareTo(Integer.java:961)
 at java.lang.Integer.compareTo(Integer.java:50)
-at DList$RevFindIterator.next(DList.java:129)
-at DList$RevFindIterator.<init>(DList.java:122)
-at DList.makeRevFindIterator(DList.java:148)
+at DList$RevFindIterator.next(DList.java:131)
+at DList$RevFindIterator.<init>(DList.java:124)
+at DList.makeRevFindIterator(DList.java:150)
 at TestDList.testFindRev(TestDList.java:219)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
@@ -48,7 +48,7 @@ working
 Solution test case detected error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
 ....F
-Time: 0.01
+Time: 0.009
 There was 1 failure:
 1) testFind(TestDList)junit.framework.AssertionFailedError: fwdfind returns everything expected:<1> but was:<null>
 at TestDList.testFind(TestDList.java:77)
