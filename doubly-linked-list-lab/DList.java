@@ -84,6 +84,7 @@ public class DList<E extends Comparable<E>> {
 	public class FwdFindIterator extends AllIterator {
 		E data;
 		boolean found;
+		
 		public FwdFindIterator(E data) {
 			cursor = sentinel;
 			this.data=data;
@@ -116,6 +117,7 @@ public class DList<E extends Comparable<E>> {
 	public class RevFindIterator extends AllIterator {
 		E data;
 		boolean found;
+		
 		public RevFindIterator(E data) {
 			cursor = sentinel;
 			found = false;
