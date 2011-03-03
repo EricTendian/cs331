@@ -99,12 +99,11 @@ public class DList<E extends Comparable<E>> {
         }
 
         public void next() {
-            if (!found) {
-                if (cursor != sentinel && data.compareTo(cursor.data) != 0) {
-                    cursor = cursor.next;
-                } else if (data.compareTo(cursor.data) == 0) {
+	    if (found) {cursor=null;return;}
+            while (!found && cursor!=sentinel) {
+                if (data.compareTo(cursor.data) == 0) {
                     found = true;
-                }
+                } else cursor = cursor.next;
             }
         }
     }
@@ -136,12 +135,11 @@ public class DList<E extends Comparable<E>> {
         }
 
         public void next() {
-            if (!found) {
-                if (cursor != sentinel && data.compareTo(cursor.data) != 0) {
-                    cursor = cursor.prev;
-                } else if (data.compareTo(cursor.data) == 0) {
+	    if (found) {cursor=null;return;}
+            while (!found && cursor != sentinel) {
+                if (data.compareTo(cursor.data) == 0) {
                     found = true;
-                }
+                } else cursor = cursor.prev;
             }
         }
     }
