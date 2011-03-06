@@ -53,11 +53,8 @@ public class DList<E extends Comparable<E>> {
         protected boolean valid;
 
         public E get() {
-            if (cursor != sentinel) {
-                return cursor.data;
-            } else {
-                return null;
-            }
+            if (cursor != sentinel)  return cursor.data;
+            else return null;
         }
 
         public boolean isValid() {
@@ -82,34 +79,25 @@ public class DList<E extends Comparable<E>> {
         }
 
         public void next() {
-            if (cursor != sentinel) {
-                valid = true;
-                cursor = cursor.next;
-            } else {
-                valid = false;
-            }
+            if (cursor != sentinel) {cursor = cursor.next; valid = true;}
+            else valid = false;
         }
     }
 
     public class FwdFindIterator extends AllIterator {
         E data;
+        boolean found;
         public FwdFindIterator(E data) {
             cursor = sentinel;
             this.data = data;
-            valid = true;
             this.next();
         }
 
         public void next() {
-            if (!isValid()) {
-                cursor = null;
-            }
-            while (isValid() && cursor != sentinel) {
-                if (data.compareTo(cursor.data) == 0) {
-                    valid = false;
-                } else {
-                    cursor = cursor.next;
-                }
+            if (found) cursor = null;
+            while (!found && cursor != sentinel) {
+                if (data.compareTo(cursor.data) == 0) found = true;
+                else {cursor = cursor.next; valid = true;}
             }
         }
     }
@@ -121,32 +109,24 @@ public class DList<E extends Comparable<E>> {
         }
 
         public void next() {
-            if (cursor != sentinel) {
-                cursor = cursor.prev;
-            } else {
-                valid = false;
-            }
+            if (cursor != sentinel) {cursor = cursor.prev; valid = true;}
+            else valid = false;
         }
     }
 
     public class RevFindIterator extends AllIterator {
         E data;
+        boolean found;
         public RevFindIterator(E data) {
             cursor = sentinel;
             this.data = data;
-            valid = true;
             this.next();
         }
         public void next() {
-            if (!isValid()) {
-                cursor = null;
-            }
-            while (isValid() && cursor != sentinel) {
-                if (data.compareTo(cursor.data) == 0) {
-                    valid = false;
-                } else {
-                    cursor = cursor.prev;
-                }
+            if (found) cursor = null;
+            while (!found && cursor != sentinel) {
+                if (data.compareTo(cursor.data) == 0) found = true;
+                else {cursor = cursor.prev; valid = true;}
             }
         }
     }
