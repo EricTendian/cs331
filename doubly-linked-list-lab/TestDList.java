@@ -1,5 +1,5 @@
 import junit.framework.*;
-import etran.*;
+//import etran.*;
 public class TestDList extends TestCase {
 
     public Integer i1 = new Integer(1);
