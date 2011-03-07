@@ -33,11 +33,13 @@ public class DList<E extends Comparable<E>> {
 
     public void insertFront(E data) {
         sentinel.prev = new Node(sentinel, data, sentinel.prev);
+        sentinel.prev.next.prev = sentinel.prev;
         size++;
     }
 
     public void insertEnd(E data) {
         sentinel.next = new Node(sentinel.next, data, sentinel);
+        sentinel.next.next.next = sentinel.next;
         size++;
     }
 
