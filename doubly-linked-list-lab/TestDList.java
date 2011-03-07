@@ -56,7 +56,6 @@ public class TestDList extends TestCase {
         assertEquals("last item correct", i5, rev.get());
         d.deleteEnd();
         assertEquals("deleteEnd decrements size", 2, d.size());
-        fwd = d.makeFwdIterator();
 	assertEquals("deleteEnd doesn't set first=null", i1, fwd.get());
         d.insertEnd(i5);
 

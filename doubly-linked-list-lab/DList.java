@@ -1,7 +1,4 @@
-
-
 public class DList<E extends Comparable<E>> {
-
     private class Node {
         public E data;
         public Node next;
@@ -32,27 +29,29 @@ public class DList<E extends Comparable<E>> {
     }
 
     public void insertFront(E data) {
-        sentinel.prev = new Node(sentinel, data, sentinel.prev);
-        sentinel.prev.next.prev = sentinel.prev;
+        sentinel.next = new Node(sentinel, data, sentinel.next);
+        sentinel.next.next.prev = sentinel.next;
         size++;
     }
 
     public void insertEnd(E data) {
-        sentinel.next = new Node(sentinel.next, data, sentinel);
-        sentinel.next.next.next = sentinel.next;
+        sentinel.prev = new Node(sentinel.prev, data, sentinel);
+        sentinel.prev.prev.next = sentinel.prev;
         size++;
     }
 
     public void deleteFront() {
         if (size>0) {
-            sentinel.prev = new Node(sentinel, sentinel.prev.next.data, sentinel.prev.next.next);
+            sentinel.prev = sentinel.prev.next;
+            sentinel.prev.prev = sentinel;
             size--;
         }
     }
 
     public void deleteEnd() {
         if (size>0) {
-            sentinel.next = new Node(sentinel.next.prev.prev, sentinel.next.prev.data, sentinel);
+            sentinel.next = sentinel.next.prev;
+            sentinel.next.next = sentinel;
             size--;
         }
     }
@@ -85,7 +84,7 @@ public class DList<E extends Comparable<E>> {
 
     public class FwdIterator extends AllIterator {
         public FwdIterator() {
-            cursor = sentinel.prev;
+            cursor = sentinel.next;
         }
 
         public void next() {
@@ -97,18 +96,19 @@ public class DList<E extends Comparable<E>> {
         private E data;
         public FwdFindIterator(E data) {
             this.data = data;
-            cursor = sentinel.prev;
+            cursor = sentinel.next;
             this.next();
         }
 
         public void next() {
-            while (data.compareTo(cursor.data)!=0 && isValid()) cursor = cursor.next;
+            cursor = cursor.next;
+            while (isValid() && data.compareTo(cursor.data)!=0) cursor = cursor.next;
         }
     }
 
     public class RevIterator extends AllIterator {
         public RevIterator() {
-            cursor = sentinel.next;
+            cursor = sentinel.prev;
         }
 
         public void next() {
@@ -120,11 +120,12 @@ public class DList<E extends Comparable<E>> {
         private E data;
         public RevFindIterator(E data) {
             this.data = data;
-            cursor = sentinel.next;
+            cursor = sentinel.prev;
             this.next();
         }
         public void next() {
-            while (data.compareTo(cursor.data)!=0 && isValid()) cursor = cursor.prev;
+            cursor = cursor.prev;
+            while (isValid() && data.compareTo(cursor.data)!=0) cursor = cursor.prev;
         }
     }
 
