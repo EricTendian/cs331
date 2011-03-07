@@ -1,7 +1,7 @@
 Testing lab doubly linked list lab for etendian.
-Thu Mar  3 09:41:47 CST 2011
+Sun Mar  6 20:01:48 CST 2011
 
-Running 'Testing student's code': Did not compile
+Running 'Testing student's code': Fail
     (solutions tests vs. student code.)
 Running 'Testing student's test cases with working version of program': Fail
     (student tests vs. solution code.)
@@ -14,19 +14,31 @@ Details:
 'Testing student's code'
     (solutions tests vs. student code.)
 ----------------------------------------
-javac -classpath /usr/share/junit/lib/junit.jar -d classes -sourcepath . DList.java Iterator.java TestDList.java
-DList.java:102: cannot find symbol
-symbol  : variable isValid
-location: class DList<E>.FwdFindIterator
-if (!isValid) {cursor=null;return;}
-^
-DList.java:136: cannot find symbol
-symbol  : variable found
-location: class DList<E>.RevFindIterator
-while (!found && cursor != sentinel) {
-^
-2 errors
-scons: *** [classes/DList$Node.class] Error 1
+canon
+Solution test case detected error.
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
+....F.F..F.E
+Time: 0.01
+There was 1 error:
+1) testFindRev(TestDList)java.lang.NullPointerException
+at java.lang.Integer.compareTo(Integer.java:961)
+at java.lang.Integer.compareTo(Integer.java:50)
+at DList$RevFindIterator.next(DList.java:125)
+at DList$RevFindIterator.<init>(DList.java:122)
+at DList.makeRevFindIterator(DList.java:142)
+at TestDList.testFindRev(TestDList.java:219)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+There were 3 failures:
+1) testInsertFrontRev(TestDList)junit.framework.AssertionFailedError: if fwd 1 expected:<25> but was:<null>
+at TestDList.testInsertFrontRev(TestDList.java:100)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+2) testInsertEndFwd(TestDList)junit.framework.AssertionFailedError: if fwd 1 expected:<25> but was:<null>
+at TestDList.testInsertEndFwd(TestDList.java:132)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 
 ----------------------------------------
 'Testing student's test cases with working version of program'
@@ -35,17 +47,22 @@ scons: *** [classes/DList$Node.class] Error 1
 working
 Solution test case detected error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
-...F.
+...F.F
 Time: 0.009
-There was 1 failure:
-1) testEndInsertion(TestDList)junit.framework.AssertionFailedError: last item overwritten expected:<2> but was:<1>
-at TestDList.testEndInsertion(TestDList.java:55)
+There were 2 failures:
+1) testEndInsertion(TestDList)junit.framework.AssertionFailedError: front item correct expected:<1> but was:<2>
+at TestDList.testEndInsertion(TestDList.java:57)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+2) testFind(TestDList)junit.framework.AssertionFailedError: element found fwd expected:<1> but was:<null>
+at TestDList.testFind(TestDList.java:76)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 
 FAILURES!!!
-Tests run: 4,  Failures: 1,  Errors: 0
+Tests run: 4,  Failures: 2,  Errors: 0
 
 
 ----------------------------------------
