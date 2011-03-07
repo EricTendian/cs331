@@ -1,4 +1,5 @@
 
+
 public class DList<E extends Comparable<E>> {
 
     private class Node {
@@ -12,6 +13,8 @@ public class DList<E extends Comparable<E>> {
 
         public Node(Node prev, E data, Node next) {
             this.data = data;
+            this.prev = prev;
+	    this.next = next; 
         }
     }
     private int size;
@@ -29,23 +32,27 @@ public class DList<E extends Comparable<E>> {
     }
 
     public void insertFront(E data) {
-        sentinel.prev = new Node(sentinel, data, sentinel.prev.next);
+        sentinel.prev = new Node(sentinel, data, sentinel.prev);
         size++;
     }
 
     public void insertEnd(E data) {
-        sentinel.next = new Node(sentinel.next.prev, data, sentinel);
+        sentinel.next = new Node(sentinel.next, data, sentinel);
         size++;
     }
 
     public void deleteFront() {
-        sentinel.prev = new Node(sentinel, sentinel.prev.next.data, sentinel.prev.next.next);
-        size--;
+        if (size>0) {
+            sentinel.prev = new Node(sentinel, sentinel.prev.next.data, sentinel.prev.next.next);
+            size--;
+        }
     }
 
     public void deleteEnd() {
-        sentinel.next = new Node(sentinel.next.prev.prev, sentinel.next.prev.data, sentinel);
-        size--;
+        if (size>0) {
+            sentinel.next = new Node(sentinel.next.prev.prev, sentinel.next.prev.data, sentinel);
+            size--;
+        }
     }
 
     private abstract class AllIterator implements Iterator<E> {
@@ -53,20 +60,22 @@ public class DList<E extends Comparable<E>> {
         protected boolean valid;
 
         public E get() {
-            if (cursor != sentinel)  return cursor.data;
-            else return null;
+            if (isValid()) return cursor.data;
+            return null;
         }
 
         public boolean isValid() {
+            valid=(cursor!=sentinel);
             return valid;
         }
 
         public abstract void next();  // set valid to null if next moves to the sentinel
 
         public void delete() {
-            if (isValid()) {
+            if (size>0 && isValid()) {
                 cursor.prev.next = cursor.next;
                 cursor.next.prev = cursor.prev;
+                size--;
                 this.next();
             }
         }
@@ -74,60 +83,46 @@ public class DList<E extends Comparable<E>> {
 
     public class FwdIterator extends AllIterator {
         public FwdIterator() {
-            cursor = sentinel;
-            this.next();
+            cursor = sentinel.prev;
         }
 
         public void next() {
-            if (cursor != sentinel) {cursor = cursor.next; valid = true;}
-            else valid = false;
+            if (isValid()) cursor = cursor.next;
         }
     }
 
     public class FwdFindIterator extends AllIterator {
-        E data;
-        boolean found;
+        private E data;
         public FwdFindIterator(E data) {
-            cursor = sentinel;
             this.data = data;
+            cursor = sentinel.prev;
             this.next();
         }
 
         public void next() {
-            if (found) cursor = null;
-            while (!found && cursor != sentinel) {
-                if (data.compareTo(cursor.data) == 0) found = true;
-                else {cursor = cursor.next; valid = true;}
-            }
+            while (data.compareTo(cursor.data)!=0 && isValid()) cursor = cursor.next;
         }
     }
 
     public class RevIterator extends AllIterator {
         public RevIterator() {
-            cursor = sentinel;
-            this.next();
+            cursor = sentinel.next;
         }
 
         public void next() {
-            if (cursor != sentinel) {cursor = cursor.prev; valid = true;}
-            else valid = false;
+            if (isValid()) cursor = cursor.prev;
         }
     }
 
     public class RevFindIterator extends AllIterator {
-        E data;
-        boolean found;
+        private E data;
         public RevFindIterator(E data) {
-            cursor = sentinel;
             this.data = data;
+            cursor = sentinel.next;
             this.next();
         }
         public void next() {
-            if (found) cursor = null;
-            while (!found && cursor != sentinel) {
-                if (data.compareTo(cursor.data) == 0) found = true;
-                else {cursor = cursor.prev; valid = true;}
-            }
+            while (data.compareTo(cursor.data)!=0 && isValid()) cursor = cursor.prev;
         }
     }
 

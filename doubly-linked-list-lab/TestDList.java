@@ -16,7 +16,6 @@ public class TestDList extends TestCase {
 
     public void testCreate() {
         DList<Integer> d = new DList<Integer>();
-
         assertEquals("1. create", 0, d.size());
         d.insertFront(i1);
         d.deleteEnd();
@@ -39,7 +38,6 @@ public class TestDList extends TestCase {
         assertEquals("forward iterator starts at first element", i5, fwd.get());
         fwd.next();
         assertEquals("forward iterator only returns first element", i2, fwd.get());
-
         assertEquals("reverse iterator is really a forward iterator", false, fwd.equals(rev));
         assertEquals("reverse iterator only returns last element", i1, rev.get());
         rev.next();
@@ -53,6 +51,8 @@ public class TestDList extends TestCase {
         d.insertEnd(i5);
         Iterator rev = d.makeRevIterator();
         Iterator fwd = d.makeFwdIterator();
+        rev.next();
+        fwd.next();
         assertEquals("insertEnd 3 items", 3, d.size());
         assertEquals("front item correct", i1, fwd.get());
         assertEquals("last item correct", i5, rev.get());
@@ -71,6 +71,8 @@ public class TestDList extends TestCase {
         d.insertFront(i5);
         Iterator fwdfind = d.makeFwdFindIterator(i1);
         Iterator revfind = d.makeRevFindIterator(i5);
+        fwdfind.next();
+        revfind.next();
         assertEquals("element found fwd", i1, fwdfind.get());
         assertEquals("element found rev", i5, revfind.get());
         fwdfind.next();
