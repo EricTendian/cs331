@@ -1,5 +1,5 @@
 import junit.framework.*;
-
+import etran.*;
 public class TestDList extends TestCase {
 
     public Integer i1 = new Integer(1);
@@ -18,6 +18,7 @@ public class TestDList extends TestCase {
         DList<Integer> d = new DList<Integer>();
         assertEquals("1. create", 0, d.size());
         d.insertFront(i1);
+        d.deleteFront();
         d.deleteEnd();
         assertEquals("size doesn't decrement on deletion", 0, d.size());
     }
@@ -39,9 +40,15 @@ public class TestDList extends TestCase {
         fwd.next();
         assertEquals("forward iterator only returns first element", i2, fwd.get());
         assertEquals("reverse iterator is really a forward iterator", false, fwd.equals(rev));
-        assertEquals("reverse iterator only returns last element", i1, rev.get());
         rev.next();
         assertEquals("reverse iterator only returns last element", i2, rev.get());
+        rev.delete();
+        assertEquals("item deleted", i5, rev.get());
+        assertEquals("size decremented", 2, d.size());
+        fwd.next();
+        fwd.delete();
+        assertEquals("item deleted", null, fwd.get());
+        assertEquals("size decremented", 1, d.size());
     }
 
     public void testEndInsertion() {
@@ -64,10 +71,16 @@ public class TestDList extends TestCase {
     public void testFind() {
         DList<Integer> d = new DList<Integer>();
         d.insertFront(i1);
-        d.insertEnd(i2);
+        d.insertEnd(i5);
+        d.insertFront(i2);
         d.insertFront(i5);
+        d.insertEnd(i1);
         Iterator fwdfind = d.makeFwdFindIterator(i1);
         Iterator revfind = d.makeRevFindIterator(i5);
+        assertEquals("element found fwd", i1, fwdfind.get());
+        assertEquals("element found rev", i5, revfind.get());
+        fwdfind.next();
+        revfind.next();
         assertEquals("element found fwd", i1, fwdfind.get());
         assertEquals("element found rev", i5, revfind.get());
         fwdfind.next();
