@@ -1,35 +1,12 @@
 Testing lab doubly linked list lab for etendian.
-Mon Mar  7 00:26:47 CST 2011
+Mon Mar  7 11:56:47 CST 2011
 
 Running 'Testing student's code': Pass
     (solutions tests vs. student code.)
-Running 'Testing student's test cases with working version of program': Pass
+Running 'Testing student's test cases with working version of program': Did not compile
     (student tests vs. solution code.)
-Running 'size doesn't increment on insertion.': Pass
-    (student tests vs. broken code.)
-Running 'size doesn't decrement on deletion.': Pass
-    (student tests vs. broken code.)
-Running 'last pointer not set on initial insertion.': Pass
-    (student tests vs. broken code.)
-Running 'delete last element doesn't set first=null.': Fail
-    (student tests vs. broken code.)
-Running 'reverse iterator is really a forward iterator.': Pass
-    (student tests vs. broken code.)
-Running 'reverse iterator only returns last element.': Pass
-    (student tests vs. broken code.)
-Running 'insert last clobbers last element.': Fail
-    (student tests vs. broken code.)
-Running 'previous pointers never set.': Pass
-    (student tests vs. broken code.)
-Running 'forward find iterator skips first match.': Fail
-    (student tests vs. broken code.)
-Running 'forward find iterator returns everything.': Pass
-    (student tests vs. broken code.)
-Running 'reverse find iterator skips first match.': Fail
-    (student tests vs. broken code.)
-Running 'reverse find iterator returns everything.': Pass
-    (student tests vs. broken code.)
-Total: 65/85
+
+ No further tests will be run.Total: 20/85
 
 
 Details:
@@ -49,111 +26,82 @@ OK (8 tests)
 'Testing student's test cases with working version of program'
     (student tests vs. solution code.)
 ----------------------------------------
-Pass
-java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
-....
-Time: 0.008
-
-OK (4 tests)
-
+javac -classpath /usr/share/junit/lib/junit.jar -d classes -sourcepath . DList.java Iterator.java TestDList.java
+TestDList.java:2: package etran does not exist
+import etran.*;
+^
+1 error
+scons: *** [classes/DList$Node.class] Error 1
 
 ----------------------------------------
 'size doesn't increment on insertion.'
     (student tests vs. broken code.)
 ----------------------------------------
-Pass
+Not run.  Qualifying tests failed.
 
 ----------------------------------------
 'size doesn't decrement on deletion.'
     (student tests vs. broken code.)
 ----------------------------------------
-Pass
+Not run.  Qualifying tests failed.
 
 ----------------------------------------
 'last pointer not set on initial insertion.'
     (student tests vs. broken code.)
 ----------------------------------------
-Pass
+Not run.  Qualifying tests failed.
 
 ----------------------------------------
 'delete last element doesn't set first=null.'
     (student tests vs. broken code.)
 ----------------------------------------
-broke4
-Student test case did not detect error.
-java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
-....
-Time: 0.008
-
-OK (4 tests)
-
+Not run.  Qualifying tests failed.
 
 ----------------------------------------
 'reverse iterator is really a forward iterator.'
     (student tests vs. broken code.)
 ----------------------------------------
-Pass
+Not run.  Qualifying tests failed.
 
 ----------------------------------------
 'reverse iterator only returns last element.'
     (student tests vs. broken code.)
 ----------------------------------------
-Pass
+Not run.  Qualifying tests failed.
 
 ----------------------------------------
 'insert last clobbers last element.'
     (student tests vs. broken code.)
 ----------------------------------------
-broke7
-Student test case did not detect error.
-java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
-....
-Time: 0.008
-
-OK (4 tests)
-
+Not run.  Qualifying tests failed.
 
 ----------------------------------------
 'previous pointers never set.'
     (student tests vs. broken code.)
 ----------------------------------------
-Pass
+Not run.  Qualifying tests failed.
 
 ----------------------------------------
 'forward find iterator skips first match.'
     (student tests vs. broken code.)
 ----------------------------------------
-broke9
-Student test case did not detect error.
-java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
-....
-Time: 0.008
-
-OK (4 tests)
-
+Not run.  Qualifying tests failed.
 
 ----------------------------------------
 'forward find iterator returns everything.'
     (student tests vs. broken code.)
 ----------------------------------------
-Pass
+Not run.  Qualifying tests failed.
 
 ----------------------------------------
 'reverse find iterator skips first match.'
     (student tests vs. broken code.)
 ----------------------------------------
-broke11
-Student test case did not detect error.
-java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestDList
-....
-Time: 0.008
-
-OK (4 tests)
-
+Not run.  Qualifying tests failed.
 
 ----------------------------------------
 'reverse find iterator returns everything.'
     (student tests vs. broken code.)
 ----------------------------------------
-Pass
+Not run.  Qualifying tests failed.
 
