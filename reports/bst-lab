@@ -1,5 +1,5 @@
 Testing lab BST Lab for etendian.
-Tue Mar  8 14:37:11 CST 2011
+Tue Mar  8 15:17:13 CST 2011
 
 Running 'Testing student's code': Fail
     (solutions tests vs. student code.)
@@ -29,7 +29,7 @@ canon
 Solution test case detected error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestBST
 ...F..F.F
-Time: 0.007
+Time: 0.016
 There were 3 failures:
 1) testFind(TestBST)junit.framework.AssertionFailedError: Find test expected:<2> but was:<null>
 at TestBST.testFind(TestBST.java:47)
@@ -58,7 +58,7 @@ Tests run: 6,  Failures: 3,  Errors: 0
 Pass
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestBST
 .
-Time: 0.012
+Time: 0.01
 
 OK (1 test)
 
@@ -71,7 +71,7 @@ broke1
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestBST
 .
-Time: 0.004
+Time: 0.003
 
 OK (1 test)
 
@@ -84,7 +84,7 @@ broke2
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestBST
 .
-Time: 0.004
+Time: 0.003
 
 OK (1 test)
 
@@ -97,7 +97,7 @@ broke3
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestBST
 .
-Time: 0.003
+Time: 0.004
 
 OK (1 test)
 
@@ -110,7 +110,7 @@ broke4
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestBST
 .
-Time: 0.003
+Time: 0.004
 
 OK (1 test)
 
@@ -123,7 +123,7 @@ broke5
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestBST
 .
-Time: 0.003
+Time: 0.004
 
 OK (1 test)
 
@@ -136,7 +136,7 @@ broke6
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestBST
 .
-Time: 0.012
+Time: 0.004
 
 OK (1 test)
 
