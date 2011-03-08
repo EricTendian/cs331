@@ -23,6 +23,8 @@ public class BST<K extends Comparable, V extends Comparable> {
     }
 
     public BST() {
+        root = null;
+        size = 0;
     }
     
     public int size() {
@@ -47,8 +49,7 @@ public class BST<K extends Comparable, V extends Comparable> {
     }
     
     public V find(K key) {
-        if (size>0) return findAux(root, key);
-        return null;
+        return findAux(root, key);
     }
     
     private V findAux(Node n, K key) {
@@ -101,10 +102,12 @@ public class BST<K extends Comparable, V extends Comparable> {
         private boolean valid;
 
         public K get() {
+            if (isValid()) return cursor.key;
             return null;
         }
 
         public boolean isValid() {
+            valid = (cursor!=null);
             return valid;
         }
 
