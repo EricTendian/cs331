@@ -1,0 +1,86 @@
+Testing lab Traversal Lab for etendian.
+Fri Mar 11 20:18:21 CST 2011
+
+Running Testing student's code: Did not compile
+    (solutions tests vs. student code.)
+Running Testing student's test cases with working version of program: Fail
+    (student tests vs. solution code.)
+
+ No further tests will be run.Total: 0/60
+
+
+Details:
+----------------------------------------
+Testing student's code
+    (solutions tests vs. student code.)
+----------------------------------------
+javac -classpath /usr/share/junit/lib/junit.jar -d classes -sourcepath . Iterator.java TestTree.java
+TestTree.java:39: cannot find symbol
+symbol  : class Tree
+location: class TestTree
+Tree bst = new Tree();
+^
+TestTree.java:39: cannot find symbol
+symbol  : class Tree
+location: class TestTree
+Tree bst = new Tree();
+^
+TestTree.java:45: cannot find symbol
+symbol  : class Tree
+location: class TestTree
+Tree bst;
+^
+TestTree.java:49: cannot find symbol
+symbol  : class Tree
+location: class TestTree
+bst = new Tree();
+^
+TestTree.java:66: cannot find symbol
+symbol  : class Tree
+location: class TestTree
+Tree bst;
+
+----------------------------------------
+Testing student's test cases with working version of program
+    (student tests vs. solution code.)
+----------------------------------------
+working
+Solution test case detected error.
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestBST
+
+----------------------------------------
+bfsIterator not working
+    (student tests vs. broken code.)
+----------------------------------------
+Not run.  Qualifying tests failed.
+
+----------------------------------------
+dfsIterator not working
+    (student tests vs. broken code.)
+----------------------------------------
+Not run.  Qualifying tests failed.
+
+----------------------------------------
+preorder not working
+    (student tests vs. broken code.)
+----------------------------------------
+Not run.  Qualifying tests failed.
+
+----------------------------------------
+inorder not working
+    (student tests vs. broken code.)
+----------------------------------------
+Not run.  Qualifying tests failed.
+
+----------------------------------------
+postorder not working
+    (student tests vs. broken code.)
+----------------------------------------
+Not run.  Qualifying tests failed.
+
+----------------------------------------
+frontier not working
+    (student tests vs. broken code.)
+----------------------------------------
+Not run.  Qualifying tests failed.
+
