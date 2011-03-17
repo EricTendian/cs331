@@ -20,10 +20,42 @@ public class TestBST extends TestCase {
 	super(name);
     }
 
-    public void testCreate() {
+    public void testRoot() {
 	BST<String,Integer> bst = new BST<String,Integer>();
-
 	assertEquals("1. create",0,bst.size());
+        bst.add(n1,i1);
+        assertEquals("size incremented",1,bst.size());
+        assertEquals("finds value",i1,bst.find(n1));
+        assertEquals("finds key",n1,bst.revFind(i1));
+        bst.delete(n1);
+        assertEquals("size decremented",0,bst.size());
+        assertEquals("finds value",null,bst.find(n1));
+        assertEquals("finds key",null,bst.revFind(i1));
+    }
+    
+    public void testChild() {
+        BST<String,Integer> bst = new BST<String,Integer>();
+        bst.add(n1,i1);
+        bst.add(n2,i2);
+        bst.add(n3,i3);
+        assertEquals("correct size",3,bst.size());
+        assertEquals("finds value",i2,bst.find(n2));
+        assertEquals("finds key",n3,bst.revFind(i3));
+        bst.delete(n1);
+        assertEquals("size decremented",2,bst.size());
+        assertEquals("finds value",null,bst.find(n1));
+        assertEquals("finds key",null,bst.revFind(i1));
+    }
+    
+    public void testIterator() {
+        BST<String,Integer> bst = new BST<String,Integer>();
+        bst.add(n1,i1);
+        bst.add(n2,i2);
+        bst.add(n3,i3);
+        bst.add(n4,i4);
+        bst.add(n5,i5);
+        Iterator iter = bst.mkBFSIterator();
+        iter.get();
     }
 
 }
