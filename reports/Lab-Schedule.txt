@@ -13,9 +13,11 @@ Lab is active!
 
 Lab:  bst-lab
 Start time:  2011-03-07 20:00:00
-Finish time:  2011-03-14 23:59:00
+Finish time:  2011-03-23 23:59:00
 Lab is active!
 
 Lab:  traversal-lab
 Start time:  2011-03-11 20:00:00
 Finish time:  2011-03-25 23:59:00
+Lab is active!
+
