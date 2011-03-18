@@ -1,5 +1,5 @@
 Testing lab Traversal Lab for etendian.
-Fri Mar 11 20:18:21 CST 2011
+Thu Mar 17 22:18:43 CDT 2011
 
 Running Testing student's code: Did not compile
     (solutions tests vs. student code.)
@@ -46,7 +46,7 @@ Testing student's test cases with working version of program
 ----------------------------------------
 working
 Solution test case detected error.
-java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestBST
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestTree
 
 ----------------------------------------
 bfsIterator not working
