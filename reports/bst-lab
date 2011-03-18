@@ -1,23 +1,23 @@
 Testing lab BST Lab for etendian.
-Tue Mar  8 15:17:13 CST 2011
+Thu Mar 17 22:17:32 CDT 2011
 
 Running 'Testing student's code': Fail
     (solutions tests vs. student code.)
 Running 'Testing student's test cases with working version of program': Pass
     (student tests vs. solution code.)
-Running 'size not incremented all the time': Fail
+Running 'size not incremented all the time': Pass
     (student tests vs. broken code.)
-Running 'size not decremented': Fail
+Running 'size not decremented': Pass
     (student tests vs. broken code.)
-Running 'delete truncates tree': Fail
+Running 'delete truncates tree': Pass
     (student tests vs. broken code.)
-Running 'find only returns null': Fail
+Running 'find only returns null': Pass
     (student tests vs. broken code.)
-Running 'inserts only go one direction': Fail
+Running 'inserts only go one direction': Pass
     (student tests vs. broken code.)
 Running 'bfs enqueues children in wrong order': Fail
     (student tests vs. broken code.)
-Total: 5/55
+Total: 30/55
 
 
 Details:
@@ -29,7 +29,7 @@ canon
 Solution test case detected error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestBST
 ...F..F.F
-Time: 0.016
+Time: 0.047
 There were 3 failures:
 1) testFind(TestBST)junit.framework.AssertionFailedError: Find test expected:<2> but was:<null>
 at TestBST.testFind(TestBST.java:47)
@@ -57,76 +57,41 @@ Tests run: 6,  Failures: 3,  Errors: 0
 ----------------------------------------
 Pass
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestBST
-.
-Time: 0.01
+...
+Time: 0.046
 
-OK (1 test)
+OK (3 tests)
 
 
 ----------------------------------------
 'size not incremented all the time'
     (student tests vs. broken code.)
 ----------------------------------------
-broke1
-Student test case did not detect error.
-java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestBST
-.
-Time: 0.003
-
-OK (1 test)
-
+Pass
 
 ----------------------------------------
 'size not decremented'
     (student tests vs. broken code.)
 ----------------------------------------
-broke2
-Student test case did not detect error.
-java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestBST
-.
-Time: 0.003
-
-OK (1 test)
-
+Pass
 
 ----------------------------------------
 'delete truncates tree'
     (student tests vs. broken code.)
 ----------------------------------------
-broke3
-Student test case did not detect error.
-java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestBST
-.
-Time: 0.004
-
-OK (1 test)
-
+Pass
 
 ----------------------------------------
 'find only returns null'
     (student tests vs. broken code.)
 ----------------------------------------
-broke4
-Student test case did not detect error.
-java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestBST
-.
-Time: 0.004
-
-OK (1 test)
-
+Pass
 
 ----------------------------------------
 'inserts only go one direction'
     (student tests vs. broken code.)
 ----------------------------------------
-broke5
-Student test case did not detect error.
-java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestBST
-.
-Time: 0.004
-
-OK (1 test)
-
+Pass
 
 ----------------------------------------
 'bfs enqueues children in wrong order'
@@ -135,9 +100,9 @@ OK (1 test)
 broke6
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestBST
-.
-Time: 0.004
+...
+Time: 0.031
 
-OK (1 test)
+OK (3 tests)
 
 
