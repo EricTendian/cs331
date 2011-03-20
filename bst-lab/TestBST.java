@@ -74,9 +74,9 @@ public class TestBST extends TestCase {
         iter.next();
         assertEquals("next item is i4", i4, iter.get());
         iter.next();
-        assertEquals("next item is i1", i1, iter.get());
-        iter.next();
         assertEquals("next item is i5", i5, iter.get());
+        iter.next();
+        assertEquals("next item is i1", i1, iter.get());
         iter.next();
         assertEquals("finished", null, iter.get());
     }
