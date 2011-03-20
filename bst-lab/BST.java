@@ -71,13 +71,12 @@ public class BST<K extends Comparable, V extends Comparable> {
         
         if (key.compareTo(n.key)<0) n.left = remove(key, n.left);
         else if (key.compareTo(n.key)>0) n.right = remove(key, n.right);
-        else {
-            if (n.left!=null && n.right!=null) {
+        else if (n.left!=null && n.right!=null) {
                 n.key = minKey(n.right);
                 n.right = remove(n.key, n.right);
-            } else if (n.left!=null) n.left = ( n.left != null ) ? n.left : n.right;
-            else if (n.right!=null) n.left = ( n.left != null ) ? n.left : n.right;
-        } return n;
+        } else
+            n = ( n.left != null ) ? n.left : n.right;
+        return n;
     }
     
     private K minKey(Node n) {
@@ -114,7 +113,7 @@ public class BST<K extends Comparable, V extends Comparable> {
         }
 
         public void next() {
-            if (cursor==null && parent==null) {parent = root; this.getNext();}
+            if (cursor==null && parent==null) {cursor = root; parent = root;}
             else {
                 if (cursor==null) return; //LOLWTF
                 else if (cursor.equals(parent.left) && hasRight) cursor = parent.right; //nav to right side
