@@ -14,7 +14,7 @@ public class BST<K extends Comparable, V extends Comparable> {
             right = null;
         }
 
-        public Node(Node left, K key, V val, Node right) {
+        public Node(K key, V val, Node left, Node right) {
             this.key = key;
             this.val = val;
             this.left = left;
@@ -42,7 +42,7 @@ public class BST<K extends Comparable, V extends Comparable> {
         else if (val.compareTo(n.val)<0) {
             if (n.left==null) n.left = new Node(key, val);
             else addAux(n.left, key, val);
-        } else if (val.compareTo(n.val)>0) {
+        } else {
             if (n.right==null) n.right = new Node(key, val);
             else addAux(n.right, key, val);
         }
@@ -97,11 +97,15 @@ public class BST<K extends Comparable, V extends Comparable> {
     }
     
     public class BFSIterator implements Iterator<K> {
-        private Node cursor=root;
-        private Node parent=root;
+        private Node cursor;
+        private Node parent;
         private boolean hasRight;
         private boolean valid;
-
+        
+        public BFSIterator() {
+            cursor=root;
+        }
+        
         public K get() {
             if (isValid()) return cursor.key;
             return null;
@@ -113,9 +117,9 @@ public class BST<K extends Comparable, V extends Comparable> {
         }
 
         public void next() {
-            if (cursor==null && parent==null) {cursor = root; parent = root;}
+            if (parent==null) {parent = root; this.getNext();}
             else {
-                if (cursor==null) return; //LOLWTF
+                if (cursor==null) return;
                 else if (cursor.equals(parent.left) && hasRight) cursor = parent.right; //nav to right side
                 else {parent = cursor; this.getNext();} //go into subtree
             }

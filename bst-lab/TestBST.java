@@ -3,7 +3,7 @@
 import junit.framework.*;
 
 public class TestBST extends TestCase {
-    /*public String n1 = "Jenny";
+    public String n1 = "Jenny";
     public String n2 = "Empire";
     public String n3 = "Emergency";
     public String n4 = "Helpdesk";
@@ -13,20 +13,7 @@ public class TestBST extends TestCase {
     public Integer i2 = new Integer(5882300);
     public Integer i3 = new Integer(911);
     public Integer i4 = new Integer(5673375);
-    public Integer i5 = new Integer(5551212);*/
-    
-    public String n1 = "a";
-    public String n2 = "b";
-    public String n3 = "c";
-    public String n4 = "d";
-    public String n5 = "e";
-
-    public Integer i1 = new Integer(1);
-    public Integer i2 = new Integer(2);
-    public Integer i3 = new Integer(3);
-    public Integer i4 = new Integer(4);
-    public Integer i5 = new Integer(5);
-
+    public Integer i5 = new Integer(5551212);
 
     public TestBST(String name) {
 	super(name);
@@ -60,22 +47,22 @@ public class TestBST extends TestCase {
     }
     
     public void testIterator() {
-        BST<Integer,String> bst = new BST<Integer,String>();
-        bst.add(i1,n1);
-        bst.add(i2,n2);
-        bst.add(i3,n3);
-        bst.add(i4,n4);
-        bst.add(i5,n5);
+        BST<String,Integer> bst = new BST<String,Integer>();
+        bst.add(n1,i1);
+        bst.add(n2,i2);
+        bst.add(n3,i3);
+        bst.add(n4,i4);
+        bst.add(n5,i5);
         Iterator iter = bst.mkBFSIterator();
-        assertEquals("root is i1", i1, iter.get());
+        assertEquals("root is n1", n1, iter.get());
         iter.next();
-        assertEquals("next item is i2", i2, iter.get());
+        assertEquals("next item is n2", n2, iter.get());
         iter.next();
-        assertEquals("next item is i3", i3, iter.get());
+        assertEquals("next item is n3", n3, iter.get());
         iter.next();
-        assertEquals("next item is i4", i4, iter.get());
+        assertEquals("next item is n4", n4, iter.get());
         iter.next();
-        assertEquals("next item is i5", i5, iter.get());
+        assertEquals("next item is n5", n5, iter.get());
         iter.next();
         assertEquals("finished", null, iter.get());
     }
