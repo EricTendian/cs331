@@ -1,23 +1,12 @@
 Testing lab BST Lab for etendian.
-Thu Mar 17 22:17:32 CDT 2011
+Sun Mar 20 16:53:59 CDT 2011
 
 Running 'Testing student's code': Fail
     (solutions tests vs. student code.)
-Running 'Testing student's test cases with working version of program': Pass
+Running 'Testing student's test cases with working version of program': Fail
     (student tests vs. solution code.)
-Running 'size not incremented all the time': Pass
-    (student tests vs. broken code.)
-Running 'size not decremented': Pass
-    (student tests vs. broken code.)
-Running 'delete truncates tree': Pass
-    (student tests vs. broken code.)
-Running 'find only returns null': Pass
-    (student tests vs. broken code.)
-Running 'inserts only go one direction': Pass
-    (student tests vs. broken code.)
-Running 'bfs enqueues children in wrong order': Fail
-    (student tests vs. broken code.)
-Total: 30/55
+
+ No further tests will be run.Total: 0/55
 
 
 Details:
@@ -29,14 +18,14 @@ canon
 Solution test case detected error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestBST
 ...F..F.F
-Time: 0.047
+Time: 0.007
 There were 3 failures:
 1) testFind(TestBST)junit.framework.AssertionFailedError: Find test expected:<2> but was:<null>
 at TestBST.testFind(TestBST.java:47)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-2) testDelete(TestBST)junit.framework.AssertionFailedError: Find test expected:<null> but was:<1>
+2) testDelete(TestBST)junit.framework.AssertionFailedError: Find test expected:<3> but was:<null>
 at TestBST.testDelete(TestBST.java:70)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
@@ -55,54 +44,55 @@ Tests run: 6,  Failures: 3,  Errors: 0
 'Testing student's test cases with working version of program'
     (student tests vs. solution code.)
 ----------------------------------------
-Pass
+working
+Solution test case detected error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestBST
-...
-Time: 0.046
+...F
+Time: 0.009
+There was 1 failure:
+1) testIterator(TestBST)junit.framework.AssertionFailedError: root is correct expected:<1> but was:<2>
+at TestBST.testIterator(TestBST.java:71)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 
-OK (3 tests)
+FAILURES!!!
+Tests run: 3,  Failures: 1,  Errors: 0
 
 
 ----------------------------------------
 'size not incremented all the time'
     (student tests vs. broken code.)
 ----------------------------------------
-Pass
+Not run.  Qualifying tests failed.
 
 ----------------------------------------
 'size not decremented'
     (student tests vs. broken code.)
 ----------------------------------------
-Pass
+Not run.  Qualifying tests failed.
 
 ----------------------------------------
 'delete truncates tree'
     (student tests vs. broken code.)
 ----------------------------------------
-Pass
+Not run.  Qualifying tests failed.
 
 ----------------------------------------
 'find only returns null'
     (student tests vs. broken code.)
 ----------------------------------------
-Pass
+Not run.  Qualifying tests failed.
 
 ----------------------------------------
 'inserts only go one direction'
     (student tests vs. broken code.)
 ----------------------------------------
-Pass
+Not run.  Qualifying tests failed.
 
 ----------------------------------------
 'bfs enqueues children in wrong order'
     (student tests vs. broken code.)
 ----------------------------------------
-broke6
-Student test case did not detect error.
-java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestBST
-...
-Time: 0.031
-
-OK (3 tests)
-
+Not run.  Qualifying tests failed.
 
