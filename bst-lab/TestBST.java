@@ -67,16 +67,15 @@ public class TestBST extends TestCase {
         bst.add(i4,n4);
         bst.add(i5,n5);
         Iterator iter = bst.mkBFSIterator();
-        iter.next();
         assertEquals("root is i2", i2, iter.get());
         iter.next();
         assertEquals("next item is i3", i3, iter.get());
         iter.next();
         assertEquals("next item is i4", i4, iter.get());
         iter.next();
-        assertEquals("next item is i5", i5, iter.get());
-        iter.next();
         assertEquals("next item is i1", i1, iter.get());
+        iter.next();
+        assertEquals("next item is i5", i5, iter.get());
         iter.next();
         assertEquals("finished", null, iter.get());
     }
