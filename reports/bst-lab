@@ -1,5 +1,5 @@
 Testing lab BST Lab for etendian.
-Sun Mar 20 17:53:55 CDT 2011
+Sun Mar 20 18:18:54 CDT 2011
 
 Running 'Testing student's code': Fail
     (solutions tests vs. student code.)
@@ -13,11 +13,11 @@ Running 'delete truncates tree': Pass
     (student tests vs. broken code.)
 Running 'find only returns null': Pass
     (student tests vs. broken code.)
-Running 'inserts only go one direction': Fail
+Running 'inserts only go one direction': Pass
     (student tests vs. broken code.)
-Running 'bfs enqueues children in wrong order': Fail
+Running 'bfs enqueues children in wrong order': Pass
     (student tests vs. broken code.)
-Total: 25/55
+Total: 35/55
 
 
 Details:
@@ -91,25 +91,11 @@ Pass
 'inserts only go one direction'
     (student tests vs. broken code.)
 ----------------------------------------
-broke5
-Student test case did not detect error.
-java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestBST
-...
-Time: 0.008
-
-OK (3 tests)
-
+Pass
 
 ----------------------------------------
 'bfs enqueues children in wrong order'
     (student tests vs. broken code.)
 ----------------------------------------
-broke6
-Student test case did not detect error.
-java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestBST
-...
-Time: 0.008
-
-OK (3 tests)
-
+Pass
 
