@@ -1,5 +1,5 @@
 Testing lab BST Lab for etendian.
-Sun Mar 20 16:53:59 CDT 2011
+Sun Mar 20 16:58:53 CDT 2011
 
 Running 'Testing student's code': Fail
     (solutions tests vs. student code.)
@@ -50,8 +50,8 @@ java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestBST
 ...F
 Time: 0.009
 There was 1 failure:
-1) testIterator(TestBST)junit.framework.AssertionFailedError: root is correct expected:<1> but was:<2>
-at TestBST.testIterator(TestBST.java:71)
+1) testIterator(TestBST)junit.framework.AssertionFailedError: next item is i1 expected:<1> but was:<3>
+at TestBST.testIterator(TestBST.java:73)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
