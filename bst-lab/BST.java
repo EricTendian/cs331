@@ -98,7 +98,7 @@ public class BST<K extends Comparable, V extends Comparable> {
     public class BFSIterator implements Iterator<K> {
         private Node cursor;
         private Node parent;
-        private Queue<Node> nodeQ;
+        //private Queue<Node> nodeQ;
         private boolean hasRight;
         private boolean valid;
         
