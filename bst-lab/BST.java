@@ -38,8 +38,8 @@ public class BST<K extends Comparable, V extends Comparable> {
     }
     
     private void addAux(Node n, K key, V val) {
-        if (val.compareTo(n.val)==0) return;
-        else if (val.compareTo(n.val)<0) {
+        if (key.compareTo(n.key)==0) return;
+        else if (key.compareTo(n.key)<0) {
             if (n.left==null) n.left = new Node(key, val);
             else addAux(n.left, key, val);
         } else {
@@ -74,8 +74,7 @@ public class BST<K extends Comparable, V extends Comparable> {
         else if (n.left!=null && n.right!=null) {
                 n.key = minKey(n.right);
                 n.right = remove(n.key, n.right);
-        } else
-            n = ( n.left != null ) ? n.left : n.right;
+        } else n = ( n.left != null ) ? n.left : n.right;
         return n;
     }
     
@@ -99,11 +98,13 @@ public class BST<K extends Comparable, V extends Comparable> {
     public class BFSIterator implements Iterator<K> {
         private Node cursor;
         private Node parent;
-        private boolean hasRight;
+        private Queue<Node> nodeQ;
         private boolean valid;
         
         public BFSIterator() {
             cursor=root;
+            nodeQ = new Queue<Node>();
+            nodeQ.enqueue(root);
         }
         
         public K get() {
@@ -117,12 +118,12 @@ public class BST<K extends Comparable, V extends Comparable> {
         }
 
         public void next() {
-            if (parent==null) {parent = root; this.getNext();}
-            else {
-                if (cursor==null) return;
-                else if (cursor.equals(parent.left) && hasRight) cursor = parent.right; //nav to right side
-                else {parent = cursor; this.getNext();} //go into subtree
-            }
+            if (isValid()) {
+                if (parent==null) {parent = root; this.getNext();}
+                else {
+                    if (cursor.equals(parent.left) && hasRight) cursor = parent.right; //nav to right side
+                    else {parent = cursor; this.getNext();} //go into subtree
+                }}
         }
 
         private void getNext() {
