@@ -1,7 +1,7 @@
 Testing lab BST Lab for etendian.
-Sun Mar 20 18:18:54 CDT 2011
+Mon Mar 21 14:59:03 CDT 2011
 
-Running 'Testing student's code': Fail
+Running 'Testing student's code': Did not compile
     (solutions tests vs. student code.)
 Running 'Testing student's test cases with working version of program': Pass
     (student tests vs. solution code.)
@@ -25,31 +25,31 @@ Details:
 'Testing student's code'
     (solutions tests vs. student code.)
 ----------------------------------------
-canon
-Solution test case detected error.
-java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestBST
-...F..F.F
-Time: 0.007
-There were 3 failures:
-1) testFind(TestBST)junit.framework.AssertionFailedError: Find test expected:<2> but was:<null>
-at TestBST.testFind(TestBST.java:47)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-2) testDelete(TestBST)junit.framework.AssertionFailedError: Find test expected:<3> but was:<null>
-at TestBST.testDelete(TestBST.java:70)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-3) testStructure(TestBST)junit.framework.ComparisonFailure: BFS test 4-2 expected:<[f]> but was:<[a]>
-at TestBST.testStructure(TestBST.java:86)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-
-FAILURES!!!
-Tests run: 6,  Failures: 3,  Errors: 0
-
+javac -classpath /usr/share/junit/lib/junit.jar -d classes -sourcepath . BST.java Iterator.java TestBST.java
+BST.java:101: cannot find symbol
+symbol  : class Queue
+location: class BST<K,V>.BFSIterator
+private Queue<Node> nodeQ;
+^
+BST.java:106: cannot find symbol
+symbol  : class Queue
+location: class BST<K,V>.BFSIterator
+nodeQ = new Queue<Node>();
+^
+BST.java:124: cannot find symbol
+symbol  : variable hasRight
+location: class BST<K,V>.BFSIterator
+if (cursor.equals(parent.left) && hasRight) cursor = parent.right; //nav to right side
+^
+BST.java:131: cannot find symbol
+symbol  : variable hasRight
+location: class BST<K,V>.BFSIterator
+if (parent.left!=null && parent.right!=null) {cursor = parent.left; hasRight = true;}
+^
+BST.java:132: cannot find symbol
+symbol  : variable hasRight
+location: class BST<K,V>.BFSIterator
+else if (parent.left!=null) {cursor = parent.left; hasRight = false;} //left side only
 
 ----------------------------------------
 'Testing student's test cases with working version of program'
