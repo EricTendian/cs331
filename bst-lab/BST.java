@@ -99,12 +99,13 @@ public class BST<K extends Comparable, V extends Comparable> {
         private Node cursor;
         private Node parent;
         private Queue<Node> nodeQ;
+        private boolean hasRight;
         private boolean valid;
         
         public BFSIterator() {
             cursor=root;
-            nodeQ = new Queue<Node>();
-            nodeQ.enqueue(root);
+            //nodeQ = new Queue<Node>();
+            //nodeQ.enqueue(root);
         }
         
         public K get() {
