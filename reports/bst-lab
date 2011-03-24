@@ -1,5 +1,5 @@
 Testing lab BST Lab for etendian.
-Thu Mar 24 16:33:51 CDT 2011
+Thu Mar 24 16:38:55 CDT 2011
 
 Running 'Testing student's code': Fail
     (solutions tests vs. student code.)
@@ -28,28 +28,18 @@ Details:
 canon
 Solution test case detected error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestBST
-.....E.
-Time: 0.042
-There was 1 error:
-1) testDelete(TestBST)java.lang.StackOverflowError
-at BST.delete1(BST.java:70)
-at BST.delete1(BST.java:76)
-at BST.delete1(BST.java:76)
-at BST.delete1(BST.java:76)
-at BST.delete1(BST.java:76)
-at BST.delete1(BST.java:76)
-at BST.delete1(BST.java:76)
-at BST.delete1(BST.java:76)
-at BST.delete1(BST.java:76)
-at BST.delete1(BST.java:76)
-at BST.delete1(BST.java:76)
-at BST.delete1(BST.java:76)
-at BST.delete1(BST.java:76)
-at BST.delete1(BST.java:76)
-at BST.delete1(BST.java:76)
-at BST.delete1(BST.java:76)
-at BST.delete1(BST.java:76)
-at BST.delete1(BST.java:76)
+.....F.
+Time: 0.01
+There was 1 failure:
+1) testDelete(TestBST)junit.framework.AssertionFailedError: Find test expected:<6> but was:<1>
+at TestBST.testDelete(TestBST.java:70)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+FAILURES!!!
+Tests run: 6,  Failures: 1,  Errors: 0
+
 
 ----------------------------------------
 'Testing student's test cases with working version of program'
@@ -58,7 +48,7 @@ at BST.delete1(BST.java:76)
 Pass
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestBST
 ...
-Time: 0.007
+Time: 0.008
 
 OK (3 tests)
 
