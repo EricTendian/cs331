@@ -89,7 +89,7 @@ public class BST<K extends Comparable, V extends Comparable> {
     
     private K revFind(Node n, V val) {	
 	if (n==null) return null;
-	else if (val.compareTo(n.val)==0) return n.key;
+	if (val.compareTo(n.val)==0) return n.key;
         else if (revFind(n.left,val)!=null) return revFind(n.left, val);
         else if (revFind(n.right,val)!=null) return revFind(n.right, val);
         else return null;
