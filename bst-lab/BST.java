@@ -83,7 +83,7 @@ public class BST<K extends Comparable, V extends Comparable> {
 	} return n;
     }
     
-    private K minKey(Node n) {
+    private Node minNode(Node n) {
         if (n.left==null) return n;
         else return minNode(n.left);
     }
