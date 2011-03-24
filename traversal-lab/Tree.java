@@ -50,8 +50,8 @@ public class Tree {
             levelorder();
         }
 
-        public K get() {
-            if (isValid()) return cursor.key;
+        public int get() {
+            if (isValid()) return cursor.val;
             return null;
         }
 
