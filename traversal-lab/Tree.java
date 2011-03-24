@@ -11,8 +11,8 @@ public class Tree {
             right = null;
         }
 
-        public Node(V val, Node left, Node right) {
-            this.val = val;
+        public Node(int i, Node left, Node right) {
+            this.val = i;
             this.left = left;
             this.right = right;
         }
