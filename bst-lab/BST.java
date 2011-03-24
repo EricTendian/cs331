@@ -35,48 +35,47 @@ public class BST<K extends Comparable, V extends Comparable> {
     }
     
     public void add(K key, V val) {
-        if (size>0) this.addAux(root, key, val);
+        if (size>0) add(root, key, val);
         else root = new Node(key, val);
         size++;
     }
     
-    private void addAux(Node n, K key, V val) {
+    private void add(Node n, K key, V val) {
         if (key.compareTo(n.key)==0) return;
         else if (key.compareTo(n.key)<0) {
             if (n.left==null) n.left = new Node(key, val);
-            else addAux(n.left, key, val);
+            else add(n.left, key, val);
         } else {
             if (n.right==null) n.right = new Node(key, val);
-            else addAux(n.right, key, val);
+            else add(n.right, key, val);
         }
     }
     
     public V find(K key) {
-        return findAux(root, key);
+        return find(root, key);
     }
     
-    private V findAux(Node n, K key) {
+    private V find(Node n, K key) {
         if (n==null) return null;
-        if (n.key.compareTo(key)==0) return n.val;
-        else if (n.key.compareTo(key)<0) return findAux(n.right, key);
-        else return findAux(n.left, key);
+        if (key.compareTo(n.key)==0) return n.val;
+        else if (key.compareTo(n.key)>0) return find(n.right, key);
+        else return find(n.left, key);
     }
     
     public void delete(K key) {
         if (size>0) {
-            root = remove(key, root);
+            root = delete1(key, root);
             size--;
         }
     }
     
-    private Node remove(K key, Node n) {
+    private Node delete1(K key, Node n) {
         if (n == null) return null;
-        
-        if (key.compareTo(n.key)<0) n.left = remove(key, n.left);
-        else if (key.compareTo(n.key)>0) n.right = remove(key, n.right);
+        if (key.compareTo(n.key)<0) n.left = delete1(key, n.left);
+        else if (key.compareTo(n.key)>0) n.right = delete1(key, n.right);
         else if (n.left!=null && n.right!=null) {
                 n.key = minKey(n.right);
-                n.right = remove(n.key, n.right);
+                n.right = delete1(n.key, n.right);
         } else n = ( n.left != null ) ? n.left : n.right;
         return n;
     }
@@ -155,7 +154,7 @@ public class BST<K extends Comparable, V extends Comparable> {
 
         public void delete() {
             if (size>0 && isValid()) {
-                remove(cursor.key, cursor);
+                delete1(cursor.key, cursor);
                 size--;
                 this.next();
             }
