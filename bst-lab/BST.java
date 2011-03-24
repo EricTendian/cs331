@@ -1,3 +1,6 @@
+
+import java.util.ArrayList;
+
 public class BST<K extends Comparable, V extends Comparable> {
     private int size;
     private Node root;
@@ -97,15 +100,16 @@ public class BST<K extends Comparable, V extends Comparable> {
     
     public class BFSIterator implements Iterator<K> {
         private Node cursor;
-        private Node parent;
-        //private Queue<Node> nodeQ;
-        private boolean hasRight;
+        private Queue<Node> nodeQ;
+        private ArrayList<Node> nodeL;
+        private int index;
         private boolean valid;
         
         public BFSIterator() {
-            cursor=root;
-            //nodeQ = new Queue<Node>();
-            //nodeQ.enqueue(root);
+            nodeQ = new Queue<Node>();
+            nodeL = new ArrayList<Node>();
+            index = 0;
+            levelorder();
         }
         
         public K get() {
@@ -120,20 +124,34 @@ public class BST<K extends Comparable, V extends Comparable> {
 
         public void next() {
             if (isValid()) {
-                if (parent==null) {parent = root; this.getNext();}
+                /*if (parent==null) {parent = root; this.getNext();}
                 else {
                     if (cursor.equals(parent.left) && hasRight) cursor = parent.right; //nav to right side
                     else {parent = cursor; this.getNext();} //go into subtree
-                }}
+                }*/
+                if (index+1<nodeL.size()) {index++; cursor = nodeL.get(index);}
+                else cursor = null;
+            }
         }
-
-        private void getNext() {
+        
+        private void levelorder() {
+            nodeQ.enqueue(root);
+            while (nodeQ.size()>0) {
+                Node n = nodeQ.dequeue();
+                nodeL.add(n);
+                if (n.left!=null) nodeQ.enqueue(n.left);
+                if (n.right!=null) nodeQ.enqueue(n.right);
+            }
+            cursor = nodeL.get(0);
+        }
+        
+        /*private void getNext() {
             //both sides
             if (parent.left!=null && parent.right!=null) {cursor = parent.left; hasRight = true;}
             else if (parent.left!=null) {cursor = parent.left; hasRight = false;} //left side only
             else if (parent.right!=null) {cursor = parent.right; hasRight = false;} //right side only
             else cursor = null;
-        }
+        }*/
 
         public void delete() {
             if (size>0 && isValid()) {
