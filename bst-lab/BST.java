@@ -1,6 +1,3 @@
-
-import java.util.ArrayList;
-
 public class BST<K extends Comparable, V extends Comparable> {
     private int size;
     private Node root;
@@ -100,14 +97,12 @@ public class BST<K extends Comparable, V extends Comparable> {
     public class BFSIterator implements Iterator<K> {
         private Node cursor;
         private Queue<Node> nodeQ;
-        private ArrayList<Node> nodeL;
-        private int index;
+        private Queue<Node> q;
         private boolean valid;
         
         public BFSIterator() {
             nodeQ = new Queue<Node>();
-            nodeL = new ArrayList<Node>();
-            index = 0;
+            q = new Queue<Node>();
             levelorder();
         }
         
@@ -128,8 +123,7 @@ public class BST<K extends Comparable, V extends Comparable> {
                     if (cursor.equals(parent.left) && hasRight) cursor = parent.right; //nav to right side
                     else {parent = cursor; this.getNext();} //go into subtree
                 }*/
-                if (index+1<nodeL.size()) {index++; cursor = nodeL.get(index);}
-                else cursor = null;
+                cursor = q.dequeue();
             }
         }
         
@@ -137,11 +131,11 @@ public class BST<K extends Comparable, V extends Comparable> {
             nodeQ.enqueue(root);
             while (nodeQ.size()>0) {
                 Node n = nodeQ.dequeue();
-                nodeL.add(n);
+                q.enqueue(n);
                 if (n.left!=null) nodeQ.enqueue(n.left);
                 if (n.right!=null) nodeQ.enqueue(n.right);
             }
-            cursor = nodeL.get(0);
+            cursor = q.dequeue();
         }
         
         /*private void getNext() {
