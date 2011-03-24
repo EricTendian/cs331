@@ -14,25 +14,31 @@ public class TestTree extends TestCase {
 	Iterator inO = tree.mkInorderIterator();
 	Iterator postO = tree.mkPostorderIterator();
 	Iterator frontO = tree.mkFrontierIterator();
+	assertEquals("bfs created", false, bfs==null);
+	assertEquals("dfs created", false, dfs==null);
+	assertEquals("preO created", false, preO==null);
+	assertEquals("inO created", false, inO==null);
+	assertEquals("postO created", false, postO==null);
+	assertEquals("frontO created", false, frontO==null);
     }
  
     public void testIterator() {
-        Tree bst = new Tree();
-        bst.add(n1,i1);
-        bst.add(n2,i2);
-        bst.add(n3,i3);
-        bst.add(n4,i4);
-        bst.add(n5,i5);
+        Tree tree = new Tree();
+        tree.add(1);
+        tree.add(2);
+        tree.add(3);
+        tree.add(4);
+        tree.add(5);
         Iterator iter = bst.mkBFSIterator();
-        assertEquals("root is n1", n1, iter.get());
+        assertEquals("root is 1", 1, iter.get());
         iter.next();
-        assertEquals("next item is n2", n2, iter.get());
+        assertEquals("next item is 2", 2, iter.get());
         iter.next();
-        assertEquals("next item is n3", n3, iter.get());
+        assertEquals("next item is 3", 3, iter.get());
         iter.next();
-        assertEquals("next item is n4", n4, iter.get());
+        assertEquals("next item is 4", 4, iter.get());
         iter.next();
-        assertEquals("next item is n5", n5, iter.get());
+        assertEquals("next item is 5", 5, iter.get());
         iter.next();
         assertEquals("finished", null, iter.get());
     }

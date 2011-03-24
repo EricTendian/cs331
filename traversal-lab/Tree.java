@@ -73,7 +73,7 @@ public class Tree {
                 if (n.left!=null) nodeQ.enqueue(n.left);
                 if (n.right!=null) nodeQ.enqueue(n.right);
             }
-            cursor = q.dequeue()
+            cursor = q.dequeue();
         }
     }
     
