@@ -73,7 +73,7 @@ public class BST<K extends Comparable, V extends Comparable> {
         else {
 	    if (n.left!=null && n.right!=null) {
                 n.key = minKey(n.right);
-                n.right = delete1(n.key, n);
+                n.right = delete1(n.key, n.right);
             } else if (n.left!=null || n.right!=null) {
                 if (n.left!=null) n = n.left;
 		else n = n.right;
