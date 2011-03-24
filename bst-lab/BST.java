@@ -55,8 +55,8 @@ public class BST<K extends Comparable, V extends Comparable> {
     private V find(Node n, K key) {
         if (n==null) return null;
         if (key.compareTo(n.key)==0) return n.val;
-        else if (key.compareTo(n.key)>0) return find(n.right, key);
-        else return find(n.left, key);
+        else if (key.compareTo(n.key)<0) return find(n.left, key);
+        else return find(n.right, key);
     }
     
     public void delete(K key) {
@@ -83,15 +83,16 @@ public class BST<K extends Comparable, V extends Comparable> {
     }
     
     public K revFind(V val) {
-        if (size>0) if (size>0) return revFindAux(root, val);
+        if (size>0) return revFind(root, val);
         return null;
     }
     
-    private K revFindAux(Node n, V val) {
-        if (n==null) return null;
-        if (n.val.compareTo(val)==0) return n.key;
-        else if (val.compareTo(n.val)>0) return revFindAux(n.right, val);
-        else return revFindAux(n.left, val);
+    private K revFind(Node n, V val) {	
+	if (n==null) return null;
+	else if (val.compareTo(n.val)==0) return n.key;
+        else if (revFind(n.left,val)!=null) return revFind(n.left, val);
+        else if (revFind(n.right,val)!=null) return revFind(n.right, val);
+        else return null;
     }
     
     public class BFSIterator implements Iterator<K> {

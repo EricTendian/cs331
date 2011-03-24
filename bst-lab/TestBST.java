@@ -37,13 +37,14 @@ public class TestBST extends TestCase {
         bst.add(n1,i1);
         bst.add(n2,i2);
         bst.add(n3,i3);
-        assertEquals("correct size",3,bst.size());
+	bst.add(n4,i4);
+        assertEquals("correct size",4,bst.size());
         assertEquals("finds value",i2,bst.find(n2));
         assertEquals("finds key",n3,bst.revFind(i3));
-        bst.delete(n1);
-        assertEquals("size decremented",2,bst.size());
-        assertEquals("finds value",null,bst.find(n1));
-        assertEquals("finds key",null,bst.revFind(i1));
+        bst.delete(n2);
+        assertEquals("size decremented",3,bst.size());
+        assertEquals("finds value",null,bst.find(n2));
+        assertEquals("finds key",null,bst.revFind(i2));
     }
     
     public void testIterator() {
