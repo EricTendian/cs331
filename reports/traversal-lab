@@ -1,5 +1,5 @@
 Testing lab Traversal Lab for etendian.
-Thu Mar 24 17:25:52 CDT 2011
+Thu Mar 24 17:35:50 CDT 2011
 
 Running Testing student's code: Did not compile
     (solutions tests vs. student code.)
@@ -45,30 +45,30 @@ Testing student's test cases with working version of program
     (student tests vs. solution code.)
 ----------------------------------------
 javac -classpath /usr/share/junit/lib/junit.jar -d classes -sourcepath . Iterator.java List.java Queue.java TestTree.java Tree.java
-TestTree.java:5: class TestBST is public, should be declared in a file named TestBST.java
-public class TestBST extends TestCase {
+TestTree.java:21: cannot find symbol
+symbol  : variable n1
+location: class TestTree
+bst.add(n1,i1);
+^
+TestTree.java:21: cannot find symbol
+symbol  : variable i1
+location: class TestTree
+bst.add(n1,i1);
+^
+TestTree.java:22: cannot find symbol
+symbol  : variable n2
+location: class TestTree
+bst.add(n2,i2);
+^
+TestTree.java:22: cannot find symbol
+symbol  : variable i2
+location: class TestTree
+bst.add(n2,i2);
 ^
 TestTree.java:23: cannot find symbol
-symbol  : class BST
-location: class TestBST
-BST<String,Integer> bst = new BST<String,Integer>();
-^
-TestTree.java:23: cannot find symbol
-symbol  : class BST
-location: class TestBST
-BST<String,Integer> bst = new BST<String,Integer>();
-^
-TestTree.java:36: cannot find symbol
-symbol  : class BST
-location: class TestBST
-BST<String,Integer> bst = new BST<String,Integer>();
-^
-TestTree.java:36: cannot find symbol
-symbol  : class BST
-location: class TestBST
-BST<String,Integer> bst = new BST<String,Integer>();
-^
-TestTree.java:51: cannot find symbol
+symbol  : variable n3
+location: class TestTree
+bst.add(n3,i3);
 
 ----------------------------------------
 bfsIterator not working
