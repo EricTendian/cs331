@@ -1,5 +1,5 @@
 Testing lab Traversal Lab for etendian.
-Thu Mar 24 17:50:51 CDT 2011
+Thu Mar 24 17:55:52 CDT 2011
 
 Running Testing student's code: Did not compile
     (solutions tests vs. student code.)
@@ -20,11 +20,6 @@ symbol  : class V
 location: class Tree.Node
 public Node(V val, Node left, Node right) {
 ^
-Tree.java:53: cannot find symbol
-symbol  : class K
-location: class Tree.BFSIterator
-public K get() {
-^
 Tree.java:25: cannot find symbol
 symbol  : variable size
 location: class Tree
@@ -35,10 +30,15 @@ symbol  : variable size
 location: class Tree
 size++;
 ^
-Tree.java:54: cannot find symbol
-symbol  : variable key
-location: class Tree.Node
-if (isValid()) return cursor.key;
+Tree.java:55: incompatible types
+found   : <nulltype>
+required: int
+return null;
+^
+Tree.java:86: cannot find symbol
+symbol  : class DFSIterator
+location: class Tree
+return new DFSIterator();
 
 ----------------------------------------
 Testing student's test cases with working version of program
@@ -48,7 +48,7 @@ working
 Solution test case detected error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestTree
 .F.F.F.F.F.F
-Time: 0.017
+Time: 0.013
 There were 6 failures:
 1) testBFS(TestTree)junit.framework.AssertionFailedError: finished expected:<null> but was:<0>
 at TestTree.testBFS(TestTree.java:27)
