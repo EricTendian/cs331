@@ -58,7 +58,7 @@ public class BST<K extends Comparable, V extends Comparable> {
     private V findAux(Node n, K key) {
         if (n==null) return null;
         if (n.key.compareTo(key)==0) return n.val;
-        else if (key.compareTo(n.key)>0) return findAux(n.right, key);
+        else if (n.key.compareTo(key)>0) return findAux(n.right, key);
         else return findAux(n.left, key);
     }
     
