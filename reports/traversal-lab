@@ -1,9 +1,9 @@
 Testing lab Traversal Lab for etendian.
-Thu Mar 17 22:18:43 CDT 2011
+Thu Mar 24 17:10:59 CDT 2011
 
 Running Testing student's code: Did not compile
     (solutions tests vs. student code.)
-Running Testing student's test cases with working version of program: Fail
+Running Testing student's test cases with working version of program: Did not compile
     (student tests vs. solution code.)
 
  No further tests will be run.Total: 0/60
@@ -14,39 +14,57 @@ Details:
 Testing student's code
     (solutions tests vs. student code.)
 ----------------------------------------
-javac -classpath /usr/share/junit/lib/junit.jar -d classes -sourcepath . Iterator.java TestTree.java
-TestTree.java:39: cannot find symbol
-symbol  : class Tree
-location: class TestTree
+javac -classpath /usr/share/junit/lib/junit.jar -d classes -sourcepath . Iterator.java List.java Queue.java TestTree.java Tree.java
+Tree.java:1: class BST is public, should be declared in a file named BST.java
+public class BST<K extends Comparable, V extends Comparable> {
+^
+Tree.java:152: type Iterator does not take parameters
+public Iterator<K> mkBFSIterator() {
+^
+Tree.java:104: type Iterator does not take parameters
+public class BFSIterator implements Iterator<K> {
+^
+./Tree.java:1: class BST is public, should be declared in a file named BST.java
+public class BST<K extends Comparable, V extends Comparable> {
+^
+TestTree.java:39: cannot access Tree
+bad class file: ./Tree.java
+file does not contain class Tree
+Please remove or make sure it appears in the correct subdirectory of the classpath.
 Tree bst = new Tree();
 ^
-TestTree.java:39: cannot find symbol
-symbol  : class Tree
-location: class TestTree
-Tree bst = new Tree();
-^
-TestTree.java:45: cannot find symbol
-symbol  : class Tree
-location: class TestTree
-Tree bst;
-^
-TestTree.java:49: cannot find symbol
-symbol  : class Tree
-location: class TestTree
-bst = new Tree();
-^
-TestTree.java:66: cannot find symbol
-symbol  : class Tree
-location: class TestTree
-Tree bst;
+5 errors
+scons: *** [classes/Iterator.class] Error 1
 
 ----------------------------------------
 Testing student's test cases with working version of program
     (student tests vs. solution code.)
 ----------------------------------------
-working
-Solution test case detected error.
-java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestTree
+javac -classpath /usr/share/junit/lib/junit.jar -d classes -sourcepath . Iterator.java List.java Queue.java TestTree.java Tree.java
+TestTree.java:5: class TestBST is public, should be declared in a file named TestBST.java
+public class TestBST extends TestCase {
+^
+TestTree.java:23: cannot find symbol
+symbol  : class BST
+location: class TestBST
+BST<String,Integer> bst = new BST<String,Integer>();
+^
+TestTree.java:23: cannot find symbol
+symbol  : class BST
+location: class TestBST
+BST<String,Integer> bst = new BST<String,Integer>();
+^
+TestTree.java:36: cannot find symbol
+symbol  : class BST
+location: class TestBST
+BST<String,Integer> bst = new BST<String,Integer>();
+^
+TestTree.java:36: cannot find symbol
+symbol  : class BST
+location: class TestBST
+BST<String,Integer> bst = new BST<String,Integer>();
+^
+TestTree.java:51: cannot find symbol
 
 ----------------------------------------
 bfsIterator not working
