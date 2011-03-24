@@ -1,6 +1,6 @@
 public class Tree {
     private Node root;
-    
+
     private class Node {
         public int val;
         public Node left, right;
@@ -26,7 +26,7 @@ public class Tree {
         else root = new Node(i);
         size++;
     }
-    
+
     private void add(Node n, int i) {
         if (i==n.val) return;
         else if (i<n.val) {
@@ -36,19 +36,20 @@ public class Tree {
             if (n.right==null) n.right = new Node(i);
             else add(n.right, i);
         }
+    }
 
     public class BFSIterator implements Iterator {
         private Node cursor;
         private Queue<Node> nodeQ;
         private Queue<Node> q;
         private boolean valid;
-        
+
         public BFSIterator() {
             nodeQ = new Queue<Node>();
             q = new Queue<Node>();
             levelorder();
         }
-        
+
         public K get() {
             if (isValid()) return cursor.key;
             return null;
@@ -64,7 +65,7 @@ public class Tree {
                 cursor = q.dequeue();
             }
         }
-        
+
         private void levelorder() {
             nodeQ.enqueue(root);
             while (nodeQ.size()>0) {
@@ -76,7 +77,7 @@ public class Tree {
             cursor = q.dequeue();
         }
     }
-    
+
     public Iterator mkBFSIterator() {
         return new BFSIterator();
     }
@@ -84,7 +85,7 @@ public class Tree {
     public Iterator mkDFSIterator() {
         return new DFSIterator();
     }
-    
+
     public Iterator mkPreorderIterator() {
         return new PreorderIterator();
     }
