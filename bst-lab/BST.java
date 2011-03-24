@@ -72,7 +72,8 @@ public class BST<K extends Comparable, V extends Comparable> {
         else if (key.compareTo(n.key)>0) n.right = delete1(key, n.right);
         else {
 	    if (n.left!=null && n.right!=null) {
-                n.key = minKey(n.right);
+                n.key = minNode(n.right).key;
+                n.val = minNode(n.right).val;
                 n.right = delete1(n.key, n.right);
             } else if (n.left!=null || n.right!=null) {
                 if (n.left!=null) n = n.left;
@@ -83,8 +84,8 @@ public class BST<K extends Comparable, V extends Comparable> {
     }
     
     private K minKey(Node n) {
-        if (n.left==null) return n.key;
-        else return minKey(n.left);
+        if (n.left==null) return n;
+        else return minNode(n.left);
     }
     
     public K revFind(V val) {
