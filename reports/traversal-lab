@@ -1,5 +1,5 @@
 Testing lab Traversal Lab for etendian.
-Thu Mar 24 17:10:59 CDT 2011
+Thu Mar 24 17:25:52 CDT 2011
 
 Running Testing student's code: Did not compile
     (solutions tests vs. student code.)
@@ -15,26 +15,30 @@ Testing student's code
     (solutions tests vs. student code.)
 ----------------------------------------
 javac -classpath /usr/share/junit/lib/junit.jar -d classes -sourcepath . Iterator.java List.java Queue.java TestTree.java Tree.java
-Tree.java:1: class BST is public, should be declared in a file named BST.java
-public class BST<K extends Comparable, V extends Comparable> {
+Tree.java:40: illegal start of expression
+public class BFSIterator implements Iterator {
 ^
-Tree.java:152: type Iterator does not take parameters
-public Iterator<K> mkBFSIterator() {
+Tree.java:76: ';' expected
+cursor = q.dequeue()
 ^
-Tree.java:104: type Iterator does not take parameters
-public class BFSIterator implements Iterator<K> {
+Tree.java:80: illegal start of expression
+public Iterator mkBFSIterator() {
 ^
-./Tree.java:1: class BST is public, should be declared in a file named BST.java
-public class BST<K extends Comparable, V extends Comparable> {
+Tree.java:80: ';' expected
+public Iterator mkBFSIterator() {
 ^
-TestTree.java:39: cannot access Tree
-bad class file: ./Tree.java
-file does not contain class Tree
-Please remove or make sure it appears in the correct subdirectory of the classpath.
-Tree bst = new Tree();
+Tree.java:84: illegal start of expression
+public Iterator mkDFSIterator() {
 ^
-5 errors
-scons: *** [classes/Iterator.class] Error 1
+Tree.java:84: ';' expected
+public Iterator mkDFSIterator() {
+^
+Tree.java:88: illegal start of expression
+public Iterator mkPreorderIterator() {
+^
+Tree.java:88: ';' expected
+public Iterator mkPreorderIterator() {
+^
 
 ----------------------------------------
 Testing student's test cases with working version of program
