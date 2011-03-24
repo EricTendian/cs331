@@ -70,11 +70,16 @@ public class BST<K extends Comparable, V extends Comparable> {
         if (n == null) return null;
         if (key.compareTo(n.key)<0) n.left = delete1(key, n.left);
         else if (key.compareTo(n.key)>0) n.right = delete1(key, n.right);
-        else if (n.left!=null && n.right!=null) {
+        else {
+	    if (n.left!=null && n.right!=null) {
                 n.key = minKey(n.right);
-                n.right = delete1(n.key, n.right);
-        } else n = ( n.left != null ) ? n.left : n.right;
-        return n;
+                n.right = delete1(n.key, n);
+            } else if (n.left!=null || n.right!=null) {
+                if (n.left!=null) n = n.left;
+		else n = n.right;
+	    }
+	    else n = null;
+	} return n;
     }
     
     private K minKey(Node n) {
@@ -119,11 +124,6 @@ public class BST<K extends Comparable, V extends Comparable> {
 
         public void next() {
             if (isValid()) {
-                /*if (parent==null) {parent = root; this.getNext();}
-                else {
-                    if (cursor.equals(parent.left) && hasRight) cursor = parent.right; //nav to right side
-                    else {parent = cursor; this.getNext();} //go into subtree
-                }*/
                 cursor = q.dequeue();
             }
         }
@@ -137,15 +137,7 @@ public class BST<K extends Comparable, V extends Comparable> {
                 if (n.right!=null) nodeQ.enqueue(n.right);
             }
             cursor = q.dequeue();
-        }
-        
-        /*private void getNext() {
-            //both sides
-            if (parent.left!=null && parent.right!=null) {cursor = parent.left; hasRight = true;}
-            else if (parent.left!=null) {cursor = parent.left; hasRight = false;} //left side only
-            else if (parent.right!=null) {cursor = parent.right; hasRight = false;} //right side only
-            else cursor = null;
-        }*/
+	}
 
         public void delete() {
             if (size>0 && isValid()) {
