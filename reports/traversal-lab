@@ -1,5 +1,5 @@
 Testing lab Traversal Lab for etendian.
-Thu Mar 24 17:35:50 CDT 2011
+Thu Mar 24 17:40:55 CDT 2011
 
 Running Testing student's code: Did not compile
     (solutions tests vs. student code.)
@@ -17,9 +17,6 @@ Testing student's code
 javac -classpath /usr/share/junit/lib/junit.jar -d classes -sourcepath . Iterator.java List.java Queue.java TestTree.java Tree.java
 Tree.java:40: illegal start of expression
 public class BFSIterator implements Iterator {
-^
-Tree.java:76: ';' expected
-cursor = q.dequeue()
 ^
 Tree.java:80: illegal start of expression
 public Iterator mkBFSIterator() {
@@ -39,36 +36,22 @@ public Iterator mkPreorderIterator() {
 Tree.java:88: ';' expected
 public Iterator mkPreorderIterator() {
 ^
+Tree.java:92: illegal start of expression
+public Iterator mkInorderIterator() {
+^
 
 ----------------------------------------
 Testing student's test cases with working version of program
     (student tests vs. solution code.)
 ----------------------------------------
 javac -classpath /usr/share/junit/lib/junit.jar -d classes -sourcepath . Iterator.java List.java Queue.java TestTree.java Tree.java
-TestTree.java:21: cannot find symbol
-symbol  : variable n1
+TestTree.java:32: cannot find symbol
+symbol  : variable bst
 location: class TestTree
-bst.add(n1,i1);
+Iterator iter = bst.mkBFSIterator();
 ^
-TestTree.java:21: cannot find symbol
-symbol  : variable i1
-location: class TestTree
-bst.add(n1,i1);
-^
-TestTree.java:22: cannot find symbol
-symbol  : variable n2
-location: class TestTree
-bst.add(n2,i2);
-^
-TestTree.java:22: cannot find symbol
-symbol  : variable i2
-location: class TestTree
-bst.add(n2,i2);
-^
-TestTree.java:23: cannot find symbol
-symbol  : variable n3
-location: class TestTree
-bst.add(n3,i3);
+1 error
+scons: *** [classes/Iterator.class] Error 1
 
 ----------------------------------------
 bfsIterator not working
