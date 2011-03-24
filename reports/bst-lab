@@ -1,5 +1,5 @@
 Testing lab BST Lab for etendian.
-Thu Mar 24 16:08:59 CDT 2011
+Thu Mar 24 16:13:57 CDT 2011
 
 Running 'Testing student's code': Fail
     (solutions tests vs. student code.)
@@ -48,7 +48,7 @@ Tests run: 6,  Failures: 1,  Errors: 0
 Pass
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestBST
 ...
-Time: 0.008
+Time: 0.007
 
 OK (3 tests)
 
