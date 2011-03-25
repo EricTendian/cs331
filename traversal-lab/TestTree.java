@@ -24,7 +24,7 @@ public class TestTree extends TestCase {
         iter.next();
         assertEquals("next item is 5", 5, iter.get());
         iter.next();
-        assertEquals("finished", null, iter.get());
+        assertEquals("finished", -1, iter.get());
     }
 
     public void testDFS() {
