@@ -1,12 +1,12 @@
 Testing lab Traversal Lab for etendian.
-Thu Mar 24 18:00:52 CDT 2011
+Thu Mar 24 20:06:05 CDT 2011
 
-Running Testing student's code: Did not compile
+Running Testing student's code: Pass
     (solutions tests vs. student code.)
 Running Testing student's test cases with working version of program: Fail
     (student tests vs. solution code.)
 
- No further tests will be run.Total: 0/60
+ No further tests will be run.Total: 25/60
 
 
 Details:
@@ -14,31 +14,13 @@ Details:
 Testing student's code
     (solutions tests vs. student code.)
 ----------------------------------------
-javac -classpath /usr/share/junit/lib/junit.jar -d classes -sourcepath . Iterator.java List.java Queue.java TestTree.java Tree.java
-Tree.java:25: cannot find symbol
-symbol  : variable size
-location: class Tree
-if (size>0) add(root, i);
-^
-Tree.java:27: cannot find symbol
-symbol  : variable size
-location: class Tree
-size++;
-^
-Tree.java:55: incompatible types
-found   : <nulltype>
-required: int
-return null;
-^
-Tree.java:86: cannot find symbol
-symbol  : class DFSIterator
-location: class Tree
-return new DFSIterator();
-^
-Tree.java:90: cannot find symbol
-symbol  : class PreorderIterator
-location: class Tree
-return new PreorderIterator();
+Pass
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestTree
+...................
+Time: 0.013
+
+OK (19 tests)
+
 
 ----------------------------------------
 Testing student's test cases with working version of program
@@ -50,7 +32,7 @@ java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestTree
 .F.F.F.F.F.F
 Time: 0.013
 There were 6 failures:
-1) testBFS(TestTree)junit.framework.AssertionFailedError: finished expected:<null> but was:<0>
+1) testBFS(TestTree)junit.framework.AssertionFailedError: finished expected:<-1> but was:<0>
 at TestTree.testBFS(TestTree.java:27)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
