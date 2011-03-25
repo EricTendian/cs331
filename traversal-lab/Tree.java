@@ -47,6 +47,7 @@ public class Tree {
             nodeQ = new Queue<Node>();
             q = new Queue<Node>();
             BFS();
+            cursor = q.dequeue();
         }
 
         public int get() {
@@ -73,7 +74,6 @@ public class Tree {
                 if (n.left!=null) nodeQ.enqueue(n.left);
                 if (n.right!=null) nodeQ.enqueue(n.right);
             }
-            cursor = q.dequeue();
         }
     }
     
@@ -85,6 +85,7 @@ public class Tree {
         public DFSIterator() {
             q = new Queue<Node>();
             DFS(root);
+            cursor = q.dequeue();
         }
 
         public int get() {
@@ -118,6 +119,7 @@ public class Tree {
         public PreorderIterator() {
             q = new Queue<Node>();
             preorder(root);
+            cursor = q.dequeue();
         }
 
         public int get() {
@@ -151,6 +153,7 @@ public class Tree {
         public InorderIterator() {
             q = new Queue<Node>();
             inorder(root);
+            cursor = q.dequeue();
         }
 
         public int get() {
@@ -184,6 +187,7 @@ public class Tree {
         public PostorderIterator() {
             q = new Queue<Node>();
             postorder(root);
+            cursor = q.dequeue();
         }
 
         public int get() {
