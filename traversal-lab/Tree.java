@@ -52,7 +52,7 @@ public class Tree {
 
         public int get() {
             if (isValid()) return cursor.val;
-            return -1;
+            return 0;
         }
 
         public boolean isValid() {
@@ -90,7 +90,7 @@ public class Tree {
 
         public int get() {
             if (isValid()) return cursor.val;
-            return -1;
+            return 0;
         }
 
         public boolean isValid() {
@@ -124,7 +124,7 @@ public class Tree {
 
         public int get() {
             if (isValid()) return cursor.val;
-            return -1;
+            return 0;
         }
 
         public boolean isValid() {
@@ -158,7 +158,7 @@ public class Tree {
 
         public int get() {
             if (isValid()) return cursor.val;
-            return -1;
+            return 0;
         }
 
         public boolean isValid() {
@@ -192,7 +192,7 @@ public class Tree {
 
         public int get() {
             if (isValid()) return cursor.val;
-            return -1;
+            return 0;
         }
 
         public boolean isValid() {
@@ -222,7 +222,7 @@ public class Tree {
 
         public int get() {
             if (isValid()) return cursor.val;
-            return -1;
+            return 0;
         }
 
         public boolean isValid() {

@@ -27,7 +27,7 @@ public class TestTree extends TestCase {
         iter.next();
         assertEquals("next item is 8", 8, iter.get());
         iter.next();
-        assertEquals("finished", -1, iter.get());
+        assertEquals("finished", 0, iter.get());
     }
 
     public void testDFS() {
@@ -51,7 +51,7 @@ public class TestTree extends TestCase {
         iter.next();
         assertEquals("next item is 8", 8, iter.get());
         iter.next();
-        assertEquals("finished", -1, iter.get());
+        assertEquals("finished", 0, iter.get());
     }
 
     public void testPreO() {
@@ -75,7 +75,7 @@ public class TestTree extends TestCase {
         iter.next();
         assertEquals("next item is 8", 8, iter.get());
         iter.next();
-        assertEquals("finished", -1, iter.get());
+        assertEquals("finished", 0, iter.get());
     }
 
     public void testInO() {
@@ -99,7 +99,7 @@ public class TestTree extends TestCase {
         iter.next();
         assertEquals("next item is 9", 9, iter.get());
         iter.next();
-        assertEquals("finished", -1, iter.get());
+        assertEquals("finished", 0, iter.get());
     }
 
     public void testPostO() {
@@ -123,7 +123,7 @@ public class TestTree extends TestCase {
         iter.next();
         assertEquals("next item is 6", 6, iter.get());
         iter.next();
-        assertEquals("finished", -1, iter.get());
+        assertEquals("finished", 0, iter.get());
     }
 
     public void testFrontO() {
@@ -147,7 +147,7 @@ public class TestTree extends TestCase {
         iter.next();
         assertEquals("next item is 8", 8, iter.get());
         iter.next();
-        assertEquals("finished", -1, iter.get());
+        assertEquals("finished", 0, iter.get());
     }
     
     private Tree init() {
