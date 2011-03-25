@@ -129,17 +129,7 @@ public class TestTree extends TestCase {
     public void testFrontO() {
         Tree tree = init();
         Iterator iter = tree.mkFrontierIterator();
-        assertEquals("root is 6", 1, iter.get());
-        iter.next();
-        assertEquals("next item is 2", 2, iter.get());
-        iter.next();
-        assertEquals("next item is 7", 7, iter.get());
-        iter.next();
-        assertEquals("next item is 1", 1, iter.get());
-        iter.next();
-        assertEquals("next item is 4", 4, iter.get());
-        iter.next();
-        assertEquals("next item is 9", 9, iter.get());
+        assertEquals("root is 1", 1, iter.get());
         iter.next();
         assertEquals("next item is 3", 3, iter.get());
         iter.next();
