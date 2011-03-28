@@ -28,6 +28,7 @@ public class Heap<E> {
    }
 
    public void enqueue(E elt) {
+      data[63];
       size++;
    }
 
@@ -37,6 +38,6 @@ public class Heap<E> {
    }
 
    public E top () {
-      return null;
+      return data[0];
    }
 }
