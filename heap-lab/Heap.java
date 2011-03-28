@@ -4,20 +4,21 @@ public class Heap<E> {
 
    public Heap() {
       data = new Object[64];
+      size = 0;
    }
 
    // Helper functions
 
    private int left(int i) {
-      return 0;
+      return 2 * i + 1;
    }
 
    private int right(int i) {
-      return 0;
+      return 2 * i + 2;
    }
 
    private int parent(int i) {
-      return 0;
+      return (i - 1) / 2;
    }
 
    // Main functions
@@ -27,10 +28,11 @@ public class Heap<E> {
    }
 
    public void enqueue(E elt) {
-      size ++;
+      size++;
    }
 
    public E dequeue() {
+      size--;
       return null;
    }
 
