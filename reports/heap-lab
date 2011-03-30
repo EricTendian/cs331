@@ -1,0 +1,109 @@
+Testing lab Heap Lab for etendian.
+Wed Mar 30 12:24:10 CDT 2011
+
+Running 'Testing student code': Did not compile
+    (solutions tests vs. student code.)
+Running Testing student test cases with working version of program: Pass
+    (student tests vs. solution code.)
+Running left-child formula wrong: Fail
+    (student tests vs. broken code.)
+Running right-child formula wrong: Fail
+    (student tests vs. broken code.)
+Running parent formula wrong: Fail
+    (student tests vs. broken code.)
+Running compare only root and left: Fail
+    (student tests vs. broken code.)
+Running wrong element moved up during delete: Fail
+    (student tests vs. broken code.)
+Total: 5/50
+
+
+Details:
+----------------------------------------
+'Testing student code'
+    (solutions tests vs. student code.)
+----------------------------------------
+javac -classpath /usr/share/junit/lib/junit.jar -d classes -sourcepath . Heap.java TestHeap.java
+Heap.java:31: not a statement
+data[63];
+^
+1 error
+scons: *** [classes/Heap.class] Error 1
+
+----------------------------------------
+Testing student test cases with working version of program
+    (student tests vs. solution code.)
+----------------------------------------
+Pass
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestHeap
+.
+Time: 0.016
+
+OK (1 test)
+
+
+----------------------------------------
+left-child formula wrong
+    (student tests vs. broken code.)
+----------------------------------------
+broke1
+Student test case did not detect error.
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestHeap
+.
+Time: 0.034
+
+OK (1 test)
+
+
+----------------------------------------
+right-child formula wrong
+    (student tests vs. broken code.)
+----------------------------------------
+broke2
+Student test case did not detect error.
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestHeap
+.
+Time: 0.005
+
+OK (1 test)
+
+
+----------------------------------------
+parent formula wrong
+    (student tests vs. broken code.)
+----------------------------------------
+broke3
+Student test case did not detect error.
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestHeap
+.
+Time: 0.015
+
+OK (1 test)
+
+
+----------------------------------------
+compare only root and left
+    (student tests vs. broken code.)
+----------------------------------------
+broke4
+Student test case did not detect error.
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestHeap
+.
+Time: 0.021
+
+OK (1 test)
+
+
+----------------------------------------
+wrong element moved up during delete
+    (student tests vs. broken code.)
+----------------------------------------
+broke5
+Student test case did not detect error.
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestHeap
+.
+Time: 0.003
+
+OK (1 test)
+
+
