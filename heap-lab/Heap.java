@@ -51,7 +51,7 @@ public class Heap<E> {
         if (size>0) {
             data[0] = data[size-1];
             size--;
-            if (size>0)
+            if (size>0) heapify(0);
 	} else return null;
     }
 
