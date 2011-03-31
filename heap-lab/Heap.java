@@ -58,12 +58,13 @@ public class Heap<E> {
     private void heapify(int index) {
         int left = left(index);
         int right = right(index);
+        int min;
         if (right>=size) {
             if (left>=size) return;
-            else int min = left;
+            else min = left;
         } else {
-            if (data[left]<=data[right]) int min = left;
-            else int min = right;
+            if (data[left]<=data[right]) min = left;
+            else min = right;
         } if (data[index]>data[min]) {
             Object temp = data[min];
             data[min] = data[index];
