@@ -1,4 +1,4 @@
-public class Heap<E> {
+public class Heap<E extends Comparable> {
     private int size;
     private Object data[];
 
@@ -49,9 +49,11 @@ public class Heap<E> {
 
     public E dequeue() {
         if (size>0) {
+            E del = data[0];
             data[0] = data[size-1];
             size--;
             if (size>0) heapify(0);
+            return del;
 	} else return null;
     }
 
@@ -74,6 +76,6 @@ public class Heap<E> {
     }
 
     public E top () {
-        return data[0];
+        return (E) data[0];
     }
 }
