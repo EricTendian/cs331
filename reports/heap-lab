@@ -1,5 +1,5 @@
 Testing lab Heap Lab for etendian.
-Thu Mar 31 00:16:50 CDT 2011
+Thu Mar 31 00:26:49 CDT 2011
 
 Running 'Testing student code': Did not compile
     (solutions tests vs. student code.)
@@ -24,30 +24,19 @@ Details:
     (solutions tests vs. student code.)
 ----------------------------------------
 javac -classpath /usr/share/junit/lib/junit.jar -d classes -sourcepath . Heap.java TestHeap.java
-Heap.java:30: cannot find symbol
-symbol  : class E
-location: class Heap
-public void enqueue(E elt) {
+Heap.java:41: operator < cannot be applied to E,E
+if ((E) data[index] < (E) data[parent]) {
 ^
-Heap.java:50: cannot find symbol
-symbol  : class E
-location: class Heap
-public E dequeue() {
+Heap.java:68: operator <= cannot be applied to E,E
+if ((E) data[left] <= (E) data[right]) min = left;
 ^
-Heap.java:78: cannot find symbol
-symbol  : class E
-location: class Heap
-public E top () {
+Heap.java:70: operator > cannot be applied to E,E
+} if ((E) data[index] > (E) data[min]) {
 ^
-Heap.java:41: cannot find symbol
-symbol  : method compareTo(java.lang.Object)
-location: class java.lang.Object
-if (data[index].compareTo(data[parent])<0) {
-^
-Heap.java:56: cannot find symbol
-symbol  : class E
-location: class Heap
-return (E) del;
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+3 errors
+scons: *** [classes/Heap.class] Error 1
 
 ----------------------------------------
 Testing student test cases with working version of program
@@ -69,7 +58,7 @@ broke1
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestHeap
 .
-Time: 0.003
+Time: 0.002
 
 OK (1 test)
 
@@ -82,7 +71,7 @@ broke2
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestHeap
 .
-Time: 0.003
+Time: 0.002
 
 OK (1 test)
 
@@ -95,7 +84,7 @@ broke3
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestHeap
 .
-Time: 0.002
+Time: 0.003
 
 OK (1 test)
 
