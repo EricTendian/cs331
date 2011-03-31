@@ -1,4 +1,4 @@
-public class Heap {
+public class Heap<E> {
     private int size;
     private Object data[];
 
@@ -38,7 +38,7 @@ public class Heap {
     private void reHeap(int index) {
         if (index!=0) {
             int parent = parent(index);
-	    if (data[index].compareTo(data[parent])<0) {
+	    if ((E) data[index] < (E) data[parent]) {
                 Object temp = data[parent];
                 data[parent] = data[index];
                 data[index] = temp;
@@ -65,9 +65,9 @@ public class Heap {
             if (left>=size) return;
             else min = left;
         } else {
-            if (data[left]<=data[right]) min = left;
+            if ((E) data[left] <= (E) data[right]) min = left;
             else min = right;
-        } if (data[index].compareTo(data[min])>0) {
+        } if ((E) data[index] > (E) data[min]) {
             Object temp = data[min];
             data[min] = data[index];
             data[index] = temp;
