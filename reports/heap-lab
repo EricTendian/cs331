@@ -1,5 +1,5 @@
 Testing lab Heap Lab for etendian.
-Wed Mar 30 23:56:51 CDT 2011
+Thu Mar 31 00:01:50 CDT 2011
 
 Running 'Testing student code': Did not compile
     (solutions tests vs. student code.)
@@ -24,28 +24,23 @@ Details:
     (solutions tests vs. student code.)
 ----------------------------------------
 javac -classpath /usr/share/junit/lib/junit.jar -d classes -sourcepath . Heap.java TestHeap.java
-Heap.java:63: '.class' expected
-else int min = left;
+Heap.java:41: operator > cannot be applied to java.lang.Object,java.lang.Object
+if (data[parent] > data[index]) {
 ^
-Heap.java:63: not a statement
-else int min = left;
+Heap.java:66: operator <= cannot be applied to java.lang.Object,java.lang.Object
+if (data[left]<=data[right]) min = left;
 ^
-Heap.java:63: illegal start of expression
-else int min = left;
+Heap.java:68: operator > cannot be applied to java.lang.Object,java.lang.Object
+} if (data[index]>data[min]) {
 ^
-Heap.java:65: '.class' expected
-if (data[left]<=data[right]) int min = left;
+Heap.java:77: incompatible types
+found   : java.lang.Object
+required: E
+return data[0];
 ^
-Heap.java:65: not a statement
-if (data[left]<=data[right]) int min = left;
-^
-Heap.java:65: illegal start of expression
-if (data[left]<=data[right]) int min = left;
-^
-Heap.java:66: 'else' without 'if'
-else int min = right;
-^
-7 errors
+Note: TestHeap.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+4 errors
 scons: *** [classes/Heap.class] Error 1
 
 ----------------------------------------
@@ -94,7 +89,7 @@ broke3
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestHeap
 .
-Time: 0.002
+Time: 0.003
 
 OK (1 test)
 
