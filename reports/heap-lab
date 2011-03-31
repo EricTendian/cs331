@@ -1,5 +1,5 @@
 Testing lab Heap Lab for etendian.
-Thu Mar 31 00:26:49 CDT 2011
+Thu Mar 31 16:36:51 CDT 2011
 
 Running 'Testing student code': Did not compile
     (solutions tests vs. student code.)
@@ -24,19 +24,30 @@ Details:
     (solutions tests vs. student code.)
 ----------------------------------------
 javac -classpath /usr/share/junit/lib/junit.jar -d classes -sourcepath . Heap.java TestHeap.java
-Heap.java:41: operator < cannot be applied to E,E
-if ((E) data[index] < (E) data[parent]) {
+Heap.java:41: cannot find symbol
+symbol  : method compareTo(E)
+location: class java.lang.Object
+if ((E) data[index].compareTo((E) data[parent])>0) {
 ^
-Heap.java:68: operator <= cannot be applied to E,E
-if ((E) data[left] <= (E) data[right]) min = left;
+Heap.java:41: operator > cannot be applied to E,int
+if ((E) data[index].compareTo((E) data[parent])>0) {
 ^
-Heap.java:70: operator > cannot be applied to E,E
-} if ((E) data[index] > (E) data[min]) {
+Heap.java:68: cannot find symbol
+symbol  : method compareTo(E)
+location: class java.lang.Object
+if ((E) data[left].compareTo((E) data[right])<=0) min = left;
 ^
-Note: Some input files use unchecked or unsafe operations.
-Note: Recompile with -Xlint:unchecked for details.
-3 errors
-scons: *** [classes/Heap.class] Error 1
+Heap.java:68: operator <= cannot be applied to E,int
+if ((E) data[left].compareTo((E) data[right])<=0) min = left;
+^
+Heap.java:70: cannot find symbol
+symbol  : method compareTo(E)
+location: class java.lang.Object
+} if ((E) data[index].compareTo((E) data[min])<0) {
+^
+Heap.java:70: operator < cannot be applied to E,int
+} if ((E) data[index].compareTo((E) data[min])<0) {
+^
 
 ----------------------------------------
 Testing student test cases with working version of program
@@ -45,7 +56,7 @@ Testing student test cases with working version of program
 Pass
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestHeap
 .
-Time: 0.002
+Time: 0.003
 
 OK (1 test)
 
@@ -71,7 +82,7 @@ broke2
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestHeap
 .
-Time: 0.002
+Time: 0.003
 
 OK (1 test)
 
@@ -110,7 +121,7 @@ broke5
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestHeap
 .
-Time: 0.003
+Time: 0.002
 
 OK (1 test)
 
