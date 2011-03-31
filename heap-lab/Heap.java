@@ -1,4 +1,4 @@
-public class Heap<E extends Comparable> {
+public class Heap {
     private int size;
     private Object data[];
 
@@ -38,7 +38,7 @@ public class Heap<E extends Comparable> {
     private void reHeap(int index) {
         if (index!=0) {
             int parent = parent(index);
-	    if (data[parent] > data[index]) {
+	    if (data[index].compareTo(data[parent])<0) {
                 Object temp = data[parent];
                 data[parent] = data[index];
                 data[index] = temp;
@@ -49,11 +49,11 @@ public class Heap<E extends Comparable> {
 
     public E dequeue() {
         if (size>0) {
-            E del = data[0];
+            Object del = data[0];
             data[0] = data[size-1];
             size--;
             if (size>0) heapify(0);
-            return del;
+            return (E) del;
 	} else return null;
     }
 
@@ -67,7 +67,7 @@ public class Heap<E extends Comparable> {
         } else {
             if (data[left]<=data[right]) min = left;
             else min = right;
-        } if (data[index]>data[min]) {
+        } if (data[index].compareTo(data[min])>0) {
             Object temp = data[min];
             data[min] = data[index];
             data[index] = temp;
