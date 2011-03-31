@@ -1,5 +1,5 @@
 Testing lab Heap Lab for etendian.
-Wed Mar 30 23:26:54 CDT 2011
+Wed Mar 30 23:52:12 CDT 2011
 
 Running 'Testing student code': Did not compile
     (solutions tests vs. student code.)
@@ -24,11 +24,30 @@ Details:
     (solutions tests vs. student code.)
 ----------------------------------------
 javac -classpath /usr/share/junit/lib/junit.jar -d classes -sourcepath . Heap.java TestHeap.java
-Heap.java:31: not a statement
-data[63];
+Heap.java:55: illegal start of expression
+} else return null;
 ^
-1 error
-scons: *** [classes/Heap.class] Error 1
+Heap.java:58: illegal start of expression
+private void heapify(int index) {
+^
+Heap.java:58: illegal start of expression
+private void heapify(int index) {
+^
+Heap.java:58: ';' expected
+private void heapify(int index) {
+^
+Heap.java:58: ';' expected
+private void heapify(int index) {
+^
+Heap.java:63: '.class' expected
+else int min = left;
+^
+Heap.java:63: not a statement
+else int min = left;
+^
+Heap.java:63: illegal start of expression
+else int min = left;
+^
 
 ----------------------------------------
 Testing student test cases with working version of program
@@ -37,7 +56,7 @@ Testing student test cases with working version of program
 Pass
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestHeap
 .
-Time: 0.002
+Time: 0.003
 
 OK (1 test)
 
@@ -50,7 +69,7 @@ broke1
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestHeap
 .
-Time: 0.003
+Time: 0.002
 
 OK (1 test)
 
@@ -63,7 +82,7 @@ broke2
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestHeap
 .
-Time: 0.002
+Time: 0.003
 
 OK (1 test)
 
@@ -102,7 +121,7 @@ broke5
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestHeap
 .
-Time: 0.003
+Time: 0.002
 
 OK (1 test)
 
