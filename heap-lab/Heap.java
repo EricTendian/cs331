@@ -22,44 +22,24 @@ public class Heap<E extends Comparable> {
     private int parent(int i) {
         return (i - 1) / 2;
     }
-
-    // Main functions
-
-    public int size() {
-        return size;
+    
+    private void swap(int pos1, int pos2) {
+        E tmp = data.get(pos1);
+        data.add(pos1, data.get(pos2));
+	data.add(pos2, tmp);
     }
-
-    public void enqueue(E elt) {
-        if (size>0) {
-            data.add(size-1, elt);
-            reHeap(size-1);
-        } else data.add(0, elt);
-        size++;
-    }
-
-    private void reHeap(int index) {
+    
+    private void heapifyUp(int index) {
         if (index!=0) {
             int parent = parent(index);
-	    if (data.get(index).compareTo(data.get(parent))>0) {
-                E temp = data.get(parent);
-                data.add(parent, data.get(index));
-                data.add(index, temp);
-                reHeap(parent);
+	    if (data.get(parent).compareTo(data.get(index))>0) {
+                swap(index, parent);
+                heapifyUp(parent);
 	    }
         }
     }
-
-    public E dequeue() {
-        if (size>0) {
-            E del = data.get(0);
-            data.add(0, data.get(size-1));
-            size--;
-            if (size>0) heapify(0);
-            return del;
-	} else return null;
-    }
-
-    private void heapify(int index) {
+    
+    private void heapifyDown(int index) {
         int left = left(index);
         int right = right(index);
         int min;
@@ -70,11 +50,33 @@ public class Heap<E extends Comparable> {
             if (data.get(left).compareTo(data.get(right))<=0) min = left;
             else min = right;
         } if (data.get(index).compareTo(data.get(min))<0) {
-            E temp = data.get(min);
-            data.add(min, data.get(index));
-            data.add(index, temp);
-            heapify(min);
+            swap(index, min);
+            heapifyDown(min);
         }
+    }
+
+    // Main functions
+
+    public int size() {
+        return size;
+    }
+
+    public void enqueue(E elt) {
+        if (size>0) {
+            data.add(size-1, elt);
+            heapifyUp(size-1);
+        } else data.add(0, elt);
+        size++;
+    }
+
+    public E dequeue() {
+        if (size>0) {
+            E del = data.get(0);
+            data.add(0, data.get(size-1));
+            size--;
+            if (size>0) heapifyDown(0);
+            return del;
+	} else return null;
     }
 
     public E top () {
