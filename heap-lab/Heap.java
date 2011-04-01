@@ -1,9 +1,11 @@
-public class Heap<E> {
+import java.util.ArrayList;
+
+public class Heap<E extends Comparable> {
     private int size;
-    private Object data[];
+    private ArrayList<E> data;
 
     public Heap() {
-        data = new Object[64];
+        data = new ArrayList<E>();
         size = 0;
     }
 
@@ -28,20 +30,18 @@ public class Heap<E> {
     }
 
     public void enqueue(E elt) {
-        if (size<64) {
-            data[size-1] = elt;
-            reHeap(size-1);
-            size++;
-        }
+        data.add(size-1, elt);
+        reHeap(size-1);
+        size++;
     }
 
     private void reHeap(int index) {
         if (index!=0) {
             int parent = parent(index);
-	    if ((E) data[index].compareTo((E) data[parent])>0) {
-                Object temp = data[parent];
-                data[parent] = data[index];
-                data[index] = temp;
+	    if (data.get(index).compareTo(data.get(parent))>0) {
+                E temp = data.get(parent);
+                data.add(parent, data.get(index));
+                data.add(index, temp);
                 reHeap(parent);
 	    }
         }
@@ -49,11 +49,11 @@ public class Heap<E> {
 
     public E dequeue() {
         if (size>0) {
-            Object del = data[0];
-            data[0] = data[size-1];
+            E del = data.get(0);
+            data.add(0, data.get(size-1));
             size--;
             if (size>0) heapify(0);
-            return (E) del;
+            return del;
 	} else return null;
     }
 
@@ -65,17 +65,17 @@ public class Heap<E> {
             if (left>=size) return;
             else min = left;
         } else {
-            if ((E) data[left].compareTo((E) data[right])<=0) min = left;
+            if (data.get(left).compareTo(data.get(right))<=0) min = left;
             else min = right;
-        } if ((E) data[index].compareTo((E) data[min])<0) {
-            Object temp = data[min];
-            data[min] = data[index];
-            data[index] = temp;
+        } if (data.get(index).compareTo(data.get(min))<0) {
+            E temp = data.get(min);
+            data.add(min, data.get(index));
+            data.add(index, temp);
             heapify(min);
         }
     }
 
     public E top () {
-        return (E) data[0];
+        return data.get(0);
     }
 }
