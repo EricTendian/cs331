@@ -1,7 +1,7 @@
 Testing lab Heap Lab for etendian.
-Thu Mar 31 21:01:50 CDT 2011
+Thu Mar 31 21:16:51 CDT 2011
 
-Running 'Testing student code': Fail
+Running 'Testing student code': Looping
     (solutions tests vs. student code.)
 Running Testing student test cases with working version of program: Pass
     (student tests vs. solution code.)
@@ -23,31 +23,7 @@ Details:
 'Testing student code'
     (solutions tests vs. student code.)
 ----------------------------------------
-canon
-Solution test case detected error.
-java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestHeap
-..E.E.E
-Time: 0.004
-There were 3 errors:
-1) test1(TestHeap)java.lang.IndexOutOfBoundsException: Index: -1, Size: 0
-at java.util.ArrayList.rangeCheckForAdd(ArrayList.java:579)
-at java.util.ArrayList.add(ArrayList.java:393)
-at Heap.enqueue(Heap.java:33)
-at TestHeap.test1(TestHeap.java:38)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-2) test2(TestHeap)java.lang.IndexOutOfBoundsException: Index: -1, Size: 0
-at java.util.ArrayList.rangeCheckForAdd(ArrayList.java:579)
-at java.util.ArrayList.add(ArrayList.java:393)
-at Heap.enqueue(Heap.java:33)
-at TestHeap.test2(TestHeap.java:51)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-3) test3(TestHeap)java.lang.IndexOutOfBoundsException: Index: -1, Size: 0
-at java.util.ArrayList.rangeCheckForAdd(ArrayList.java:579)
-at java.util.ArrayList.add(ArrayList.java:393)
+Looping / Taking too long.  Code terminated.
 
 ----------------------------------------
 Testing student test cases with working version of program
@@ -56,7 +32,7 @@ Testing student test cases with working version of program
 Pass
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestHeap
 .
-Time: 0.003
+Time: 0.004
 
 OK (1 test)
 
@@ -82,7 +58,7 @@ broke2
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestHeap
 .
-Time: 0.004
+Time: 0.005
 
 OK (1 test)
 
@@ -95,7 +71,7 @@ broke3
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestHeap
 .
-Time: 0.003
+Time: 0.004
 
 OK (1 test)
 
@@ -121,7 +97,7 @@ broke5
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestHeap
 .
-Time: 0.003
+Time: 0.004
 
 OK (1 test)
 
