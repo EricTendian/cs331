@@ -30,8 +30,10 @@ public class Heap<E extends Comparable> {
     }
 
     public void enqueue(E elt) {
-        data.add(size-1, elt);
-        reHeap(size-1);
+        if (size>0) {
+            data.add(size-1, elt);
+            reHeap(size-1);
+        } else data.add(0, elt);
         size++;
     }
 
