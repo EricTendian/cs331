@@ -39,7 +39,7 @@ public class Heap<E extends Comparable> {
         int right = right(index);
         if (right>size-1) if (left>size-1) return;
         if (data.get(left).compareTo(data.get(right))>0) ++left;
-        if (data.get(index).compareTo(data.get(left))<=0) return;
+        if (data.get(index).compareTo(data.get(left))>=0) return;
         Collections.swap(data, index, left);
         heapifyDown(left);
     }
