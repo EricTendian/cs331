@@ -41,7 +41,7 @@ public class Heap<E extends Comparable> {
         if (left<=size-1 && data.get(left).compareTo(data.get(index))<0) min=left;
         if (right<=size-1 && data.get(right).compareTo(data.get(min))>=0) min=right;
         if (min!=index) {
-            Collections.swap(data, index, left);
+            Collections.swap(data, index, min);
             downHeap(min);
         }
     }
@@ -55,7 +55,7 @@ public class Heap<E extends Comparable> {
     public void enqueue(E elt) {
         if (size>0) {
             data.add(size, elt);
-            upHeap(size-1);
+            upHeap(size);
         } else data.add(0, elt);
         size++;
     }
