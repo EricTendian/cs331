@@ -1,5 +1,5 @@
 Testing lab Heap Lab for etendian.
-Fri Apr  1 16:47:12 CDT 2011
+Fri Apr  1 21:41:50 CDT 2011
 
 Running 'Testing student code': Fail
     (solutions tests vs. student code.)
@@ -18,7 +18,7 @@ canon
 Solution test case detected error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestHeap
 ...F.F
-Time: 0.082
+Time: 0.094
 There were 2 failures:
 1) test2(TestHeap)junit.framework.AssertionFailedError: Test 2: Dequeue expected:<17> but was:<26>
 at TestHeap.test2(TestHeap.java:57)
@@ -45,8 +45,8 @@ java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestHeap
 ..F
 Time: 0.005
 There was 1 failure:
-1) testMultiple(TestHeap)junit.framework.AssertionFailedError: correct element dequeued expected:<6> but was:<5>
-at TestHeap.testMultiple(TestHeap.java:37)
+1) testMultiple(TestHeap)junit.framework.AssertionFailedError: correct element dequeued expected:<9> but was:<8>
+at TestHeap.testMultiple(TestHeap.java:39)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
