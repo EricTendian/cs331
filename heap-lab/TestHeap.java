@@ -38,6 +38,6 @@ public class TestHeap extends TestCase {
         assertEquals("correct element dequeued", 6, heap.dequeue());
         assertEquals("correct element dequeued", 8, heap.dequeue());
         assertEquals("correct element dequeued", 9, heap.dequeue());
-        assertEquals("size is decremented", 6, heap.size());
+        assertEquals("size is decremented", 0, heap.size());
     }
 }
