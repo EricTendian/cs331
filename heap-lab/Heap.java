@@ -13,15 +13,15 @@ public class Heap<E extends Comparable> {
     // Helper functions
 
     private int left(int i) {
-        return 2*i;
+        return (2*i)+1;
     }
 
     private int right(int i) {
-        return 2*i+1;
+        return (2*i)+2;
     }
 
     private int parent(int i) {
-        return i/2;
+        return (i-1)/2;
     }
     
     private void upHeap(int index) {
@@ -38,8 +38,10 @@ public class Heap<E extends Comparable> {
         int left = left(index);
         int right = right(index);
         int min = index;
-        if (left<=size-1 && data.get(left).compareTo(data.get(index))<0) min=left;
-        if (right<=size-1 && data.get(right).compareTo(data.get(min))>=0) min=right;
+        if (left<=size-1 && data.get(left).compareTo(data.get(index))<0)
+            min=left;
+        if (right<=size-1 && data.get(right).compareTo(data.get(min))>=0)
+            min=right;
         if (min!=index) {
             Collections.swap(data, index, min);
             downHeap(min);
