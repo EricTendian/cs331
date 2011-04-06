@@ -2,12 +2,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Heap<E extends Comparable> {
-    private int size;
     private ArrayList<E> data;
 
     public Heap() {
         data = new ArrayList<E>();
-        size = 0;
     }
 
     // Helper functions
@@ -25,7 +23,7 @@ public class Heap<E extends Comparable> {
     }
     
     private void upHeap(int index) {
-        if (index!=0) {
+        if (index>0) {
             int parent = parent(index);
 	    if (data.get(parent).compareTo(data.get(index))>0) {
                 Collections.swap(data, index, parent);
@@ -37,12 +35,15 @@ public class Heap<E extends Comparable> {
     private void downHeap(int index) {
         int left = left(index);
         int right = right(index);
-        int min = index;
-        if (left<=size-1 && data.get(left).compareTo(data.get(index))<0)
-            min=left;
-        if (right<=size-1 && data.get(right).compareTo(data.get(min))>=0)
-            min=right;
-        if (min!=index) {
+        int min;
+        if (right>=size()) {
+            if (left>=size()) return;
+            else min = left;
+        } else {
+            if (data.get(left).compareTo(data.get(right))<=0) min = left;
+            else min = right;
+        }
+        if (data.get(index).compareTo(data.get(min))>0) {
             Collections.swap(data, index, min);
             downHeap(min);
         }
@@ -51,27 +52,27 @@ public class Heap<E extends Comparable> {
     // Main functions
 
     public int size() {
-        return size;
+        return data.size();
     }
 
     public void enqueue(E elt) {
-        if (size>0) {
-            data.add(size, elt);
-            upHeap(size);
-        } else data.add(0, elt);
-        size++;
+        data.add(elt);
+        upHeap(size()-1);
     }
 
     public E dequeue() {
-        if (size>0) {
+        if (size()>0) {
             E del = data.get(0);
-            data.add(0, data.remove(--size));
-            if (size>1) downHeap(0);
+            if (size()>1) {
+                data.set(0, data.remove(size()-1));
+                downHeap(0);
+            } else data.remove(0);
             return del;
-	} else return null;
+        } else return null;
     }
 
     public E top () {
-        return data.get(0);
+        if (size()>0) return data.get(0);
+        else return null;
     }
 }
