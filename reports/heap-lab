@@ -1,5 +1,5 @@
 Testing lab Heap Lab for etendian.
-Wed Apr  6 09:07:22 CDT 2011
+Wed Apr  6 09:32:22 CDT 2011
 
 Running 'Testing student code': Pass
     (solutions tests vs. student code.)
@@ -26,7 +26,7 @@ Details:
 Pass
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestHeap
 ....
-Time: 0.297
+Time: 0.262
 
 OK (4 tests)
 
@@ -38,7 +38,7 @@ Testing student test cases with working version of program
 Pass
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestHeap
 ..
-Time: 0.015
+Time: 0.004
 
 OK (2 tests)
 
