@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class UpTree {
     public class Node<String extends Comparable> {
         public String data;
@@ -7,7 +9,7 @@ public class UpTree {
         public Node(String val) {
             data = val;
             up = null;
-            size = 0;
+            size = 1;
         }
 
         public Node(String val, Node parent) {
@@ -17,20 +19,22 @@ public class UpTree {
         }
     }
     
-    private Node root;
+    private ArrayList<Node> sets;
     
     public UpTree() {
-        root = null;
+        sets = new ArrayList<Node>;
     }
 
     public int size() {
-        return root.size;
+        int size = 0;
+	for (Node n:sets) size+=find(n).size;
+	return size;
     }
 
     public void add(String str) {
-        if (size()>0) {
-            
-        } else root = new Node(str);
+        Node n = new Node(str);
+        n.up = n;
+        sets.add(n);
     }
 
     public void union(Node x, Node y) {
@@ -60,34 +64,59 @@ public class UpTree {
     
     
     private class upIterator implements Iterator {
-        public boolean isValid() {
-            return false;
+        private Node curr;
+        private int index;
+        private SetIterator set;
+	public upIterator() {
+            index = sets.size()-1;
+            curr = sets.get(index);
+	    set = new SetIterator(curr);
         }
         
-        public int get() {
-            return 0;
+        public boolean isValid() {
+            return (curr!=null);
+        }
+        
+        public String get() {
+            return curr.data;
         }
         
         public void next() {
-            
+	    if (index>0) {
+                if (set.isValid()) {
+                    set.next();
+                    curr = set.get();
+                } else {
+                    index--;
+                    set = new SetIterator(sets.get(index));
+                    curr = set.get();
+                }
+           } else curr = null;
         }
     }
     
     private class SetIterator implements Iterator {
+        private Node curr;
+        private Node find;
         public SetIterator(Node x) {
-            
+            find = x;
+            for (int i=sets.size()-1; i>=0; i--) {
+                Node node = sets.get(i);
+                if (node.equals(find) curr = node;
+            }
         }
         
         public boolean isValid() {
+            if (curr!=null) return (curr.up!=curr);
             return false;
         }
         
-        public int get() {
-            return 0;
+        public String get() {
+            return curr.data;;
         }
         
         public void next() {
-            
+            if (isValid()) curr = curr.up;
         }
     }
 }
