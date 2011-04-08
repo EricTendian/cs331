@@ -22,7 +22,7 @@ public class UpTree {
     private ArrayList<Node> sets;
     
     public UpTree() {
-        sets = new ArrayList<Node>;
+        sets = new ArrayList<Node>();
     }
 
     public int size() {
@@ -102,7 +102,7 @@ public class UpTree {
             find = x;
             for (int i=sets.size()-1; i>=0; i--) {
                 Node node = sets.get(i);
-                if (node.equals(find) curr = node;
+                if (node.equals(find)) curr = node;
             }
         }
         
