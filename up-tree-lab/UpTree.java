@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class UpTree {
-    public class Node<String extends Comparable> {
+    public class Node {
         public String data;
         public Node up;
         public int size;
@@ -77,19 +77,19 @@ public class UpTree {
             return (curr!=null);
         }
         
-        public String get() {
-            return curr.data;
+        public int get() {
+            return curr.size;
         }
         
         public void next() {
 	    if (index>0) {
                 if (set.isValid()) {
                     set.next();
-                    curr = set.get();
+                    curr = set.getNode();
                 } else {
                     index--;
                     set = new SetIterator(sets.get(index));
-                    curr = set.get();
+                    curr = set.getNode();
                 }
            } else curr = null;
         }
@@ -111,12 +111,16 @@ public class UpTree {
             return false;
         }
         
-        public String get() {
-            return curr.data;;
+        public int get() {
+            return curr.size;
         }
         
         public void next() {
             if (isValid()) curr = curr.up;
+        }
+        
+        public Node getNode() {
+            return curr;
         }
     }
 }
