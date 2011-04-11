@@ -77,8 +77,8 @@ public class UpTree {
             return (curr!=null);
         }
         
-        public int get() {
-            return curr.size;
+        public Node get() {
+            return curr;
         }
         
         public void next() {
@@ -111,8 +111,8 @@ public class UpTree {
             return false;
         }
         
-        public int get() {
-            return curr.size;
+        public Node get() {
+            return curr;
         }
         
         public void next() {
