@@ -1,5 +1,4 @@
 import junit.framework.*;
-
 public class TestUpTree extends TestCase {
     public TestUpTree(String name) {
         super(name);
