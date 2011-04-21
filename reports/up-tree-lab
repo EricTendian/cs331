@@ -1,0 +1,173 @@
+Testing lab Up-Tree Lab for etendian.
+Thu Apr 21 10:39:33 CDT 2011
+
+Running Testing student's code: Did not compile
+    (solutions tests vs. student code.)
+Running Testing student's test cases with working version of program: Pass
+    (student tests vs. solution code.)
+Running uptree size never incremented: Fail
+    (student tests vs. broken code.)
+Running node size always zero: Fail
+    (student tests vs. broken code.)
+Running find only goes one level in: Fail
+    (student tests vs. broken code.)
+Running iterators return elements in wrong onder: Fail
+    (student tests vs. broken code.)
+Running union combines elements in wrong order: Fail
+    (student tests vs. broken code.)
+Running union doesn't find first: Fail
+    (student tests vs. broken code.)
+Running set iterator doesn't check representatives properly: Fail
+    (student tests vs. broken code.)
+Running set iterator doesnd find representative of input: Fail
+    (student tests vs. broken code.)
+Total: 5/70
+
+
+Details:
+----------------------------------------
+Testing student's code
+    (solutions tests vs. student code.)
+----------------------------------------
+javac -classpath /usr/share/junit/lib/junit.jar -d classes -sourcepath . Iterator.java TestUpTree.java UpTree.java
+TestUpTree.java:33: incompatible types
+found   : void
+required: UpTree.Node
+nlist[i] = up.add(slist[i]);
+^
+TestUpTree.java:38: cannot find symbol
+symbol  : method size()
+location: class UpTree.Node
+assertEquals("Element is rep",1,nlist[i].size());
+^
+TestUpTree.java:49: incompatible types
+found   : void
+required: UpTree.Node
+nlist[i] = up.add(slist[i]);
+^
+TestUpTree.java:51: type Iterator does not take parameters
+Iterator<UpTree.Node> it = up.mkIterator();
+^
+TestUpTree.java:67: type Iterator does not take parameters
+Iterator<UpTree.Node> it;
+^
+TestUpTree.java:71: incompatible types
+found   : void
+required: UpTree.Node
+
+----------------------------------------
+Testing student's test cases with working version of program
+    (student tests vs. solution code.)
+----------------------------------------
+Pass
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
+....
+Time: 0.002
+
+OK (4 tests)
+
+
+----------------------------------------
+uptree size never incremented
+    (student tests vs. broken code.)
+----------------------------------------
+broke1
+Student test case did not detect error.
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
+....
+Time: 0.002
+
+OK (4 tests)
+
+
+----------------------------------------
+node size always zero
+    (student tests vs. broken code.)
+----------------------------------------
+broke2
+Student test case did not detect error.
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
+....
+Time: 0.002
+
+OK (4 tests)
+
+
+----------------------------------------
+find only goes one level in
+    (student tests vs. broken code.)
+----------------------------------------
+broke3
+Student test case did not detect error.
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
+....
+Time: 0.002
+
+OK (4 tests)
+
+
+----------------------------------------
+iterators return elements in wrong onder
+    (student tests vs. broken code.)
+----------------------------------------
+broke4
+Student test case did not detect error.
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
+....
+Time: 0.002
+
+OK (4 tests)
+
+
+----------------------------------------
+union combines elements in wrong order
+    (student tests vs. broken code.)
+----------------------------------------
+broke5
+Student test case did not detect error.
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
+....
+Time: 0.002
+
+OK (4 tests)
+
+
+----------------------------------------
+union doesn't find first
+    (student tests vs. broken code.)
+----------------------------------------
+broke6
+Student test case did not detect error.
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
+....
+Time: 0.002
+
+OK (4 tests)
+
+
+----------------------------------------
+set iterator doesn't check representatives properly
+    (student tests vs. broken code.)
+----------------------------------------
+broke7
+Student test case did not detect error.
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
+....
+Time: 0.002
+
+OK (4 tests)
+
+
+----------------------------------------
+set iterator doesnd find representative of input
+    (student tests vs. broken code.)
+----------------------------------------
+broke8
+Student test case did not detect error.
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
+....
+Time: 0.002
+
+OK (4 tests)
+
+
