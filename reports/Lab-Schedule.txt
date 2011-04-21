@@ -9,19 +9,21 @@ Finish time:  2011-02-28 23:59:00
 Lab:  doubly-linked-list-lab
 Start time:  2011-02-27 22:00:00
 Finish time:  2011-03-27 23:59:00
-Lab is active!
 
 Lab:  bst-lab
 Start time:  2011-03-07 20:00:00
 Finish time:  2011-03-27 23:59:00
-Lab is active!
 
 Lab:  traversal-lab
 Start time:  2011-03-11 20:00:00
 Finish time:  2011-03-27 23:59:00
-Lab is active!
 
 Lab:  heap-lab
 Start time:  2011-03-30 12:00:00
 Finish time:  2011-04-06 23:59:00
+
+Lab:  up-tree-lab
+Start time:  2011-04-21 11:00:00
+Finish time:  2011-05-02 23:59:00
+Lab is active!
 
