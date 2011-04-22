@@ -1,5 +1,5 @@
 Testing lab Up-Tree Lab for etendian.
-Thu Apr 21 10:39:33 CDT 2011
+Thu Apr 21 20:12:07 CDT 2011
 
 Running Testing student's code: Did not compile
     (solutions tests vs. student code.)
@@ -30,30 +30,14 @@ Testing student's code
     (solutions tests vs. student code.)
 ----------------------------------------
 javac -classpath /usr/share/junit/lib/junit.jar -d classes -sourcepath . Iterator.java TestUpTree.java UpTree.java
-TestUpTree.java:33: incompatible types
-found   : void
-required: UpTree.Node
-nlist[i] = up.add(slist[i]);
-^
-TestUpTree.java:38: cannot find symbol
-symbol  : method size()
-location: class UpTree.Node
-assertEquals("Element is rep",1,nlist[i].size());
-^
-TestUpTree.java:49: incompatible types
-found   : void
-required: UpTree.Node
-nlist[i] = up.add(slist[i]);
-^
 TestUpTree.java:51: type Iterator does not take parameters
 Iterator<UpTree.Node> it = up.mkIterator();
 ^
 TestUpTree.java:67: type Iterator does not take parameters
 Iterator<UpTree.Node> it;
 ^
-TestUpTree.java:71: incompatible types
-found   : void
-required: UpTree.Node
+2 errors
+scons: *** [classes/Iterator.class] Error 1
 
 ----------------------------------------
 Testing student's test cases with working version of program
