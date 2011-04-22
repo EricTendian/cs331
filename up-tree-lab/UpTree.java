@@ -59,11 +59,11 @@ public class UpTree {
         else return y;
     }
 
-    public Iterator mkIterator() {
+    public Iterator<Node> mkIterator() {
         return new upIterator();
     }
 
-    public Iterator mkSetIterator(Node x) {
+    public Iterator<Iterator<Node>> mkSetIterator(Node x) {
         return new SetIterator(x);
     }
     
