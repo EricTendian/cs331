@@ -1,7 +1,7 @@
 Testing lab Up-Tree Lab for etendian.
-Thu Apr 21 20:12:07 CDT 2011
+Thu Apr 21 20:22:15 CDT 2011
 
-Running Testing student's code: Did not compile
+Running Testing student's code: Looping
     (solutions tests vs. student code.)
 Running Testing student's test cases with working version of program: Pass
     (student tests vs. solution code.)
@@ -29,15 +29,7 @@ Details:
 Testing student's code
     (solutions tests vs. student code.)
 ----------------------------------------
-javac -classpath /usr/share/junit/lib/junit.jar -d classes -sourcepath . Iterator.java TestUpTree.java UpTree.java
-TestUpTree.java:51: type Iterator does not take parameters
-Iterator<UpTree.Node> it = up.mkIterator();
-^
-TestUpTree.java:67: type Iterator does not take parameters
-Iterator<UpTree.Node> it;
-^
-2 errors
-scons: *** [classes/Iterator.class] Error 1
+Looping / Taking too long.  Code terminated.
 
 ----------------------------------------
 Testing student's test cases with working version of program
@@ -59,7 +51,7 @@ broke1
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
 ....
-Time: 0.002
+Time: 0.001
 
 OK (4 tests)
 
@@ -124,7 +116,7 @@ broke6
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
 ....
-Time: 0.002
+Time: 0.001
 
 OK (4 tests)
 
