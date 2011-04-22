@@ -1,27 +1,12 @@
 Testing lab Up-Tree Lab for etendian.
-Thu Apr 21 20:22:15 CDT 2011
+Thu Apr 21 21:32:09 CDT 2011
 
 Running Testing student's code: Looping
     (solutions tests vs. student code.)
-Running Testing student's test cases with working version of program: Pass
+Running Testing student's test cases with working version of program: Did not compile
     (student tests vs. solution code.)
-Running uptree size never incremented: Fail
-    (student tests vs. broken code.)
-Running node size always zero: Fail
-    (student tests vs. broken code.)
-Running find only goes one level in: Fail
-    (student tests vs. broken code.)
-Running iterators return elements in wrong onder: Fail
-    (student tests vs. broken code.)
-Running union combines elements in wrong order: Fail
-    (student tests vs. broken code.)
-Running union doesn't find first: Fail
-    (student tests vs. broken code.)
-Running set iterator doesn't check representatives properly: Fail
-    (student tests vs. broken code.)
-Running set iterator doesnd find representative of input: Fail
-    (student tests vs. broken code.)
-Total: 5/70
+
+ No further tests will be run.Total: 0/70
 
 
 Details:
@@ -35,115 +20,77 @@ Looping / Taking too long.  Code terminated.
 Testing student's test cases with working version of program
     (student tests vs. solution code.)
 ----------------------------------------
-Pass
-java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
-....
-Time: 0.002
-
-OK (4 tests)
-
+javac -classpath /usr/share/junit/lib/junit.jar -d classes -sourcepath . Iterator.java TestUpTree.java UpTree.java
+TestUpTree.java:9: an enclosing instance that contains UpTree.Node is required
+UpTree.Node str1 = new UpTree.Node("str1");
+^
+TestUpTree.java:10: an enclosing instance that contains UpTree.Node is required
+UpTree.Node str2 = new UpTree.Node("str2");
+^
+TestUpTree.java:11: cannot find symbol
+symbol  : variable data
+location: class UpTree.Node
+up.add(str1.data);
+^
+TestUpTree.java:12: cannot find symbol
+symbol  : variable data
+location: class UpTree.Node
+up.add(str2.data);
+^
+TestUpTree.java:19: an enclosing instance that contains UpTree.Node is required
+UpTree.Node str1 = new UpTree.Node("str1");
+^
+TestUpTree.java:20: an enclosing instance that contains UpTree.Node is required
+UpTree.Node str2 = new UpTree.Node("str2");
+^
+TestUpTree.java:23: cannot find symbol
+symbol  : variable up
 
 ----------------------------------------
 uptree size never incremented
     (student tests vs. broken code.)
 ----------------------------------------
-broke1
-Student test case did not detect error.
-java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
-....
-Time: 0.001
-
-OK (4 tests)
-
+Not run.  Qualifying tests failed.
 
 ----------------------------------------
 node size always zero
     (student tests vs. broken code.)
 ----------------------------------------
-broke2
-Student test case did not detect error.
-java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
-....
-Time: 0.002
-
-OK (4 tests)
-
+Not run.  Qualifying tests failed.
 
 ----------------------------------------
 find only goes one level in
     (student tests vs. broken code.)
 ----------------------------------------
-broke3
-Student test case did not detect error.
-java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
-....
-Time: 0.002
-
-OK (4 tests)
-
+Not run.  Qualifying tests failed.
 
 ----------------------------------------
 iterators return elements in wrong onder
     (student tests vs. broken code.)
 ----------------------------------------
-broke4
-Student test case did not detect error.
-java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
-....
-Time: 0.002
-
-OK (4 tests)
-
+Not run.  Qualifying tests failed.
 
 ----------------------------------------
 union combines elements in wrong order
     (student tests vs. broken code.)
 ----------------------------------------
-broke5
-Student test case did not detect error.
-java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
-....
-Time: 0.002
-
-OK (4 tests)
-
+Not run.  Qualifying tests failed.
 
 ----------------------------------------
 union doesn't find first
     (student tests vs. broken code.)
 ----------------------------------------
-broke6
-Student test case did not detect error.
-java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
-....
-Time: 0.001
-
-OK (4 tests)
-
+Not run.  Qualifying tests failed.
 
 ----------------------------------------
 set iterator doesn't check representatives properly
     (student tests vs. broken code.)
 ----------------------------------------
-broke7
-Student test case did not detect error.
-java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
-....
-Time: 0.002
-
-OK (4 tests)
-
+Not run.  Qualifying tests failed.
 
 ----------------------------------------
 set iterator doesnd find representative of input
     (student tests vs. broken code.)
 ----------------------------------------
-broke8
-Student test case did not detect error.
-java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
-....
-Time: 0.002
-
-OK (4 tests)
-
+Not run.  Qualifying tests failed.
 
