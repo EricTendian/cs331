@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 
 public class UpTree {
-    public class Node {
+    static public class Node {
         public String data;
         public Node up;
-        public int size;
+        public static int size;
 
         public Node(String val) {
             data = val;
@@ -15,7 +15,7 @@ public class UpTree {
         public Node(String val, Node parent) {
             data = val;
             up = parent;
-            size = find(parent).size;
+            size = parent.size;
         }
         
         public int size() {
@@ -102,13 +102,8 @@ public class UpTree {
     
     private class SetIterator implements Iterator {
         private Node curr;
-        private Node find;
-        public SetIterator(Node x) {
-            find = x;
-            for (int i=sets.size()-1; i>=0; i--) {
-                Node node = sets.get(i);
-                if (node.equals(find)) curr = node;
-            }
+        public SetIterator(Node find) {
+            curr = sets.get(sets.indexOf(find));
         }
         
         public boolean isValid() {
