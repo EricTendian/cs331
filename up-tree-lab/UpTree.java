@@ -17,6 +17,10 @@ public class UpTree {
             up = parent;
             size = find(parent).size;
         }
+        
+        public int size() {
+            return size;
+        }
     }
     
     private ArrayList<Node> sets;
@@ -31,10 +35,11 @@ public class UpTree {
 	return size;
     }
 
-    public void add(String str) {
+    public Node add(String str) {
         Node n = new Node(str);
         n.up = n;
         sets.add(n);
+        return n;
     }
 
     public void union(Node x, Node y) {
