@@ -1,5 +1,5 @@
 Testing lab Up-Tree Lab for etendian.
-Mon Apr 25 14:27:17 CDT 2011
+Mon Apr 25 14:37:08 CDT 2011
 
 Running Testing student's code: Fail
     (solutions tests vs. student code.)
@@ -40,12 +40,12 @@ java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTr
 ...F.F
 Time: 0.007
 There were 2 failures:
-1) testIterator(TestUpTree)junit.framework.AssertionFailedError: iteratortest1 expected:<str4> but was:<UpTree$Node@1d73831b>
+1) testIterator(TestUpTree)junit.framework.AssertionFailedError: iteratortest1 expected:<true> but was:<false>
 at TestUpTree.testIterator(TestUpTree.java:38)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-2) testSetIterator(TestUpTree)junit.framework.AssertionFailedError: setiteratortest1 expected:<str1> but was:<null>
+2) testSetIterator(TestUpTree)junit.framework.AssertionFailedError: setiteratortest1 expected:<true> but was:<false>
 at TestUpTree.testSetIterator(TestUpTree.java:61)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
