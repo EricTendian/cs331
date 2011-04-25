@@ -1,28 +1,6 @@
 import java.util.ArrayList;
 
 public class UpTree {
-    static public class Node {
-        public String data;
-        public Node up;
-        public static int size;
-
-        public Node(String val) {
-            data = val;
-            up = null;
-            size = 1;
-        }
-
-        public Node(String val, Node parent) {
-            data = val;
-            up = parent;
-            size = parent.size;
-        }
-        
-        public int size() {
-            return size;
-        }
-    }
-    
     private ArrayList<Node> sets;
     
     public UpTree() {
@@ -63,7 +41,7 @@ public class UpTree {
         return new upIterator();
     }
 
-    public Iterator<Iterator<Node>> mkSetIterator(Node x) {
+    public Iterator<Node> mkSetIterator(Node x) {
         return new SetIterator(x);
     }
     
