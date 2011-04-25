@@ -56,7 +56,7 @@ public class UpTree {
     }
 
     public Node find(Node y) {
-        if (y.up!=null) return find(y);
+        if (y.up!=null && !y.equals(y.up)) return find(y.up);
         else return y;
     }
 
