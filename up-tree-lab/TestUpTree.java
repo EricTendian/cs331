@@ -35,13 +35,13 @@ public class TestUpTree extends TestCase {
         up.add("str4");
         up.union(str3, str4);
         Iterator<UpTree.Node> itr = up.mkIterator();
-        assertEquals("iteratortest1", "str4", itr.get());
+        assertEquals("iteratortest1", true, str4.equals(itr.get()));
         itr.next();
-        assertEquals("iteratortest2", "str3", itr.get());
+        assertEquals("iteratortest2", true, str3.equals(itr.get()));
         itr.next();
-        assertEquals("iteratortest3", "str2", itr.get());
+        assertEquals("iteratortest3", true, str2.equals(itr.get()));
         itr.next();
-        assertEquals("iteratortest4", "str1", itr.get());
+        assertEquals("iteratortest4", true, str1.equals(itr.get()));
     }
     
     public void testSetIterator() {
@@ -58,12 +58,12 @@ public class TestUpTree extends TestCase {
         up.add("str4");
         up.union(str3, str4);
         Iterator<UpTree.Node> itr = up.mkSetIterator(str2);
-        assertEquals("setiteratortest1", "str1", itr.get());
+        assertEquals("setiteratortest1", true, str1.equals(itr.get()));
         itr.next();
-        assertEquals("setiteratortest2", "str2", itr.get());
+        assertEquals("setiteratortest2", true, str2.equals(itr.get()));
         itr.next();
-        assertEquals("setiteratortest3", "str3", itr.get());
+        assertEquals("setiteratortest3", true, str3.equals(itr.get()));
         itr.next();
-        assertEquals("setiteratortest4", "str4", itr.get());
+        assertEquals("setiteratortest4", true, str4.equals(itr.get()));
     }
 }
