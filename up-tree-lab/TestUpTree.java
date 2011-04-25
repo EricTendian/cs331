@@ -6,8 +6,8 @@ public class TestUpTree extends TestCase {
     
     public void testAdd() {
         UpTree up = new UpTree();
-        Node str1 = new Node("str1");
-        Node str2 = new Node("str2");
+        UpTree.Node str1 = up.new Node("str1");
+        UpTree.Node str2 = up.new Node("str2");
         up.add(str1.data);
         up.add(str2.data);
         assertEquals("addtest1", str1, up.find(str1));
@@ -16,8 +16,8 @@ public class TestUpTree extends TestCase {
     
     public void testUnion() {
         UpTree up = new UpTree();
-        Node str1 = new Node("str1");
-        Node str2 = new Node("str2");
+        UpTree.Node str1 = up.new Node("str1");
+        UpTree.Node str2 = up.new Node("str2");
         up.union(str1, str2);
         assertEquals("uniontest1", 2, up.find(str2).size);
         assertEquals("uniontest2", str2, str1.up);
@@ -25,16 +25,16 @@ public class TestUpTree extends TestCase {
     
     public void testIterator() {
         UpTree up = new UpTree();
-        Node str1 = new Node("str1");
-        Node str2 = new Node("str2");
-        Node str3 = new Node("str3");
-        Node str4 = new Node("str4");
+        UpTree.Node str1 = up.new Node("str1");
+        UpTree.Node str2 = up.new Node("str2");
+        UpTree.Node str3 = up.new Node("str3");
+        UpTree.Node str4 = up.new Node("str4");
         up.add(str1.data);
         up.add(str2.data);
         up.add(str3.data);
         up.add(str4.data);
         up.union(str3, str4);
-        Iterator<Node> itr = up.mkIterator();
+        Iterator<UpTree.Node> itr = up.mkIterator();
         assertEquals("iteratortest1", str4.data, itr.get().data);
         itr.next();
         assertEquals("iteratortest2", str3.data, itr.get().data);
@@ -46,10 +46,10 @@ public class TestUpTree extends TestCase {
     
     public void testSetIterator() {
         UpTree up = new UpTree();
-        Node str1 = new Node("str1");
-        Node str2 = new Node("str2");
-        Node str3 = new Node("str3");
-        Node str4 = new Node("str4");
+        UpTree.Node str1 = up.new Node("str1");
+        UpTree.Node str2 = up.new Node("str2");
+        UpTree.Node str3 = up.new Node("str3");
+        UpTree.Node str4 = up.new Node("str4");
         up.add(str1.data);
         up.add(str2.data);
         up.union(str1, str2);
@@ -57,7 +57,7 @@ public class TestUpTree extends TestCase {
         up.union(str2, str3);
         up.add(str4.data);
         up.union(str3, str4);
-        Iterator<Node> itr = up.mkSetIterator(str2);
+        Iterator<UpTree.Node> itr = up.mkSetIterator(str2);
         assertEquals("setiteratortest1", str1.data, itr.get().data);
         itr.next();
         assertEquals("setiteratortest2", str2.data, itr.get().data);

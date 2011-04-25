@@ -1,5 +1,5 @@
 interface Iterator<E> {
-    Node get();
+    UpTree.Node get();
     void next();
     boolean isValid();
 }
