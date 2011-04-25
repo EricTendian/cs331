@@ -1,7 +1,7 @@
 Testing lab Up-Tree Lab for etendian.
-Thu Apr 21 21:32:09 CDT 2011
+Mon Apr 25 13:52:13 CDT 2011
 
-Running Testing student's code: Looping
+Running Testing student's code: Did not compile
     (solutions tests vs. student code.)
 Running Testing student's test cases with working version of program: Did not compile
     (student tests vs. solution code.)
@@ -14,37 +14,61 @@ Details:
 Testing student's code
     (solutions tests vs. student code.)
 ----------------------------------------
-Looping / Taking too long.  Code terminated.
+javac -classpath /usr/share/junit/lib/junit.jar -d classes -sourcepath . Iterator.java Node.java TestUpTree.java UpTree.java
+TestUpTree.java:58: cannot find symbol
+symbol  : class Node
+location: class UpTree
+public void helpTestSet(String name, UpTree.Node[] set,Iterator it) {
+^
+TestUpTree.java:30: cannot find symbol
+symbol  : class Node
+location: class UpTree
+UpTree.Node nlist[] = new UpTree.Node[26];
+^
+TestUpTree.java:30: cannot find symbol
+symbol  : class Node
+location: class UpTree
+UpTree.Node nlist[] = new UpTree.Node[26];
+^
+TestUpTree.java:46: cannot find symbol
+symbol  : class Node
+location: class UpTree
+UpTree.Node nlist[] = new UpTree.Node[26];
+^
+TestUpTree.java:46: cannot find symbol
+symbol  : class Node
+location: class UpTree
+UpTree.Node nlist[] = new UpTree.Node[26];
 
 ----------------------------------------
 Testing student's test cases with working version of program
     (student tests vs. solution code.)
 ----------------------------------------
-javac -classpath /usr/share/junit/lib/junit.jar -d classes -sourcepath . Iterator.java TestUpTree.java UpTree.java
-TestUpTree.java:9: an enclosing instance that contains UpTree.Node is required
-UpTree.Node str1 = new UpTree.Node("str1");
+javac -classpath /usr/share/junit/lib/junit.jar -d classes -sourcepath . Iterator.java Node.java TestUpTree.java UpTree.java
+TestUpTree.java:13: find(UpTree.Node) in UpTree cannot be applied to (Node)
+assertEquals("addtest1", str1, up.find(str1));
 ^
-TestUpTree.java:10: an enclosing instance that contains UpTree.Node is required
-UpTree.Node str2 = new UpTree.Node("str2");
+TestUpTree.java:14: find(UpTree.Node) in UpTree cannot be applied to (Node)
+assertEquals("addtest2", str2, up.find(str2));
 ^
-TestUpTree.java:11: cannot find symbol
-symbol  : variable data
-location: class UpTree.Node
-up.add(str1.data);
+TestUpTree.java:21: union(UpTree.Node,UpTree.Node) in UpTree cannot be applied to (Node,Node)
+up.union(str1, str2);
 ^
-TestUpTree.java:12: cannot find symbol
-symbol  : variable data
-location: class UpTree.Node
-up.add(str2.data);
+TestUpTree.java:22: find(UpTree.Node) in UpTree cannot be applied to (Node)
+assertEquals("uniontest1", 2, up.find(str2).size);
 ^
-TestUpTree.java:19: an enclosing instance that contains UpTree.Node is required
-UpTree.Node str1 = new UpTree.Node("str1");
+TestUpTree.java:36: union(UpTree.Node,UpTree.Node) in UpTree cannot be applied to (Node,Node)
+up.union(str3, str4);
 ^
-TestUpTree.java:20: an enclosing instance that contains UpTree.Node is required
-UpTree.Node str2 = new UpTree.Node("str2");
+TestUpTree.java:37: incompatible types
+found   : Iterator<UpTree.Node>
+required: Iterator<Node>
+Iterator<Node> itr = up.mkIterator();
 ^
-TestUpTree.java:23: cannot find symbol
-symbol  : variable up
+TestUpTree.java:55: union(UpTree.Node,UpTree.Node) in UpTree cannot be applied to (Node,Node)
+up.union(str1, str2);
+^
+TestUpTree.java:57: union(UpTree.Node,UpTree.Node) in UpTree cannot be applied to (Node,Node)
 
 ----------------------------------------
 uptree size never incremented
