@@ -16,7 +16,7 @@ public class UpTree {
         public Node(String val, Node parent) {
             data = val;
             up = parent;
-            size = parent.size;
+            size = 1;
         }
 
         public int size() {
@@ -46,7 +46,7 @@ public class UpTree {
     public void union(Node x, Node y) {
         Node a = find(x);
         Node b = find(y);
-        if (a!=b) {
+        if (!a.equals(b)) {
             if (a.size > b.size) {
                 b.up = a; a.size+=b.size;
             } else {
