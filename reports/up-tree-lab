@@ -1,27 +1,12 @@
 Testing lab Up-Tree Lab for etendian.
-Mon Apr 25 23:45:29 CDT 2011
+Tue Apr 26 11:25:43 CDT 2011
 
 Running Testing student's code: Fail
     (solutions tests vs. student code.)
-Running Testing student's test cases with working version of program: Pass
+Running Testing student's test cases with working version of program: Fail
     (student tests vs. solution code.)
-Running uptree size never incremented: Pass
-    (student tests vs. broken code.)
-Running node size always zero: Pass
-    (student tests vs. broken code.)
-Running find only goes one level in: Pass
-    (student tests vs. broken code.)
-Running iterators return elements in wrong onder: Pass
-    (student tests vs. broken code.)
-Running union combines elements in wrong order: Pass
-    (student tests vs. broken code.)
-Running union doesn't find first: Pass
-    (student tests vs. broken code.)
-Running set iterator doesn't check representatives properly: Fail
-    (student tests vs. broken code.)
-Running set iterator doesnd find representative of input: Fail
-    (student tests vs. broken code.)
-Total: 35/70
+
+ No further tests will be run.Total: 0/70
 
 
 Details:
@@ -49,73 +34,67 @@ Tests run: 5,  Failures: 1,  Errors: 0
 Testing student's test cases with working version of program
     (student tests vs. solution code.)
 ----------------------------------------
-Pass
+working
+Solution test case detected error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
-....
-Time: 0.006
+....F
+Time: 0.007
+There was 1 failure:
+1) testSetIterator(TestUpTree)junit.framework.AssertionFailedError: setiteratortest1 expected:<true> but was:<false>
+at TestUpTree.testSetIterator(TestUpTree.java:61)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 
-OK (4 tests)
+FAILURES!!!
+Tests run: 4,  Failures: 1,  Errors: 0
 
 
 ----------------------------------------
 uptree size never incremented
     (student tests vs. broken code.)
 ----------------------------------------
-Pass
+Not run.  Qualifying tests failed.
 
 ----------------------------------------
 node size always zero
     (student tests vs. broken code.)
 ----------------------------------------
-Pass
+Not run.  Qualifying tests failed.
 
 ----------------------------------------
 find only goes one level in
     (student tests vs. broken code.)
 ----------------------------------------
-Pass
+Not run.  Qualifying tests failed.
 
 ----------------------------------------
 iterators return elements in wrong onder
     (student tests vs. broken code.)
 ----------------------------------------
-Pass
+Not run.  Qualifying tests failed.
 
 ----------------------------------------
 union combines elements in wrong order
     (student tests vs. broken code.)
 ----------------------------------------
-Pass
+Not run.  Qualifying tests failed.
 
 ----------------------------------------
 union doesn't find first
     (student tests vs. broken code.)
 ----------------------------------------
-Pass
+Not run.  Qualifying tests failed.
 
 ----------------------------------------
 set iterator doesn't check representatives properly
     (student tests vs. broken code.)
 ----------------------------------------
-broke7
-Student test case did not detect error.
-java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
-....
-Time: 0.006
-
-OK (4 tests)
-
+Not run.  Qualifying tests failed.
 
 ----------------------------------------
 set iterator doesnd find representative of input
     (student tests vs. broken code.)
 ----------------------------------------
-broke8
-Student test case did not detect error.
-java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
-....
-Time: 0.005
-
-OK (4 tests)
-
+Not run.  Qualifying tests failed.
 
