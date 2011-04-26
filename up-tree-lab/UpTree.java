@@ -9,7 +9,6 @@ public class UpTree {
 
         public Node(String val) {
             data = val;
-            up = null;
             size = 1;
         }
 
@@ -72,11 +71,9 @@ public class UpTree {
     private class upIterator implements Iterator {
         private Node curr;
         private int index;
-        private SetIterator set;
 	public upIterator() {
-            index = sets.size()-1;
-            curr = sets.get(index);
-	    set = new SetIterator(curr);
+            index = sets.size();
+            next();
         }
         
         public boolean isValid() {
@@ -89,14 +86,8 @@ public class UpTree {
         
         public void next() {
 	    if (index>0) {
-                if (set.isValid()) {
-                    set.next();
-                    curr = set.getNode();
-                } else {
-                    index--;
-                    set = new SetIterator(sets.get(index));
-                    curr = set.getNode();
-                }
+                index--;
+                curr = sets.get(index);
            } else curr = null;
         }
     }
@@ -104,7 +95,7 @@ public class UpTree {
     private class SetIterator implements Iterator {
         private Node curr;
         public SetIterator(Node find) {
-            curr = sets.get(sets.indexOf(find));
+            for (Node n:sets) if (n.data.equals(find.data)) curr = n;
         }
         
         public boolean isValid() {
@@ -118,10 +109,6 @@ public class UpTree {
         
         public void next() {
             if (isValid()) curr = curr.up;
-        }
-        
-        public Node getNode() {
-            return curr;
         }
     }
 }
