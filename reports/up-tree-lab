@@ -1,11 +1,11 @@
 Testing lab Up-Tree Lab for etendian.
-Tue Apr 26 15:57:44 CDT 2011
+Tue Apr 26 16:07:22 CDT 2011
 
 Running Testing student's code: Fail
     (solutions tests vs. student code.)
 Running Testing student's test cases with working version of program: Pass
     (student tests vs. solution code.)
-Running uptree size never incremented: Fail
+Running uptree size never incremented: Pass
     (student tests vs. broken code.)
 Running node size always zero: Pass
     (student tests vs. broken code.)
@@ -21,7 +21,7 @@ Running set iterator doesn't check representatives properly: Fail
     (student tests vs. broken code.)
 Running set iterator doesnd find representative of input: Pass
     (student tests vs. broken code.)
-Total: 20/70
+Total: 25/70
 
 
 Details:
@@ -52,7 +52,7 @@ Testing student's test cases with working version of program
 Pass
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
 ....
-Time: 0.006
+Time: 0.005
 
 OK (4 tests)
 
@@ -61,14 +61,7 @@ OK (4 tests)
 uptree size never incremented
     (student tests vs. broken code.)
 ----------------------------------------
-broke1
-Student test case did not detect error.
-java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
-....
-Time: 0.006
-
-OK (4 tests)
-
+Pass
 
 ----------------------------------------
 node size always zero
@@ -97,7 +90,7 @@ broke4
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
 ....
-Time: 0.005
+Time: 0.006
 
 OK (4 tests)
 
@@ -110,7 +103,7 @@ broke5
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
 ....
-Time: 0.006
+Time: 0.005
 
 OK (4 tests)
 
@@ -129,7 +122,7 @@ broke7
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
 ....
-Time: 0.006
+Time: 0.005
 
 OK (4 tests)
 
