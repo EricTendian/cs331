@@ -17,9 +17,11 @@ public class TestUpTree extends TestCase {
         UpTree up = new UpTree();
         UpTree.Node str1 = up.add("str1");
         UpTree.Node str2 = up.add("str2");
+        UpTree.Node str3 = up.add("str3");
         up.union(str1, str2);
-        assertEquals("uniontest1", 2, up.find(str2).size());
-        //assertEquals("uniontest2", str2, str1.up);
+	up.union(str1, str3);
+        assertEquals("uniontest1", 3, up.find(str2).size());
+        assertEquals("uniontest2", str2, up.find(str3));
     }
     
     public void testIterator() {
