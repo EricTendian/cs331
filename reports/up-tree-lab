@@ -1,5 +1,5 @@
 Testing lab Up-Tree Lab for etendian.
-Tue Apr 26 15:52:18 CDT 2011
+Tue Apr 26 15:57:44 CDT 2011
 
 Running Testing student's code: Fail
     (solutions tests vs. student code.)
@@ -15,13 +15,13 @@ Running iterators return elements in wrong onder: Fail
     (student tests vs. broken code.)
 Running union combines elements in wrong order: Fail
     (student tests vs. broken code.)
-Running union doesn't find first: Fail
+Running union doesn't find first: Pass
     (student tests vs. broken code.)
 Running set iterator doesn't check representatives properly: Fail
     (student tests vs. broken code.)
-Running set iterator doesnd find representative of input: Fail
+Running set iterator doesnd find representative of input: Pass
     (student tests vs. broken code.)
-Total: 10/70
+Total: 20/70
 
 
 Details:
@@ -33,7 +33,7 @@ canon
 Solution test case detected error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
 .....F
-Time: 0.009
+Time: 0.01
 There was 1 failure:
 1) testUnion(TestUpTree)junit.framework.AssertionFailedError: Union A and B: size(A) = 0. expected:<0> but was:<1>
 at TestUpTree.testUnion(TestUpTree.java:76)
@@ -65,7 +65,7 @@ broke1
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
 ....
-Time: 0.005
+Time: 0.006
 
 OK (4 tests)
 
@@ -97,7 +97,7 @@ broke4
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
 ....
-Time: 0.006
+Time: 0.005
 
 OK (4 tests)
 
@@ -119,14 +119,7 @@ OK (4 tests)
 union doesn't find first
     (student tests vs. broken code.)
 ----------------------------------------
-broke6
-Student test case did not detect error.
-java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
-....
-Time: 0.005
-
-OK (4 tests)
-
+Pass
 
 ----------------------------------------
 set iterator doesn't check representatives properly
@@ -145,12 +138,5 @@ OK (4 tests)
 set iterator doesnd find representative of input
     (student tests vs. broken code.)
 ----------------------------------------
-broke8
-Student test case did not detect error.
-java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
-....
-Time: 0.006
-
-OK (4 tests)
-
+Pass
 
