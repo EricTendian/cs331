@@ -1,5 +1,5 @@
 Testing lab Up-Tree Lab for etendian.
-Tue Apr 26 16:07:22 CDT 2011
+Tue Apr 26 16:12:14 CDT 2011
 
 Running Testing student's code: Fail
     (solutions tests vs. student code.)
@@ -13,7 +13,7 @@ Running find only goes one level in: Fail
     (student tests vs. broken code.)
 Running iterators return elements in wrong onder: Fail
     (student tests vs. broken code.)
-Running union combines elements in wrong order: Fail
+Running union combines elements in wrong order: Pass
     (student tests vs. broken code.)
 Running union doesn't find first: Pass
     (student tests vs. broken code.)
@@ -21,7 +21,7 @@ Running set iterator doesn't check representatives properly: Fail
     (student tests vs. broken code.)
 Running set iterator doesnd find representative of input: Pass
     (student tests vs. broken code.)
-Total: 25/70
+Total: 30/70
 
 
 Details:
@@ -33,7 +33,7 @@ canon
 Solution test case detected error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
 .....F
-Time: 0.01
+Time: 0.009
 There was 1 failure:
 1) testUnion(TestUpTree)junit.framework.AssertionFailedError: Union A and B: size(A) = 0. expected:<0> but was:<1>
 at TestUpTree.testUnion(TestUpTree.java:76)
@@ -99,14 +99,7 @@ OK (4 tests)
 union combines elements in wrong order
     (student tests vs. broken code.)
 ----------------------------------------
-broke5
-Student test case did not detect error.
-java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
-....
-Time: 0.005
-
-OK (4 tests)
-
+Pass
 
 ----------------------------------------
 union doesn't find first
@@ -122,7 +115,7 @@ broke7
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
 ....
-Time: 0.005
+Time: 0.006
 
 OK (4 tests)
 
