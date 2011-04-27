@@ -46,11 +46,11 @@ public class UpTree {
         Node a = find(x);
         Node b = find(y);
         if (a!=b) {
-            /*if (a.size > b.size) {
+            if (a.size > b.size) {
                 b.up = a; a.size+=b.size;
-            } else {*/
+            } else {
                 a.up = b; b.size+=a.size;
-            //}
+            }
             
             for (Node n:sets) {
                 if (find(n).equals(find(b))) {
