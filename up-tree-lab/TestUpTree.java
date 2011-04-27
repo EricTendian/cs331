@@ -41,6 +41,8 @@ public class TestUpTree extends TestCase {
         assertEquals("iteratortest3", str2, itr.get());
         itr.next();
         assertEquals("iteratortest4", str1, itr.get());
+        itr.next();
+        assertEquals("iteratortest5", null, itr.get());
     }
     
     public void testSetIterator() {
@@ -60,5 +62,7 @@ public class TestUpTree extends TestCase {
         assertEquals("setiteratortest3", str2, itr.get());
         itr.next();
         assertEquals("setiteratortest4", str1, itr.get());
+        itr.next();
+        assertEquals("setiteratortest5", null, itr.get());
     }
 }
