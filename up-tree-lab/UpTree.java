@@ -23,7 +23,7 @@ public class UpTree {
         }
     }
     
-    private ArrayList<Node> sets;
+    public ArrayList<Node> sets;
     
     public UpTree() {
         sets = new ArrayList<Node>();
@@ -104,12 +104,15 @@ public class UpTree {
     
     private class SetIterator implements Iterator {
         private Node curr;
+        private Stack<Node> set;
         public SetIterator(Node find) {
-            for (Node n:sets) if (n.data.equals(find.data)) curr = n;
+            set = new Stack<Node>();
+            for (Node n:sets) if (find(n).equals(find(find))) set.push(n);
+            curr = set.pop();
         }
         
         public boolean isValid() {
-            if (curr!=null) return (curr.up!=curr);
+            if (curr!=null && curr.up!=curr) return true;
             return false;
         }
         
@@ -118,7 +121,7 @@ public class UpTree {
         }
         
         public void next() {
-            if (isValid()) curr = curr.up;
+            if (isValid()) curr = set.pop();
         }
     }
 }
