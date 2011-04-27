@@ -1,5 +1,5 @@
 Testing lab Up-Tree Lab for etendian.
-Tue Apr 26 23:17:08 CDT 2011
+Tue Apr 26 23:27:09 CDT 2011
 
 Running Testing student's code: Fail
     (solutions tests vs. student code.)
@@ -33,7 +33,7 @@ canon
 Solution test case detected error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
 .....F
-Time: 0.013
+Time: 0.012
 There was 1 failure:
 1) testUnion(TestUpTree)junit.framework.AssertionFailedError: Union B and C: size(C) = 0. expected:<0> but was:<1>
 at TestUpTree.testUnion(TestUpTree.java:91)
