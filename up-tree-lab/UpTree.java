@@ -47,16 +47,9 @@ public class UpTree {
         Node b = find(y);
         if (a!=b) {
             if (a.size > b.size) {
-                b.up = a; a.size+=b.size;
+                b.up = a; a.size+=b.size; b.size=0;
             } else {
-                a.up = b; b.size+=a.size;
-            }
-            
-            for (Node n:sets) {
-                while (n.up!=n) {
-                    n.size = 0;
-                    n = n.up;
-                }
+                a.up = b; b.size+=a.size; a.size=0;
             }
         }
     }
