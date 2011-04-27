@@ -51,6 +51,16 @@ public class UpTree {
             } else {
                 a.up = b; b.size+=a.size;
             }
+            
+            for (Node n:sets) {
+                if (find(n).equals(find(b))) {
+                    while (n.up!=n) {
+                        n.size = 0;
+                        n = n.up;
+                    }
+                    break;
+                }
+            }
         }
     }
 
