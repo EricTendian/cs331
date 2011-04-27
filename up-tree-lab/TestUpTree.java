@@ -54,7 +54,6 @@ public class TestUpTree extends TestCase {
         up.union(str1, str3);
         Iterator<UpTree.Node> itr = up.mkSetIterator(str2);
         assertEquals("setiteratortest1", str4, itr.get());
-        assertEquals("setiteratortestsize", str4.size(), itr.get().size());
         itr.next();
         assertEquals("setiteratortest2", str3, itr.get());
         itr.next();

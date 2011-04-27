@@ -53,7 +53,7 @@ public class UpTree {
             }
             
             for (Node n:sets) {
-                if (find(n).equals(find(a)) || find(n).equals(find(b))) {
+                if (find(n).equals(find(a))) {
                     while (n.up!=n) {
                         n.size = 0;
                         n = n.up;
