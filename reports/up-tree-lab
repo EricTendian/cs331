@@ -1,5 +1,5 @@
 Testing lab Up-Tree Lab for etendian.
-Tue Apr 26 21:37:07 CDT 2011
+Tue Apr 26 22:27:21 CDT 2011
 
 Running Testing student's code: Fail
     (solutions tests vs. student code.)
@@ -33,9 +33,9 @@ canon
 Solution test case detected error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
 .....F
-Time: 0.01
+Time: 0.012
 There was 1 failure:
-1) testUnion(TestUpTree)junit.framework.AssertionFailedError: Union A and B, set(A) iterator test. expected:<UpTree$Node@31e4457d> but was:<UpTree$Node@18e2b22>
+1) testUnion(TestUpTree)junit.framework.AssertionFailedError: Union A and B, set(A) iterator test. expected:<UpTree$Node@5b3caecd> but was:<UpTree$Node@6cf84386>
 at TestUpTree.helpTestSet(TestUpTree.java:60)
 at TestUpTree.testUnion(TestUpTree.java:81)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -102,7 +102,7 @@ broke7
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
 ....
-Time: 0.005
+Time: 0.006
 
 OK (4 tests)
 
