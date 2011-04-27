@@ -45,12 +45,12 @@ public class UpTree {
     public void union(Node x, Node y) {
         Node a = find(x);
         Node b = find(y);
-        if (!a.equals(b)) {
-            if (a.size > b.size) {
+        if (a!=b) {
+            /*if (a.size > b.size) {
                 b.up = a; a.size+=b.size;
-            } else {
+            } else {*/
                 a.up = b; b.size+=a.size;
-            }
+            //}
             
             for (Node n:sets) {
                 if (find(n).equals(find(b))) {
@@ -65,7 +65,7 @@ public class UpTree {
     }
 
     public Node find(Node y) {
-        if (y.up!=null && !y.equals(y.up)) return find(y.up);
+        if (y.up!=null && y.up!=y) return find(y.up);
         else return y;
     }
 
@@ -108,20 +108,20 @@ public class UpTree {
         public SetIterator(Node find) {
             set = new Stack<Node>();
             for (Node n:sets) if (find(n).equals(find(find))) set.push(n);
-            curr = set.pop();
+            next();
         }
         
         public boolean isValid() {
-            if (curr!=null && curr.up!=curr) return true;
-            return false;
+            return curr!=null;
         }
         
         public Node get() {
-            return curr;
+            if (isValid()) return curr;
+            return null;
         }
         
         public void next() {
-            if (isValid()) curr = set.pop();
+            curr = set.pop();
         }
     }
 }
