@@ -30,9 +30,7 @@ public class UpTree {
     }
 
     public int size() {
-        int size = 0;
-	for (Node n:sets) size+=find(n).size;
-	return size;
+	return sets.size();
     }
 
     public Node add(String str) {
