@@ -1,23 +1,27 @@
-Testing lab Traversal Lab for etendian.
-Thu Mar 24 21:46:32 CDT 2011
+Testing lab Up-Tree Lab for etendian.
+Thu Apr 28 08:32:02 CDT 2011
 
 Running Testing student's code: Pass
     (solutions tests vs. student code.)
 Running Testing student's test cases with working version of program: Pass
     (student tests vs. solution code.)
-Running bfsIterator not working: Pass
+Running uptree size never incremented: Pass
     (student tests vs. broken code.)
-Running dfsIterator not working: Pass
+Running node size always zero: Pass
     (student tests vs. broken code.)
-Running preorder not working: Pass
+Running find only goes one level in: Pass
     (student tests vs. broken code.)
-Running inorder not working: Pass
+Running iterators return elements in wrong onder: Pass
     (student tests vs. broken code.)
-Running postorder not working: Pass
+Running union combines elements in wrong order: Pass
     (student tests vs. broken code.)
-Running frontier not working: Pass
+Running union doesn't find first: Pass
     (student tests vs. broken code.)
-Total: 60/60
+Running set iterator doesn't check representatives properly: Fail
+    (student tests vs. broken code.)
+Running set iterator doesnd find representative of input: Pass
+    (student tests vs. broken code.)
+Total: 65/70
 
 
 Details:
@@ -26,11 +30,11 @@ Testing student's code
     (solutions tests vs. student code.)
 ----------------------------------------
 Pass
-java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestTree
-...................
-Time: 0.015
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
+.....
+Time: 0.012
 
-OK (19 tests)
+OK (5 tests)
 
 
 ----------------------------------------
@@ -38,45 +42,64 @@ Testing student's test cases with working version of program
     (student tests vs. solution code.)
 ----------------------------------------
 Pass
-java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestTree
-......
-Time: 0.01
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
+....
+Time: 0.006
 
-OK (6 tests)
+OK (4 tests)
 
 
 ----------------------------------------
-bfsIterator not working
+uptree size never incremented
     (student tests vs. broken code.)
 ----------------------------------------
 Pass
 
 ----------------------------------------
-dfsIterator not working
+node size always zero
     (student tests vs. broken code.)
 ----------------------------------------
 Pass
 
 ----------------------------------------
-preorder not working
+find only goes one level in
     (student tests vs. broken code.)
 ----------------------------------------
 Pass
 
 ----------------------------------------
-inorder not working
+iterators return elements in wrong onder
     (student tests vs. broken code.)
 ----------------------------------------
 Pass
 
 ----------------------------------------
-postorder not working
+union combines elements in wrong order
     (student tests vs. broken code.)
 ----------------------------------------
 Pass
 
 ----------------------------------------
-frontier not working
+union doesn't find first
+    (student tests vs. broken code.)
+----------------------------------------
+Pass
+
+----------------------------------------
+set iterator doesn't check representatives properly
+    (student tests vs. broken code.)
+----------------------------------------
+broke7
+Student test case did not detect error.
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
+....
+Time: 0.006
+
+OK (4 tests)
+
+
+----------------------------------------
+set iterator doesnd find representative of input
     (student tests vs. broken code.)
 ----------------------------------------
 Pass

@@ -1,19 +1,19 @@
-public class Queue<E> {
-    private List<E> l;//
-    
-    public Queue() {
+public class Stack<E> {
+    private List<E> l;
+
+    public Stack() {
         l = new List<E>();
     }
     
-    public void enqueue(E data) {
-        l.insertAtEnd(data);
+    public void push (E data) {
+        l.insertAtFront(data);
     }
     
-    public E dequeue() {
+    public E pop () {
         return l.removeFromFront();
     }
     
-    public E front() {
+    public E top () {
         E first = l.removeFromFront();
         if (first!=null) l.insertAtFront(first);
         return first;

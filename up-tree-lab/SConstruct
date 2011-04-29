@@ -11,8 +11,7 @@ env.Alias('compile',compile)
 
 # Run the tests
 
-tests = env.Command('tests',compile,
-   ['java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestTree'])
+tests = env.Command('tests',compile,   ['java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree'])
 
 # Utility to commit and push
 
