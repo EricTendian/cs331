@@ -1,5 +1,5 @@
 Testing lab Up-Tree Lab for etendian.
-Sun May  1 13:52:34 CDT 2011
+Sun May  1 14:12:34 CDT 2011
 
 Running Testing student's code: Pass
     (solutions tests vs. student code.)
@@ -17,9 +17,9 @@ Running union combines elements in wrong order: Pass
     (student tests vs. broken code.)
 Running union doesn't find first: Pass
     (student tests vs. broken code.)
-Running set iterator doesn't check representatives properly: Fail
+Running set iterator doesn't check representatives properly: Pass
     (student tests vs. broken code.)
-Running set iterator doesnd find representative of input: Pass
+Running set iterator doesnd find representative of input: Fail
     (student tests vs. broken code.)
 Total: 65/70
 
@@ -44,7 +44,7 @@ Testing student's test cases with working version of program
 Pass
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
 ....
-Time: 0.022
+Time: 0.025
 
 OK (4 tests)
 
@@ -89,18 +89,18 @@ Pass
 set iterator doesn't check representatives properly
     (student tests vs. broken code.)
 ----------------------------------------
-broke7
-Student test case did not detect error.
-java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
-....
-Time: 0.024
-
-OK (4 tests)
-
+Pass
 
 ----------------------------------------
 set iterator doesnd find representative of input
     (student tests vs. broken code.)
 ----------------------------------------
-Pass
+broke8
+Student test case did not detect error.
+java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
+....
+Time: 0.025
+
+OK (4 tests)
+
 
