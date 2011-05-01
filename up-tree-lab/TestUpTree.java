@@ -49,6 +49,7 @@ public class TestUpTree extends TestCase {
         UpTree.Node str2 = up.add("str2");
         UpTree.Node str3 = up.add("str3");
         UpTree.Node str4 = up.add("str4");
+        UpTree.Node str5 = up.add("str5");
         up.union(str1, str2);
         up.union(str3, str4);
         up.union(str1, str3);
