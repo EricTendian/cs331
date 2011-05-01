@@ -1,5 +1,5 @@
 Testing lab Up-Tree Lab for etendian.
-Sun May  1 14:12:34 CDT 2011
+Sun May  1 16:27:34 CDT 2011
 
 Running Testing student's code: Pass
     (solutions tests vs. student code.)
@@ -32,7 +32,7 @@ Testing student's code
 Pass
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
 .....
-Time: 0.041
+Time: 0.042
 
 OK (5 tests)
 
@@ -44,7 +44,7 @@ Testing student's test cases with working version of program
 Pass
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
 ....
-Time: 0.025
+Time: 0.024
 
 OK (4 tests)
 
@@ -99,7 +99,7 @@ broke8
 Student test case did not detect error.
 java -cp /usr/share/junit/lib/junit.jar:classes junit.textui.TestRunner TestUpTree
 ....
-Time: 0.025
+Time: 0.027
 
 OK (4 tests)
 
