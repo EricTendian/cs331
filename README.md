@@ -1,4 +1,4 @@
 cs331
 =====
 
-Projects from IIT CS331 Adv. Data Structures course
+Projects from IIT's CS331: Advanced Data Structures, Spring 2011
